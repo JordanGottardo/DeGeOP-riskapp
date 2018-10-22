@@ -1,0 +1,59 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplateVerb}
+%\includeGlossario
+
+%\externaldocument{path/to/glossario}
+\docVerbV{5}
+\docTitle{Verbale esterno - \getdocVerbV}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{05}{06}{2017}}
+\docLastUpdateDate{\frmdata{05}{06}{2017}}
+\docStatus{Approvato}
+\docEditors{Giovanni Prete}
+\docVerificators{Leonardo Brutesco}
+\docApprovers{Marco Pasqualini}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{
+	1.0.0 & \frmdata{05}{06}{2017} & Marco Pasqualini & \responsabile  & Approvazione \\
+	0.1.0 & \frmdata{05}{06}{2017} & Leonardo Brutesco & \verificatore & Verifica documento\\
+	0.0.1 & \frmdata{05}{06}{2017} & Giovanni Prete & \programmatore & Stesura documento\\
+}
+
+\begin{document}
+	\section{Estremi della riunione}
+	\begin{itemize}
+		\item \textbf{data:} \frmdata{05}{062}{2017};
+		\item \textbf{ora inizio:} \frmora{9}{30};
+		\item \textbf{ora fine:} \frmora{11}{30};
+		\item \textbf{luogo:} Sede di RiskApp a Conselve;
+		\item \textbf{segretario:} Giovanni Prete;
+		\item \textbf{partecipanti:}
+		\begin{itemize}
+			 \item Giovanni Prete;
+			 \item Marco Pasqualini;
+			 \item Pierpaolo Toniolo (proponente).
+		\end{itemize}
+		\item \textbf{assenti:}
+			\begin{itemize}
+			 \item Daniel De Gaspari;
+			 \item Giulia Petenazzi;
+			 \item Jordan Gottardo;
+			 \item Leonardo Brutesco;
+			\end{itemize}
+	\end{itemize}
+	\section{Ordine del giorno}
+		\begin{itemize}
+			\item discussione riguardante le nuove API fornite da \riskapp.
+		\end{itemize}
+	\section{Verbale della riunione}
+	\begin{itemize}
+		\item mostrati esempi di chiamate REST sull'applicazione di \riskapp{} utilizzando le nuove API fornite da \riskapp;
+		\item discusse problematiche e debolezze delle API;
+		\item discussi gli aspetti tecnici riguardanti le nuove API.
+	\end{itemize}
+	\section{Decisioni prese}
+	\begin{itemize}
+		\itemVE accordato l'utilizzo delle API fornite per quanto riguarda asset, nodi, archi, scenari e analisi.
+	\end{itemize}
+\end{document}

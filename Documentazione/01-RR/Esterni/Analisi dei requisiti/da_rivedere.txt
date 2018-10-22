@@ -1,0 +1,33 @@
+1)********************************************************************
+
+- 1.2 Rivedere scopo del prodotto
+	- vedi Marco
+- 1.3 Inserire versione glossario? I fellowship non ce l'hanno
+- 1.4 Aggiungere altre fonti informative/normative
+	-specificare capitoli SWEBook
+
+
+
+
+2)********************************************************************
+
+- 2.1 rivedere contesto d'uso del prodotto
+- 2.2 Aggiungere funzioni del prodotto
+	- vedi Marco
+- 2.3 Aggiungere nome verbale esterno, e inserire nel verbale la categoria di utenti a cui è destinato il prodotto finale. (MAIL)
+	- specificare anche versione del verbale
+- 2.4 Aggiungere vincoli generali
+- 2.5 Aggiungere assunzione dipendenze
+	- vedi Marco
+
+
+
+3)********************************************************************
+
+- 3.1 gerarchia attori? anche se abbiamo una sola tipologia di attori?
+
+4)********************************************************************
+Scopo del prodotto (3 righe)
+Lo scopo del prodotto è la realizzazione di un’interfaccia di tipo web app, erogabile anche su dispositivo mobile, che consenta l’inserimento dei processi produttivi (macchinari, magazzini, fornitori, distributori) su mappa geografica.
+5)********************************************************************
+Scopo del prodotto (20 righe)

@@ -1,0 +1,659 @@
+\newpage
+
+\section{Tracciamento}
+
+	\subsection{Tracciamento package-requisiti}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{\glo{Package}{Package}} & \color{white} \textbf{Requisito} \\ 
+		\endfirsthead
+		\rowcolor{I}
+		\color{white} \textbf{Package} & \color{white} \textbf{Requisito} \\ 
+		\endhead
+		ButtonsPkg & RFF14.5 \newline ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF10.1 \newline ROF11.5 \newline ROF12 \newline ROF13 \newline ROF14 \newline ROF14.3 \newline ROF14.6 \newline ROF14.7 \newline ROF15 \newline ROF16.1.11 \newline ROF16.2 \newline ROF16.3 \newline ROF18 \newline ROF19 \newline ROF19.1.11 \newline ROF19.2 \newline ROF19.3 \newline ROF2 \newline ROF20 \newline ROF22 \newline ROF3 \newline ROF4 \newline ROF4.2.1 \newline ROF4.3 \newline ROF4.4 \newline ROF45 \newline ROF46 \newline ROF48.1 \\
+		ButtonsPkg & ROF5 \newline ROF5.1 \newline ROF5.2 \newline ROF6.1 \newline ROF6.10 \newline ROF6.9 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.10 \newline ROF9.2 \newline ROF9.9\\
+		AnalysisPkg & ROF19 \newline ROF19.1 \newline ROF19.3 \newline ROF20 \newline ROF21 \newline ROF22 \newline ROF47\\
+		ActionElementsPkg & ROF1 \newline ROF1.5 \newline ROF10 \newline ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3 \newline ROF21 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.10\\
+		ActionCreatorsPkg & RFF14.5 \newline ROF1 \newline ROF1.5 \newline ROF10 \newline ROF10.1 \newline ROF11 \newline ROF14 \newline ROF14.7 \newline ROF15 \newline ROF15.1 \newline ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3 \newline ROF21 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF5.1 \newline ROF6 \newline ROF6.10 \newline ROF9 \newline ROF9.10\\
+		ContentPkg & RFF11.2 \newline RFF11.3 \newline RFF11.3.1 \newline RFF11.3.1.1 \newline RFF11.3.2 \newline RFF11.6 \newline RFF11.7 \newline RFF14.4 \newline RFF14.5 \newline RFF14.5.1 \newline RFF14.5.1.1 \newline RFF14.5.2 \newline RFF14.5.2.1 \\
+		ContentPkg & ROF1.2 \newline ROF1.2.1 \newline ROF1.2.1.1 \newline ROF1.2.2 \newline ROF1.2.2.1 \newline ROF1.2.3 \newline ROF1.2.3.1 \newline ROF1.2.3.2 \newline ROF1.2.3.3 \newline ROF1.2.3.4 \newline ROF1.2.3.5 \newline ROF1.2.3.6 \newline ROF1.2.4 \newline ROF1.2.4.1 \newline ROF1.2.4.2 \newline ROF1.2.4.3 \newline ROF1.2.4.4 \newline ROF1.2.5 \newline ROF1.2.5.1 \newline ROF1.2.5.2 \newline ROF1.2.6 \newline ROF1.2.6.1 \newline ROF1.2.7 \newline ROF1.2.7.1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.6 \newline ROF10 \newline ROF10.2 \newline ROF11.3.2.1 \newline ROF11.4 \newline ROF12 \newline ROF13 \newline ROF14 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF16.1 \newline ROF16.1.1 \newline ROF16.1.1.1 \newline ROF16.1.2 \newline ROF16.1.2.1 \newline ROF16.1.3 \newline ROF16.1.3.1 \newline ROF16.1.3.10 \newline ROF16.1.3.11 \\
+		ContentPkg & ROF16.1.3.2 \newline ROF16.1.3.3 \newline ROF16.1.3.4 \newline ROF16.1.3.5 \newline ROF16.1.3.6 \newline ROF16.1.3.7 \newline ROF16.1.3.8 \newline ROF16.1.3.9 \newline ROF16.1.4 \newline ROF16.1.4.1 \newline ROF16.1.5 \newline ROF16.1.5.1 \newline ROF16.1.6 \newline ROF16.1.6.1 \newline ROF17 \newline ROF18 \newline ROF19 \newline ROF19.1 \newline ROF19.1.1 \newline ROF19.1.1.1 \newline ROF19.1.11 \newline ROF19.1.2 \newline ROF19.1.2.1 \newline ROF19.1.3 \newline ROF19.1.3.11 \newline ROF19.1.4 \newline ROF19.1.4.1 \newline ROF19.1.5 \newline ROF19.1.5.1 \newline ROF19.1.6 \newline ROF19.1.6.1 \newline ROF19.2 \newline ROF19.4 \newline ROF2 \newline ROF20 \newline ROF22 \newline ROF3 \newline ROF4 \newline ROF4.2.1 \newline ROF4.2.2 \newline ROF4.2.2.1 \newline ROF4.2.3 \newline ROF4.2.3.6 \newline ROF4.2.4 \newline ROF4.2.4.4 \newline ROF4.2.5 \newline ROF4.2.5.2 \\
+		ContentPkg & ROF4.2.6 \newline ROF4.2.6.1 \newline ROF4.2.7 \newline ROF4.2.7.1 \newline ROF4.3 \newline ROF4.4 \newline ROF42 \newline ROF43 \newline ROF44 \newline ROF45 \newline ROF46 \newline ROF5 \newline ROF5.2 \newline ROF6.1 \newline ROF6.10 \newline ROF6.12 \newline ROF6.12.1 \newline ROF6.12.1.1 \newline ROF6.3 \newline ROF6.3.1 \newline ROF6.3.2 \newline ROF6.3.3 \newline ROF6.3.4 \newline ROF6.3.5 \newline ROF6.3.6 \newline ROF6.4 \newline ROF6.5 \newline ROF6.5.2 \newline ROF6.5.2.1 \newline ROF6.5.3 \newline ROF6.5.3.1 \newline ROF6.5.4 \newline ROF6.5.4.1 \newline ROF6.6 \newline ROF6.6.2 \newline ROF6.6.2.1 \newline ROF6.7 \newline ROF6.7.2 \newline ROF6.7.2.1 \newline ROF6.8 \newline ROF6.9 \newline ROF7 \newline ROF8 \newline ROF9 \newline ROF9.1 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.10 \\
+		ContentPkg & ROF9.11 \newline ROF9.12 \newline ROF9.12.1 \newline ROF9.12.1.1 \newline ROF9.2 \newline ROF9.3 \newline ROF9.4 \newline ROF9.5 \newline ROF9.5.2 \newline ROF9.5.2.1 \newline ROF9.5.3 \newline ROF9.5.3.1 \newline ROF9.5.4 \newline ROF9.5.4.1 \newline ROF9.6 \newline ROF9.6.2 \newline ROF9.6.2.1 \newline ROF9.7 \newline ROF9.7.2 \newline ROF9.7.2.1 \newline ROF9.8 \newline ROF9.9\\
+		ReducerPkg & RFF14.5 \newline ROF1 \newline ROF1.5 \newline ROF10 \newline ROF10.1 \newline ROF11 \newline ROF11.5 \newline ROF14 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF15.1 \newline ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3 \newline ROF21 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF5.1 \newline ROF6 \newline ROF6.10 \newline ROF9 \newline ROF9.10\\
+		FactorySidebarPkg & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF20 \newline ROF4 \newline ROF4.2 \newline ROF4.2.1 \newline ROF4.3 \newline ROF45 \newline ROF46 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		ProcessPkg & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF12 \newline ROF14 \newline ROF15 \newline ROF2 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF6 \newline ROF7 \newline ROF9 \newline ROF9.10\\
+		MapComponentsPkg & RFF14.8 \newline RFF16.1.10 \newline RFF16.1.9 \newline RFF19.1.10 \newline RFF19.1.9 \newline RFF24.4 \newline ROF1 \newline ROF1.1 \newline ROF1.1.1 \newline ROF1.1.2 \newline ROF1.1.3 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF1.6 \newline ROF10 \newline ROF11 \newline ROF11.1 \newline ROF11.1.1 \newline ROF11.1.2 \newline ROF14 \newline ROF15 \newline ROF15.1 \newline ROF15.2 \newline ROF16 \newline ROF16.1.7 \newline ROF16.1.7.1 \newline ROF16.1.8 \newline ROF16.1.8.1 \newline ROF16.2 \newline ROF16.3 \newline ROF16.4 \newline ROF19.1.7 \newline ROF19.1.7.1 \newline ROF19.1.8 \newline ROF19.1.8.1 \newline ROF19.4 \newline ROF20 \newline ROF20.1 \newline ROF20.2 \newline ROF22 \newline ROF23 \newline ROF24 \newline ROF24.1 \newline ROF24.2 \newline ROF24.3 \\
+		MapComponentsPkg & ROF4 \newline ROF4.1 \newline ROF4.3 \newline ROF4.5 \newline ROF42 \newline ROF43 \newline ROF44 \newline ROF47 \newline ROF48 \newline ROF5 \newline ROF6 \newline ROF6.1 \newline ROF6.11 \newline ROF6.2 \newline ROF9 \newline ROF9.1 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.11 \newline ROF9.2 \newline ROF9.9\\
+		CallManagerPkg & ROF1 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF20 \newline ROF21 \newline ROF22 \newline ROF4 \newline ROF5 \newline ROF6 \newline ROF9\\
+		DeGeOPViewPkg & RFF24.4 \newline RFF25 \newline RFF25.1 \newline RFF26 \newline RFF26.1 \newline ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF19.4 \newline ROF21 \newline ROF24 \newline ROF24.1 \newline ROF24.2 \newline ROF24.3 \newline ROF39 \newline ROF4 \newline ROF4.1.1 \newline ROF4.1.2 \newline ROF4.1.3 \newline ROF4.2 \newline ROF4.3 \newline ROF4.5 \newline ROF40 \newline ROF41 \newline ROF47 \newline ROF48 \newline ROF5 \newline ROF6 \newline ROF6.11 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		PolygonPkg & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF4 \newline ROF5\\
+		StoreContentsPkg & RFF25 \newline RFF25.1 \newline RFF26 \newline RFF26.1 \newline ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF10.1 \newline ROF11 \newline ROF11.5 \newline ROF14 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF16 \newline ROF20 \newline ROF4 \newline ROF47 \newline ROF48 \newline ROF48.1 \newline ROF5 \newline ROF5.1 \newline ROF6 \newline ROF6.10 \newline ROF9\\
+		ActionPkg & ROF11 \newline ROF14 \newline ROF15\\
+		SidebarPkg & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		\rowcolor{white}
+		\caption{Tracciamento package-requisiti}
+	\end{longtable}
+
+\newpage
+
+	\subsection{Tracciamento requisito-package}	
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Package} \\ 
+		\endfirsthead
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Package} \\ 
+		\endhead
+		RFF11.2 & ContentPkg\\
+		RFF11.3 & ContentPkg\\
+		RFF11.3.1 & ContentPkg\\
+		RFF11.3.1.1 & ContentPkg\\
+		RFF11.3.2 & ContentPkg\\
+		RFF11.6 & ContentPkg\\
+		RFF11.7 & ContentPkg\\
+		RFF14.4 & ContentPkg\\
+		RFF14.5 & ActionCreatorsPkg \newline ReducerPkg \newline ButtonsPkg \newline ContentPkg\\
+		RFF14.5.1 & ContentPkg\\
+		RFF14.5.1.1 & ContentPkg\\
+		RFF14.5.2 & ContentPkg\\
+		RFF14.5.2.1 & ContentPkg\\
+		RFF14.8 & MapComponentsPkg\\
+		RFF16.1.10 & MapComponentsPkg\\
+		RFF16.1.9 & MapComponentsPkg\\
+		RFF19.1.10 & MapComponentsPkg\\
+		RFF19.1.9 & MapComponentsPkg\\
+		RFF24.4 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		RFF25 & DeGeOPViewPkg \newline StoreContentsPkg\\
+		RFF25.1 & DeGeOPViewPkg \newline StoreContentsPkg\\
+		RFF26 & DeGeOPViewPkg \newline StoreContentsPkg\\
+		RFF26.1 & DeGeOPViewPkg \newline StoreContentsPkg\\
+		ROF1 & ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline PolygonPkg \newline StoreContentsPkg \newline FactorySidebarPkg \newline SidebarPkg\\
+		ROF1.1 & MapComponentsPkg\\
+		ROF1.1.1 & MapComponentsPkg\\
+		ROF1.1.2 & MapComponentsPkg\\
+		ROF1.1.3 & MapComponentsPkg\\
+		ROF1.2 & ContentPkg\\
+		ROF1.2.1 & ContentPkg\\
+		ROF1.2.1.1 & ContentPkg\\
+		ROF1.2.2 & ContentPkg\\
+		ROF1.2.2.1 & ContentPkg\\
+		ROF1.2.3 & ContentPkg\\
+		ROF1.2.3.1 & ContentPkg\\
+		ROF1.2.3.2 & ContentPkg\\
+		ROF1.2.3.3 & ContentPkg\\
+		ROF1.2.3.4 & ContentPkg\\
+		ROF1.2.3.5 & ContentPkg\\
+		ROF1.2.3.6 & ContentPkg\\
+		ROF1.2.4 & ContentPkg\\
+		ROF1.2.4.1 & ContentPkg\\
+		ROF1.2.4.2 & ContentPkg\\
+		ROF1.2.4.3 & ContentPkg\\
+		ROF1.2.4.4 & ContentPkg\\
+		ROF1.2.5 & ContentPkg\\
+		ROF1.2.5.1 & ContentPkg\\
+		ROF1.2.5.2 & ContentPkg\\
+		ROF1.2.6 & ContentPkg\\
+		ROF1.2.6.1 & ContentPkg\\
+		ROF1.2.7 & ContentPkg\\
+		ROF1.2.7.1 & ContentPkg\\
+		ROF1.3 & ProcessPkg \newline MapComponentsPkg \newline DeGeOPViewPkg \newline PolygonPkg \newline StoreContentsPkg \newline SidebarPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF1.4 & ProcessPkg \newline MapComponentsPkg \newline PolygonPkg \newline StoreContentsPkg \newline DeGeOPViewPkg \newline SidebarPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF1.5 & ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline FactorySidebarPkg \newline MapComponentsPkg \newline PolygonPkg \newline SidebarPkg\\
+		ROF1.6 & ContentPkg \newline MapComponentsPkg\\
+		ROF10 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline PolygonPkg \newline SidebarPkg \newline FactorySidebarPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF10.1 & ActionCreatorsPkg \newline ReducerPkg \newline StoreContentsPkg \newline ButtonsPkg\\
+		ROF10.2 & ContentPkg\\
+		ROF11 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline ProcessPkg \newline ActionPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline FactorySidebarPkg \newline SidebarPkg\\
+		ROF11.1 & MapComponentsPkg\\
+		ROF11.1.1 & MapComponentsPkg\\
+		ROF11.1.2 & MapComponentsPkg\\
+		ROF11.3.2.1 & ContentPkg\\
+		ROF11.4 & ContentPkg\\
+		ROF11.5 & ReducerPkg \newline ButtonsPkg \newline StoreContentsPkg\\
+		ROF12 & ProcessPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF13 & ButtonsPkg \newline ContentPkg\\
+		ROF14 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline ProcessPkg \newline ActionPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg \newline SidebarPkg\\
+		ROF14.1 & ReducerPkg \newline ContentPkg \newline StoreContentsPkg\\
+		ROF14.2 & ReducerPkg \newline ContentPkg \newline StoreContentsPkg\\
+		ROF14.3 & ButtonsPkg\\
+		ROF14.6 & ButtonsPkg\\
+		ROF14.7 & ActionCreatorsPkg \newline ButtonsPkg\\
+		ROF15 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline ProcessPkg \newline ActionPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline PolygonPkg \newline SidebarPkg \newline FactorySidebarPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF15.1 & ActionCreatorsPkg \newline ReducerPkg \newline MapComponentsPkg\\
+		ROF15.2 & MapComponentsPkg\\
+		ROF16 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline PolygonPkg \newline StoreContentsPkg \newline FactorySidebarPkg \newline ReducerPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline SidebarPkg\\
+		ROF16.1 & ContentPkg\\
+		ROF16.1.1 & ContentPkg\\
+		ROF16.1.1.1 & ContentPkg\\
+		ROF16.1.11 & ButtonsPkg\\
+		ROF16.1.2 & ContentPkg\\
+		ROF16.1.2.1 & ContentPkg\\
+		ROF16.1.3 & ContentPkg\\
+		ROF16.1.3.1 & ContentPkg\\
+		ROF16.1.3.10 & ContentPkg\\
+		ROF16.1.3.11 & ContentPkg\\
+		ROF16.1.3.2 & ContentPkg\\
+		ROF16.1.3.3 & ContentPkg\\
+		ROF16.1.3.4 & ContentPkg\\
+		ROF16.1.3.5 & ContentPkg\\
+		ROF16.1.3.6 & ContentPkg\\
+		ROF16.1.3.7 & ContentPkg\\
+		ROF16.1.3.8 & ContentPkg\\
+		ROF16.1.3.9 & ContentPkg\\
+		ROF16.1.4 & ContentPkg\\
+		ROF16.1.4.1 & ContentPkg\\
+		ROF16.1.5 & ContentPkg\\
+		ROF16.1.5.1 & ContentPkg\\
+		ROF16.1.6 & ContentPkg\\
+		ROF16.1.6.1 & ContentPkg\\
+		ROF16.1.7 & MapComponentsPkg\\
+		ROF16.1.7.1 & MapComponentsPkg\\
+		ROF16.1.8 & MapComponentsPkg\\
+		ROF16.1.8.1 & MapComponentsPkg\\
+		ROF16.2 & ButtonsPkg \newline MapComponentsPkg\\
+		ROF16.3 & ButtonsPkg \newline MapComponentsPkg\\
+		ROF16.4 & MapComponentsPkg\\
+		ROF17 & ContentPkg\\
+		ROF18 & ButtonsPkg \newline ContentPkg\\
+		ROF19 & DeGeOPViewPkg \newline PolygonPkg \newline CallManagerPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg \newline AnalysisPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg\\
+		ROF19.1 & ContentPkg \newline AnalysisPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg\\
+		ROF19.1.1 & ContentPkg\\
+		ROF19.1.1.1 & ContentPkg\\
+		ROF19.1.11 & ButtonsPkg \newline ContentPkg\\
+		ROF19.1.2 & ContentPkg\\
+		ROF19.1.2.1 & ContentPkg\\
+		ROF19.1.3 & ContentPkg\\
+		ROF19.1.3.11 & ContentPkg\\
+		ROF19.1.4 & ContentPkg\\
+		ROF19.1.4.1 & ContentPkg\\
+		ROF19.1.5 & ContentPkg\\
+		ROF19.1.5.1 & ContentPkg\\
+		ROF19.1.6 & ContentPkg\\
+		ROF19.1.6.1 & ContentPkg\\
+		ROF19.1.7 & MapComponentsPkg\\
+		ROF19.1.7.1 & MapComponentsPkg\\
+		ROF19.1.8 & MapComponentsPkg\\
+		ROF19.1.8.1 & MapComponentsPkg\\
+		ROF19.2 & ButtonsPkg \newline ContentPkg\\
+		ROF19.3 & ButtonsPkg \newline AnalysisPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg\\
+		ROF19.4 & DeGeOPViewPkg \newline ContentPkg \newline MapComponentsPkg\\
+		ROF2 & ProcessPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF20 & StoreContentsPkg \newline CallManagerPkg \newline MapComponentsPkg \newline AnalysisPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF20.1 & MapComponentsPkg\\
+		ROF20.2 & MapComponentsPkg\\
+		ROF21 & AnalysisPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline DeGeOPViewPkg \newline CallManagerPkg\\
+		ROF22 & AnalysisPkg \newline ButtonsPkg \newline ContentPkg \newline CallManagerPkg \newline MapComponentsPkg\\
+		ROF23 & MapComponentsPkg\\
+		ROF24 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF24.1 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF24.2 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF24.3 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF3 & ButtonsPkg \newline ContentPkg\\
+		ROF39 & DeGeOPViewPkg\\
+		ROF4 & ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline PolygonPkg \newline StoreContentsPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg \newline SidebarPkg\\
+		ROF4.1 & MapComponentsPkg\\
+		ROF4.1.1 & DeGeOPViewPkg\\
+		ROF4.1.2 & DeGeOPViewPkg\\
+		ROF4.1.3 & DeGeOPViewPkg\\
+		ROF4.2 & DeGeOPViewPkg \newline FactorySidebarPkg\\
+		ROF4.2.1 & ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF4.2.2 & ContentPkg\\
+		ROF4.2.2.1 & ContentPkg\\
+		ROF4.2.3 & ContentPkg\\
+		ROF4.2.3.6 & ContentPkg\\
+		ROF4.2.4 & ContentPkg\\
+		ROF4.2.4.4 & ContentPkg\\
+		ROF4.2.5 & ContentPkg\\
+		ROF4.2.5.2 & ContentPkg\\
+		ROF4.2.6 & ContentPkg\\
+		ROF4.2.6.1 & ContentPkg\\
+		ROF4.2.7 & ContentPkg\\
+		ROF4.2.7.1 & ContentPkg\\
+		ROF4.3 & MapComponentsPkg \newline DeGeOPViewPkg \newline SidebarPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF4.4 & ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF4.5 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF40 & DeGeOPViewPkg\\
+		ROF41 & DeGeOPViewPkg\\
+		ROF42 & MapComponentsPkg \newline ContentPkg\\
+		ROF43 & MapComponentsPkg \newline ContentPkg\\
+		ROF44 & MapComponentsPkg \newline ContentPkg\\
+		ROF45 & ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF46 & ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF47 & AnalysisPkg \newline StoreContentsPkg \newline DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF48 & StoreContentsPkg \newline DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF48.1 & ButtonsPkg \newline StoreContentsPkg\\
+		ROF5 & ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline PolygonPkg \newline SidebarPkg \newline FactorySidebarPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF5.1 & ActionCreatorsPkg \newline ReducerPkg \newline StoreContentsPkg \newline ButtonsPkg\\
+		ROF5.2 & ButtonsPkg \newline ContentPkg\\
+		ROF6 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline FactorySidebarPkg \newline ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline SidebarPkg\\
+		ROF6.1 & ButtonsPkg \newline ContentPkg \newline MapComponentsPkg\\
+		ROF6.10 & ActionCreatorsPkg \newline ReducerPkg \newline ButtonsPkg \newline StoreContentsPkg \newline ContentPkg\\
+		ROF6.11 & DeGeOPViewPkg \newline MapComponentsPkg\\
+		ROF6.12 & ContentPkg\\
+		ROF6.12.1 & ContentPkg\\
+		ROF6.12.1.1 & ContentPkg\\
+		ROF6.2 & MapComponentsPkg\\
+		ROF6.3 & ContentPkg\\
+		ROF6.3.1 & ContentPkg\\
+		ROF6.3.2 & ContentPkg\\
+		ROF6.3.3 & ContentPkg\\
+		ROF6.3.4 & ContentPkg\\
+		ROF6.3.5 & ContentPkg\\
+		ROF6.3.6 & ContentPkg\\
+		ROF6.4 & ContentPkg\\
+		ROF6.5 & ContentPkg\\
+		ROF6.5.2 & ContentPkg\\
+		ROF6.5.2.1 & ContentPkg\\
+		ROF6.5.3 & ContentPkg\\
+		ROF6.5.3.1 & ContentPkg\\
+		ROF6.5.4 & ContentPkg\\
+		ROF6.5.4.1 & ContentPkg\\
+		ROF6.6 & ContentPkg\\
+		ROF6.6.2 & ContentPkg\\
+		ROF6.6.2.1 & ContentPkg\\
+		ROF6.7 & ContentPkg\\
+		ROF6.7.2 & ContentPkg\\
+		ROF6.7.2.1 & ContentPkg\\
+		ROF6.8 & ContentPkg\\
+		ROF6.9 & ButtonsPkg \newline ContentPkg\\
+		ROF7 & ProcessPkg \newline ButtonsPkg \newline ContentPkg\\
+		ROF8 & ButtonsPkg \newline ContentPkg\\
+		ROF9 & MapComponentsPkg \newline CallManagerPkg \newline DeGeOPViewPkg \newline StoreContentsPkg \newline ButtonsPkg \newline ContentPkg \newline FactorySidebarPkg \newline ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg \newline SidebarPkg\\
+		ROF9.1 & ButtonsPkg \newline ContentPkg \newline MapComponentsPkg\\
+		ROF9.1.1 & ButtonsPkg \newline ContentPkg \newline MapComponentsPkg\\
+		ROF9.1.3 & ButtonsPkg \newline ContentPkg \newline MapComponentsPkg\\
+		ROF9.10 & ButtonsPkg \newline ContentPkg \newline ProcessPkg \newline ActionElementsPkg \newline ActionCreatorsPkg \newline ReducerPkg\\
+		ROF9.11 & ContentPkg \newline MapComponentsPkg\\
+		ROF9.12 & ContentPkg\\
+		ROF9.12.1 & ContentPkg\\
+		ROF9.12.1.1 & ContentPkg\\
+		ROF9.2 & MapComponentsPkg \newline DeGeOPViewPkg \newline ButtonsPkg \newline SidebarPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		ROF9.3 & ContentPkg\\
+		ROF9.4 & ContentPkg\\
+		ROF9.5 & ContentPkg\\
+		ROF9.5.2 & ContentPkg\\
+		ROF9.5.2.1 & ContentPkg\\
+		ROF9.5.3 & ContentPkg\\
+		ROF9.5.3.1 & ContentPkg\\
+		ROF9.5.4 & ContentPkg\\
+		ROF9.5.4.1 & ContentPkg\\
+		ROF9.6 & ContentPkg\\
+		ROF9.6.2 & ContentPkg\\
+		ROF9.6.2.1 & ContentPkg\\
+		ROF9.7 & ContentPkg\\
+		ROF9.7.2 & ContentPkg\\
+		ROF9.7.2.1 & ContentPkg\\
+		ROF9.8 & ContentPkg\\
+		ROF9.9 & MapComponentsPkg \newline DeGeOPViewPkg \newline ButtonsPkg \newline SidebarPkg \newline ContentPkg \newline FactorySidebarPkg\\
+		\rowcolor{white}
+		\caption{Tracciamento requisito-packages}
+	\end{longtable}
+	
+	\newpage
+	
+	\subsection{Tracciamento classi-requisiti}
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{5cm}!{\VRule[1pt]}p{2.5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Classe} & \color{white} \textbf{Requisito} \\ 
+		\endfirsthead
+		\rowcolor{I}
+		\color{white} \textbf{Classe} & \color{white} \textbf{Requisito} \\ 
+		\endhead
+		AbstractAnalysisButtons & ROF48.1\\
+		Analysis & ROF21 \newline ROF22 \newline ROF47\\
+		AnalysisAction & ROF21\\
+		AnalysisActionCreator & ROF21\\
+		AnalysisButtons & ROF22 \newline ROF45 \newline ROF46\\
+		AnalysisContent & ROF22 \newline ROF45 \newline ROF46\\
+		AnalysisReducer & ROF21\\
+		AnalysisSidebarFactory & ROF45 \newline ROF46\\
+		\glo{Asset}{Asset} & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF2 \newline ROF4 \newline ROF4.4 \newline ROF5\\
+		AssetAction & ROF1 \newline ROF1.5 \newline ROF4 \newline ROF4.4 \newline ROF5\\
+		AssetActionCreator & ROF1 \newline ROF1.5 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF5.1 \newline ROF6.10\\
+		AssetReducer & ROF1 \newline ROF1.5 \newline ROF4 \newline ROF4.4 \newline ROF5 \newline ROF5.1 \newline ROF6.10\\
+		ButtonWrapper & RFF19.1.9 \newline ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		CallManager & ROF1 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF4 \newline ROF5 \newline ROF6 \newline ROF9\\
+		ConcreteDeGeOPViewBuilder & ROF1 \newline ROF1.3 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF21 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		ConcretePolygon & ROF1.3 \newline ROF1.4\\
+		ConcretePolygonFactory & ROF1 \newline ROF16 \newline ROF19 \newline ROF4\\
+		Coordinate & ROF1.3 \newline ROF1.4\\
+		Customer & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF20 \newline ROF4 \newline ROF47 \newline ROF48 \newline ROF48.1 \newline ROF5 \newline ROF6 \newline ROF9\\
+		DataFromServer & ROF1 \newline ROF11 \newline ROF14 \newline ROF16 \newline ROF21 \newline ROF22 \newline ROF4 \newline ROF6\\
+		DataToServer & ROF1 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF20 \newline ROF21 \newline ROF4 \newline ROF5 \newline ROF6 \newline ROF9\\
+		DeGeOPView & RFF24.4 \newline RFF25 \newline RFF25.1 \newline RFF26 \newline RFF26.1 \newline ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19.4 \newline ROF21 \newline ROF24 \newline ROF24.1 \newline ROF24.2 \newline ROF24.3 \newline ROF39 \newline ROF4 \newline ROF4.1.1 \newline ROF4.1.2 \newline ROF4.1.3 \newline ROF4.2 \newline ROF4.3 \newline ROF4.5 \newline ROF40 \newline ROF41 \newline ROF47 \newline ROF48 \newline ROF5 \newline ROF6 \newline ROF6.11 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		Director & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF21 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		Edge & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF11 \newline ROF12 \newline ROF14 \newline ROF15 \newline ROF5\\
+		EdgeAction & ROF11 \newline ROF14 \newline ROF15\\
+		EdgeActionCreator & RFF14.5 \newline ROF11 \newline ROF14 \newline ROF14.7 \newline ROF15 \newline ROF15.1\\
+		EdgeReducer & RFF14.5 \newline ROF11 \newline ROF11.5 \newline ROF14 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF15.1\\
+		EditAssetButtons & ROF4 \newline ROF4.2.1 \newline ROF4.4\\
+		EditAssetContent & ROF4 \newline ROF4.2.1 \newline ROF4.2.2 \newline ROF4.2.2.1 \newline ROF4.2.3 \newline ROF4.2.3.6 \newline ROF4.2.4 \newline ROF4.2.4.4 \newline ROF4.2.5 \newline ROF4.2.5.2 \newline ROF4.2.6 \newline ROF4.2.6.1 \newline ROF4.2.7 \newline ROF4.2.7.1 \newline ROF4.4\\
+		EditAssetSidebarFactory & ROF4 \newline ROF4.2 \newline ROF4.2.1\\
+		EditEdgeButtons & RFF14.5 \newline ROF14 \newline ROF14.3 \newline ROF14.7\\
+		EditEdgeContent & RFF14.4 \newline RFF14.5 \newline RFF14.5.1 \newline RFF14.5.1.1 \newline RFF14.5.2 \newline RFF14.5.2.1 \newline ROF14\\
+		EditEdgeSidebarFactory & ROF14\\
+		EditNodeButtons & ROF9 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.10 \newline ROF9.2 \newline ROF9.9\\
+		EditNodeContent & ROF1.2.3.3 \newline ROF14.1 \newline ROF14.2 \newline ROF9 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.10 \newline ROF9.11 \newline ROF9.12 \newline ROF9.12.1 \newline ROF9.12.1.1 \newline ROF9.3 \newline ROF9.4 \newline ROF9.5 \newline ROF9.5.2 \newline ROF9.5.2.1 \newline ROF9.5.3 \newline ROF9.5.3.1 \newline ROF9.5.4 \newline ROF9.5.4.1 \newline ROF9.6 \newline ROF9.6.2 \newline ROF9.6.2.1 \newline ROF9.7 \newline ROF9.7.2 \newline ROF9.7.2.1 \newline ROF9.8\\
+		EditNodeSidebarFactory & ROF9\\
+		EditScenarioButtons & ROF19 \newline ROF19.1.11 \newline ROF19.2 \newline ROF19.3\\
+		EditScenarioContent & ROF19 \newline ROF19.1 \newline ROF19.1.1 \newline ROF19.1.1.1 \newline ROF19.1.2 \newline ROF19.1.2.1 \newline ROF19.1.3 \newline ROF19.1.3.11 \newline ROF19.1.4 \newline ROF19.1.4.1 \newline ROF19.1.5 \newline ROF19.1.5.1 \newline ROF19.1.6 \newline ROF19.1.6.1 \newline ROF19.4\\
+		EditScenarioSidebarFactory & ROF19\\
+		Exit & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF5\\
+		InsertAssetButtons & ROF6.10\\
+		InsertAssetContent & ROF1.2 \newline ROF1.2.1 \newline ROF1.2.1.1 \newline ROF1.2.2 \newline ROF1.2.2.1 \newline ROF1.2.3 \newline ROF1.2.3.1 \newline ROF1.2.3.2 \newline ROF1.2.3.3 \newline ROF1.2.3.4 \newline ROF1.2.3.5 \newline ROF1.2.3.6 \newline ROF1.2.4 \newline ROF1.2.4.1 \newline ROF1.2.4.2 \newline ROF1.2.4.3 \newline ROF1.2.4.4 \newline ROF1.2.5 \newline ROF1.2.5.1 \newline ROF1.2.5.2 \newline ROF1.2.6 \newline ROF1.2.6.1 \newline ROF1.2.7 \newline ROF1.2.7.1 \newline ROF1.6\\
+		InsertAssetSidebarFactory & ROF1 \newline ROF1.5\\
+		InsertEdgeButtons & ROF11.5\\
+		InsertEdgeContent & RFF11.2 \newline RFF11.3 \newline RFF11.3.1 \newline RFF11.3.1.1 \newline RFF11.3.2 \newline RFF11.6 \newline RFF11.7 \newline ROF1.6 \newline ROF11.3.2.1 \newline ROF11.4\\
+		InsertEdgeSidebarFactory & ROF11\\
+		InsertNodeButtons & ROF6.1 \newline ROF6.10 \newline ROF6.9 \newline ROF9.1\\
+		InsertNodeContent & ROF6.1 \newline ROF6.12 \newline ROF6.12.1 \newline ROF6.12.1.1 \newline ROF6.3 \newline ROF6.3.1 \newline ROF6.3.2 \newline ROF6.3.3 \newline ROF6.3.4 \newline ROF6.3.5 \newline ROF6.3.6 \newline ROF6.4 \newline ROF6.5 \newline ROF6.5.2 \newline ROF6.5.2.1 \newline ROF6.5.3 \newline ROF6.5.3.1 \newline ROF6.5.4 \newline ROF6.5.4.1 \newline ROF6.6 \newline ROF6.6.2 \newline ROF6.6.2.1 \newline ROF6.7 \newline ROF6.7.2 \newline ROF6.7.2.1 \newline ROF6.8 \newline ROF9.1\\
+		InsertNodeSidebarFactory & ROF6\\
+		InsertScenarioButtons & ROF16.1.11 \newline ROF16.2 \newline ROF16.3\\
+		InsertScenarioContent & ROF10.2 \newline ROF11.4 \newline ROF16.1 \newline ROF16.1.1 \newline ROF16.1.1.1 \newline ROF16.1.2 \newline ROF16.1.2.1 \newline ROF16.1.3 \newline ROF16.1.3.1 \newline ROF16.1.3.10 \newline ROF16.1.3.11 \newline ROF16.1.3.2 \newline ROF16.1.3.3 \newline ROF16.1.3.4 \newline ROF16.1.3.5 \newline ROF16.1.3.6 \newline ROF16.1.3.7 \newline ROF16.1.3.8 \newline ROF16.1.3.9 \newline ROF16.1.4 \newline ROF16.1.4.1 \newline ROF16.1.5 \newline ROF16.1.5.1 \newline ROF16.1.6 \newline ROF16.1.6.1\\
+		InsertScenarioSidebarFactory & ROF16\\
+		Machine & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF5\\
+		MapWrapper & RFF16.1.10 \newline RFF16.1.9 \newline RFF19.1.10 \newline RFF19.1.9 \newline RFF24.4 \newline ROF1 \newline ROF1.1 \newline ROF1.1.1 \newline ROF1.1.2 \newline ROF1.1.3 \newline ROF1.3 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF11.1 \newline ROF11.1.1 \newline ROF11.1.2 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF16.1.7 \newline ROF16.1.7.1 \newline ROF16.1.8 \newline ROF16.1.8.1 \newline ROF16.2 \newline ROF16.3 \newline ROF19.1.7 \newline ROF19.1.7.1 \newline ROF19.1.8 \newline ROF19.1.8.1 \newline ROF24 \newline ROF24.1 \newline ROF24.2 \newline ROF24.3 \newline ROF4 \newline ROF4.1 \newline ROF4.3 \newline ROF42 \newline ROF43 \newline ROF44 \newline ROF5 \newline ROF6 \newline ROF6.1 \newline ROF6.2 \\
+		MapWrapper & ROF9 \newline ROF9.1 \newline ROF9.1.1 \newline ROF9.1.3 \newline ROF9.2 \newline ROF9.9\\
+		MessageWrapper & RFF14.8 \newline ROF1 \newline ROF1.3 \newline ROF1.5 \newline ROF1.6 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF15.1 \newline ROF15.2 \newline ROF16 \newline ROF16.4 \newline ROF19.4 \newline ROF20 \newline ROF20.1 \newline ROF22 \newline ROF23 \newline ROF4 \newline ROF4.3 \newline ROF4.5 \newline ROF47 \newline ROF48 \newline ROF5 \newline ROF6 \newline ROF6.11 \newline ROF9 \newline ROF9.11 \newline ROF9.2 \newline ROF9.9\\
+		Node & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF6 \newline ROF7 \newline ROF9 \newline ROF9.10\\
+		NodeAction & ROF10 \newline ROF6 \newline ROF9 \newline ROF9.10\\
+		NodeActionCreator & ROF10 \newline ROF10.1 \newline ROF6 \newline ROF9 \newline ROF9.10\\
+		NodeReducer & ROF10 \newline ROF10.1 \newline ROF6 \newline ROF9 \newline ROF9.10\\
+		Polygon & ROF1 \newline ROF1.5 \newline ROF10 \newline ROF15 \newline ROF16 \newline ROF19 \newline ROF4 \newline ROF5\\
+		PolygonFactory & ROF19\\
+		PolygonOperationWrapper & RFF16.1.10 \newline RFF16.1.9 \newline ROF1 \newline ROF1.1 \newline ROF1.1.2 \newline ROF1.5 \newline ROF10 \newline ROF15 \newline ROF16 \newline ROF16.1.7.1 \newline ROF16.1.8 \newline ROF16.1.8.1 \newline ROF19.1.7 \newline ROF19.1.8 \newline ROF20.2 \newline ROF4 \newline ROF4.1 \newline ROF5\\
+		Process & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF5\\
+		Queue & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF5\\
+		\glo{Reducer}{Reducer} & RFF14.5 \newline ROF1 \newline ROF1.5 \newline ROF10 \newline ROF10.1 \newline ROF11 \newline ROF11.5 \newline ROF14 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF15.1 \newline ROF16 \newline ROF4 \newline ROF5 \newline ROF5.1 \newline ROF6 \newline ROF6.10 \newline ROF9\\
+		Resource & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF5\\
+		Scenario & ROF19 \newline ROF19.1 \newline ROF19.3 \newline ROF20\\
+		ScenarioAction & ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3\\
+		ScenarioActionCreator & ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3\\
+		ScenarioReducer & ROF16 \newline ROF19 \newline ROF19.1 \newline ROF19.3\\
+		Sidebar & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		SidebarFacade & ROF1 \newline ROF1.3 \newline ROF1.4 \newline ROF1.5 \newline ROF10 \newline ROF11 \newline ROF14 \newline ROF15 \newline ROF16 \newline ROF4 \newline ROF4.3 \newline ROF5 \newline ROF6 \newline ROF9 \newline ROF9.2 \newline ROF9.9\\
+		Source & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF5\\
+		StoreDeGeOP & RFF25 \newline RFF25.1 \newline RFF26 \newline RFF26.1 \newline ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF10.1 \newline ROF11.5 \newline ROF14.1 \newline ROF14.2 \newline ROF15 \newline ROF20 \newline ROF47 \newline ROF48 \newline ROF48.1 \newline ROF5 \newline ROF5.1 \newline ROF6.10\\
+		TransportEdge & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF5\\
+		ViewAssetButtons & ROF2 \newline ROF3 \newline ROF5.1 \newline ROF5.2 \newline ROF6.10\\
+		ViewAssetContent & ROF2 \newline ROF3 \newline ROF42 \newline ROF5.2 \newline ROF6.10\\
+		ViewAssetSidebarFactory & ROF5\\
+		ViewEdgeButtons & ROF12 \newline ROF13 \newline ROF14.6\\
+		ViewEdgeContent & ROF12 \newline ROF13 \newline ROF44\\
+		ViewEdgeSidebarFactory & ROF15\\
+		ViewNodeButtons & ROF10.1 \newline ROF7 \newline ROF8\\
+		ViewNodeContent & ROF10.2 \newline ROF43 \newline ROF7 \newline ROF8\\
+		ViewNodeSidebarFactory & ROF10\\
+		ViewScenarioButtons & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF18 \newline ROF20 \newline ROF4.3 \newline ROF5 \newline ROF6.10 \newline ROF6.9 \newline ROF9.2 \newline ROF9.9\\
+		ViewScenarioContent & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF17 \newline ROF18 \newline ROF19.1.11 \newline ROF19.2 \newline ROF20 \newline ROF4.3 \newline ROF5 \newline ROF6.10 \newline ROF6.9 \newline ROF9.2 \newline ROF9.9\\
+		ViewScenarioSidebarFactory & ROF1.3 \newline ROF1.4 \newline ROF10 \newline ROF15 \newline ROF20 \newline ROF4.3 \newline ROF5 \newline ROF9.2 \newline ROF9.9\\
+		\rowcolor{white}
+		\caption{Tracciamento classe-requisiti}
+	\end{longtable}
+	
+	\newpage
+	
+	\subsection{Tracciamento requisiti-classi}
+	
+	\def\arraystretch{1.5}
+	\rowcolors{2}{D}{P}
+	\begin{longtable}{p{2.5cm}!{\VRule[1pt]}p{5cm}}
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Classe} \\ 
+		\endfirsthead
+		\rowcolor{I}
+		\color{white} \textbf{Requisito} & \color{white} \textbf{Classe} \\ 
+		\endhead
+		RFF11.2 & InsertEdgeContent\\
+		RFF11.3 & InsertEdgeContent\\
+		RFF11.3.1 & InsertEdgeContent\\
+		RFF11.3.1.1 & InsertEdgeContent\\
+		RFF11.3.2 & InsertEdgeContent\\
+		RFF11.6 & InsertEdgeContent\\
+		RFF11.7 & InsertEdgeContent\\
+		RFF14.4 & EditEdgeContent\\
+		RFF14.5 & EdgeActionCreator \newline EdgeReducer \newline EditEdgeButtons \newline EditEdgeContent \newline Reducer\\
+		RFF14.5.1 & EditEdgeContent\\
+		RFF14.5.1.1 & EditEdgeContent\\
+		RFF14.5.2 & EditEdgeContent\\
+		RFF14.5.2.1 & EditEdgeContent\\
+		RFF14.8 & MessageWrapper\\
+		RFF16.1.10 & MapWrapper \newline PolygonOperationWrapper\\
+		RFF16.1.9 & MapWrapper \newline PolygonOperationWrapper\\
+		RFF19.1.10 & MapWrapper\\
+		RFF19.1.9 & ButtonWrapper \newline MapWrapper\\
+		RFF24.4 & DeGeOPView \newline MapWrapper\\
+		RFF25 & DeGeOPView \newline StoreDeGeOP\\
+		RFF25.1 & DeGeOPView \newline StoreDeGeOP\\
+		RFF26 & DeGeOPView \newline StoreDeGeOP\\
+		RFF26.1 & DeGeOPView \newline StoreDeGeOP\\
+		ROF1 & Asset \newline AssetAction \newline AssetActionCreator \newline AssetReducer \newline ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline ConcretePolygonFactory \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline InsertAssetSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF1.1 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF1.1.1 & MapWrapper\\
+		ROF1.1.2 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF1.1.3 & MapWrapper\\
+		ROF1.2 & InsertAssetContent\\
+		ROF1.2.1 & InsertAssetContent\\
+		ROF1.2.1.1 & InsertAssetContent\\
+		ROF1.2.2 & InsertAssetContent\\
+		ROF1.2.2.1 & InsertAssetContent\\
+		ROF1.2.3 & InsertAssetContent\\
+		ROF1.2.3.1 & InsertAssetContent\\
+		ROF1.2.3.2 & InsertAssetContent\\
+		ROF1.2.3.3 & EditNodeContent \newline InsertAssetContent\\
+		ROF1.2.3.4 & InsertAssetContent\\
+		ROF1.2.3.5 & InsertAssetContent\\
+		ROF1.2.3.6 & InsertAssetContent\\
+		ROF1.2.4 & InsertAssetContent\\
+		ROF1.2.4.1 & InsertAssetContent\\
+		ROF1.2.4.2 & InsertAssetContent\\
+		ROF1.2.4.3 & InsertAssetContent\\
+		ROF1.2.4.4 & InsertAssetContent\\
+		ROF1.2.5 & InsertAssetContent\\
+		ROF1.2.5.1 & InsertAssetContent\\
+		ROF1.2.5.2 & InsertAssetContent\\
+		ROF1.2.6 & InsertAssetContent\\
+		ROF1.2.6.1 & InsertAssetContent\\
+		ROF1.2.7 & InsertAssetContent\\
+		ROF1.2.7.1 & InsertAssetContent\\
+		ROF1.3 & Asset \newline ButtonWrapper \newline ConcreteDeGeOPViewBuilder \newline ConcretePolygon \newline Coordinate \newline Customer \newline DeGeOPView \newline Director \newline Edge \newline Exit \newline Machine \newline MapWrapper \newline MessageWrapper \newline Node \newline Process \newline Queue \newline Resource \newline Sidebar \newline SidebarFacade \newline Source \newline StoreDeGeOP \newline TransportEdge \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF1.4 & Asset \newline ButtonWrapper \newline ConcretePolygon \newline Coordinate \newline Customer \newline DeGeOPView \newline Director \newline Edge \newline Exit \newline Machine \newline Node \newline Process \newline Queue \newline Resource \newline Sidebar \newline SidebarFacade \newline Source \newline StoreDeGeOP \newline TransportEdge \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF1.5 & Asset \newline AssetAction \newline AssetActionCreator \newline AssetReducer \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataToServer \newline DeGeOPView \newline Director \newline InsertAssetSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF1.6 & InsertAssetContent \newline InsertEdgeContent \newline MessageWrapper\\
+		ROF10 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataToServer \newline DeGeOPView \newline Director \newline Edge \newline Exit \newline Machine \newline MapWrapper \newline MessageWrapper \newline Node \newline NodeAction \newline NodeActionCreator \newline NodeReducer \newline Polygon \newline PolygonOperationWrapper \newline Process \newline Queue \newline Reducer \newline Resource \newline Sidebar \newline SidebarFacade \newline Source \newline StoreDeGeOP \newline TransportEdge \newline ViewNodeSidebarFactory \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF10.1 & NodeActionCreator \newline NodeReducer \newline Reducer \newline StoreDeGeOP \newline ViewNodeButtons\\
+		ROF10.2 & InsertScenarioContent \newline ViewNodeContent\\
+		ROF11 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline Edge \newline EdgeAction \newline EdgeActionCreator \newline EdgeReducer \newline InsertEdgeSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF11.1 & MapWrapper\\
+		ROF11.1.1 & MapWrapper\\
+		ROF11.1.2 & MapWrapper\\
+		ROF11.3.2.1 & InsertEdgeContent\\
+		ROF11.4 & InsertEdgeContent \newline InsertScenarioContent\\
+		ROF11.5 & EdgeReducer \newline InsertEdgeButtons \newline Reducer \newline StoreDeGeOP\\
+		ROF12 & Edge \newline ViewEdgeButtons \newline ViewEdgeContent\\
+		ROF13 & ViewEdgeButtons \newline ViewEdgeContent\\
+		ROF14 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline Edge \newline EdgeAction \newline EdgeActionCreator \newline EdgeReducer \newline EditEdgeButtons \newline EditEdgeContent \newline EditEdgeSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF14.1 & EdgeReducer \newline EditNodeContent \newline Reducer \newline StoreDeGeOP\\
+		ROF14.2 & EdgeReducer \newline EditNodeContent \newline Reducer \newline StoreDeGeOP\\
+		ROF14.3 & EditEdgeButtons\\
+		ROF14.6 & ViewEdgeButtons\\
+		ROF14.7 & EdgeActionCreator \newline EditEdgeButtons\\
+		ROF15 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataToServer \newline DeGeOPView \newline Director \newline Edge \newline EdgeAction \newline EdgeActionCreator \newline EdgeReducer \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Process \newline Queue \newline Reducer \newline Resource \newline Sidebar \newline SidebarFacade \newline Source \newline StoreDeGeOP \newline TransportEdge \newline ViewEdgeSidebarFactory \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF15.1 & EdgeActionCreator \newline EdgeReducer \newline MessageWrapper \newline Reducer\\
+		ROF15.2 & MessageWrapper\\
+		ROF16 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline ConcretePolygonFactory \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline InsertScenarioSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Reducer \newline ScenarioAction \newline ScenarioActionCreator \newline ScenarioReducer \newline Sidebar \newline SidebarFacade\\
+		ROF16.1 & InsertScenarioContent\\
+		ROF16.1.1 & InsertScenarioContent\\
+		ROF16.1.1.1 & InsertScenarioContent\\
+		ROF16.1.11 & InsertScenarioButtons\\
+		ROF16.1.2 & InsertScenarioContent\\
+		ROF16.1.2.1 & InsertScenarioContent\\
+		ROF16.1.3 & InsertScenarioContent\\
+		ROF16.1.3.1 & InsertScenarioContent\\
+		ROF16.1.3.10 & InsertScenarioContent\\
+		ROF16.1.3.11 & InsertScenarioContent\\
+		ROF16.1.3.2 & InsertScenarioContent\\
+		ROF16.1.3.3 & InsertScenarioContent\\
+		ROF16.1.3.4 & InsertScenarioContent\\
+		ROF16.1.3.5 & InsertScenarioContent\\
+		ROF16.1.3.6 & InsertScenarioContent\\
+		ROF16.1.3.7 & InsertScenarioContent\\
+		ROF16.1.3.8 & InsertScenarioContent\\
+		ROF16.1.3.9 & InsertScenarioContent\\
+		ROF16.1.4 & InsertScenarioContent\\
+		ROF16.1.4.1 & InsertScenarioContent\\
+		ROF16.1.5 & InsertScenarioContent\\
+		ROF16.1.5.1 & InsertScenarioContent\\
+		ROF16.1.6 & InsertScenarioContent\\
+		ROF16.1.6.1 & InsertScenarioContent\\
+		ROF16.1.7 & MapWrapper\\
+		ROF16.1.7.1 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF16.1.8 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF16.1.8.1 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF16.2 & InsertScenarioButtons \newline MapWrapper\\
+		ROF16.3 & InsertScenarioButtons \newline MapWrapper\\
+		ROF16.4 & MessageWrapper\\
+		ROF17 & ViewScenarioContent\\
+		ROF18 & ViewScenarioButtons \newline ViewScenarioContent\\
+		ROF19 & ConcreteDeGeOPViewBuilder \newline ConcretePolygonFactory \newline DataToServer \newline Director \newline EditScenarioButtons \newline EditScenarioContent \newline EditScenarioSidebarFactory \newline Polygon \newline PolygonFactory \newline Scenario \newline ScenarioAction \newline ScenarioActionCreator \newline ScenarioReducer\\
+		ROF19.1 & EditScenarioContent \newline Scenario \newline ScenarioAction \newline ScenarioActionCreator \newline ScenarioReducer\\
+		ROF19.1.1 & EditScenarioContent\\
+		ROF19.1.1.1 & EditScenarioContent\\
+		ROF19.1.11 & EditScenarioButtons \newline ViewScenarioContent\\
+		ROF19.1.2 & EditScenarioContent\\
+		ROF19.1.2.1 & EditScenarioContent\\
+		ROF19.1.3 & EditScenarioContent\\
+		ROF19.1.3.11 & EditScenarioContent\\
+		ROF19.1.4 & EditScenarioContent\\
+		ROF19.1.4.1 & EditScenarioContent\\
+		ROF19.1.5 & EditScenarioContent\\
+		ROF19.1.5.1 & EditScenarioContent\\
+		ROF19.1.6 & EditScenarioContent\\
+		ROF19.1.6.1 & EditScenarioContent\\
+		ROF19.1.7 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF19.1.7.1 & MapWrapper\\
+		ROF19.1.8 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF19.1.8.1 & MapWrapper\\
+		ROF19.2 & EditScenarioButtons \newline ViewScenarioContent\\
+		ROF19.3 & EditScenarioButtons \newline Scenario \newline ScenarioAction \newline ScenarioActionCreator \newline ScenarioReducer\\
+		ROF19.4 & DeGeOPView \newline EditScenarioContent \newline MessageWrapper\\
+		ROF2 & Asset \newline ViewAssetButtons \newline ViewAssetContent\\
+		ROF20 & Customer \newline DataToServer \newline MessageWrapper \newline Scenario \newline StoreDeGeOP \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF20.1 & MessageWrapper\\
+		ROF20.2 & PolygonOperationWrapper\\
+		ROF21 & Analysis \newline AnalysisAction \newline AnalysisActionCreator \newline AnalysisReducer \newline ConcreteDeGeOPViewBuilder \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director\\
+		ROF22 & Analysis \newline AnalysisButtons \newline AnalysisContent \newline DataFromServer \newline MessageWrapper\\
+		ROF23 & MessageWrapper\\
+		ROF24 & DeGeOPView \newline MapWrapper\\
+		ROF24.1 & DeGeOPView \newline MapWrapper\\
+		ROF24.2 & DeGeOPView \newline MapWrapper\\
+		ROF24.3 & DeGeOPView \newline MapWrapper\\
+		ROF3 & ViewAssetButtons \newline ViewAssetContent\\
+		ROF39 & DeGeOPView\\
+		ROF4 & Asset \newline AssetAction \newline AssetActionCreator \newline AssetReducer \newline ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline ConcretePolygonFactory \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline EditAssetButtons \newline EditAssetContent \newline EditAssetSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF4.1 & MapWrapper \newline PolygonOperationWrapper\\
+		ROF4.1.1 & DeGeOPView\\
+		ROF4.1.2 & DeGeOPView\\
+		ROF4.1.3 & DeGeOPView\\
+		ROF4.2 & DeGeOPView \newline EditAssetSidebarFactory\\
+		ROF4.2.1 & EditAssetButtons \newline EditAssetContent \newline EditAssetSidebarFactory\\
+		ROF4.2.2 & EditAssetContent\\
+		ROF4.2.2.1 & EditAssetContent\\
+		ROF4.2.3 & EditAssetContent\\
+		ROF4.2.3.6 & EditAssetContent\\
+		ROF4.2.4 & EditAssetContent\\
+		ROF4.2.4.4 & EditAssetContent\\
+		ROF4.2.5 & EditAssetContent\\
+		ROF4.2.5.2 & EditAssetContent\\
+		ROF4.2.6 & EditAssetContent\\
+		ROF4.2.6.1 & EditAssetContent\\
+		ROF4.2.7 & EditAssetContent\\
+		ROF4.2.7.1 & EditAssetContent\\
+		ROF4.3 & ButtonWrapper \newline ConcreteDeGeOPViewBuilder \newline DeGeOPView \newline Director \newline MapWrapper \newline MessageWrapper \newline Sidebar \newline SidebarFacade \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF4.4 & Asset \newline AssetAction \newline AssetActionCreator \newline AssetReducer \newline EditAssetButtons \newline EditAssetContent\\
+		ROF4.5 & DeGeOPView \newline MessageWrapper\\
+		ROF40 & DeGeOPView\\
+		ROF41 & DeGeOPView\\
+		ROF42 & MapWrapper \newline ViewAssetContent\\
+		ROF43 & MapWrapper \newline ViewNodeContent\\
+		ROF44 & MapWrapper \newline ViewEdgeContent\\
+		ROF45 & AnalysisButtons \newline AnalysisContent \newline AnalysisSidebarFactory\\
+		ROF46 & AnalysisButtons \newline AnalysisContent \newline AnalysisSidebarFactory\\
+		ROF47 & Analysis \newline Customer \newline DeGeOPView \newline MessageWrapper \newline StoreDeGeOP\\
+		ROF48 & Customer \newline DeGeOPView \newline MessageWrapper \newline StoreDeGeOP\\
+		ROF48.1 & AbstractAnalysisButtons \newline Customer \newline StoreDeGeOP\\
+		ROF5 & Asset \newline AssetAction \newline AssetActionCreator \newline AssetReducer \newline ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataToServer \newline DeGeOPView \newline Director \newline Edge \newline Exit \newline Machine \newline MapWrapper \newline MessageWrapper \newline Polygon \newline PolygonOperationWrapper \newline Process \newline Queue \newline Reducer \newline Resource \newline Sidebar \newline SidebarFacade \newline Source \newline StoreDeGeOP \newline TransportEdge \newline ViewAssetSidebarFactory \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF5.1 & AssetActionCreator \newline AssetReducer \newline Reducer \newline StoreDeGeOP \newline ViewAssetButtons\\
+		ROF5.2 & ViewAssetButtons \newline ViewAssetContent\\
+		ROF6 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataFromServer \newline DataToServer \newline DeGeOPView \newline Director \newline InsertNodeSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Node \newline NodeAction \newline NodeActionCreator \newline NodeReducer \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF6.1 & InsertNodeButtons \newline InsertNodeContent \newline MapWrapper\\
+		ROF6.10 & AssetActionCreator \newline AssetReducer \newline InsertAssetButtons \newline InsertNodeButtons \newline Reducer \newline StoreDeGeOP \newline ViewAssetButtons \newline ViewAssetContent \newline ViewScenarioButtons \newline ViewScenarioContent\\
+		ROF6.11 & DeGeOPView \newline MessageWrapper\\
+		ROF6.12 & InsertNodeContent\\
+		ROF6.12.1 & InsertNodeContent\\
+		ROF6.12.1.1 & InsertNodeContent\\
+		ROF6.2 & MapWrapper\\
+		ROF6.3 & InsertNodeContent\\
+		ROF6.3.1 & InsertNodeContent\\
+		ROF6.3.2 & InsertNodeContent\\
+		ROF6.3.3 & InsertNodeContent\\
+		ROF6.3.4 & InsertNodeContent\\
+		ROF6.3.5 & InsertNodeContent\\
+		ROF6.3.6 & InsertNodeContent\\
+		ROF6.4 & InsertNodeContent\\
+		ROF6.5 & InsertNodeContent\\
+		ROF6.5.2 & InsertNodeContent\\
+		ROF6.5.2.1 & InsertNodeContent\\
+		ROF6.5.3 & InsertNodeContent\\
+		ROF6.5.3.1 & InsertNodeContent\\
+		ROF6.5.4 & InsertNodeContent\\
+		ROF6.5.4.1 & InsertNodeContent\\
+		ROF6.6 & InsertNodeContent\\
+		ROF6.6.2 & InsertNodeContent\\
+		ROF6.6.2.1 & InsertNodeContent\\
+		ROF6.7 & InsertNodeContent\\
+		ROF6.7.2 & InsertNodeContent\\
+		ROF6.7.2.1 & InsertNodeContent\\
+		ROF6.8 & InsertNodeContent\\
+		ROF6.9 & InsertNodeButtons \newline ViewScenarioButtons \newline ViewScenarioContent\\
+		ROF7 & Node \newline ViewNodeButtons \newline ViewNodeContent\\
+		ROF8 & ViewNodeButtons \newline ViewNodeContent\\
+		ROF9 & ButtonWrapper \newline CallManager \newline ConcreteDeGeOPViewBuilder \newline Customer \newline DataToServer \newline DeGeOPView \newline Director \newline EditNodeButtons \newline EditNodeContent \newline EditNodeSidebarFactory \newline MapWrapper \newline MessageWrapper \newline Node \newline NodeAction \newline NodeActionCreator \newline NodeReducer \newline Reducer \newline Sidebar \newline SidebarFacade\\
+		ROF9.1 & InsertNodeButtons \newline InsertNodeContent \newline MapWrapper\\
+		ROF9.1.1 & EditNodeButtons \newline EditNodeContent \newline MapWrapper\\
+		ROF9.1.3 & EditNodeButtons \newline EditNodeContent \newline MapWrapper\\
+		ROF9.10 & EditNodeButtons \newline EditNodeContent \newline Node \newline NodeAction \newline NodeActionCreator \newline NodeReducer\\
+		ROF9.11 & EditNodeContent \newline MessageWrapper\\
+		ROF9.12 & EditNodeContent\\
+		ROF9.12.1 & EditNodeContent\\
+		ROF9.12.1.1 & EditNodeContent\\
+		ROF9.2 & ButtonWrapper \newline ConcreteDeGeOPViewBuilder \newline DeGeOPView \newline Director \newline EditNodeButtons \newline MapWrapper \newline MessageWrapper \newline Sidebar \newline SidebarFacade \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		ROF9.3 & EditNodeContent\\
+		ROF9.4 & EditNodeContent\\
+		ROF9.5 & EditNodeContent\\
+		ROF9.5.2 & EditNodeContent\\
+		ROF9.5.2.1 & EditNodeContent\\
+		ROF9.5.3 & EditNodeContent\\
+		ROF9.5.3.1 & EditNodeContent\\
+		ROF9.5.4 & EditNodeContent\\
+		ROF9.5.4.1 & EditNodeContent\\
+		ROF9.6 & EditNodeContent\\
+		ROF9.6.2 & EditNodeContent\\
+		ROF9.6.2.1 & EditNodeContent\\
+		ROF9.7 & EditNodeContent\\
+		ROF9.7.2 & EditNodeContent\\
+		ROF9.7.2.1 & EditNodeContent\\
+		ROF9.8 & EditNodeContent\\
+		ROF9.9 & ButtonWrapper \newline ConcreteDeGeOPViewBuilder \newline DeGeOPView \newline Director \newline EditNodeButtons \newline MapWrapper \newline MessageWrapper \newline Sidebar \newline SidebarFacade \newline ViewScenarioButtons \newline ViewScenarioContent \newline ViewScenarioSidebarFactory\\
+		\rowcolor{white}
+		\caption{Tracciamento requisito-classi}
+	\end{longtable}
+	
+	

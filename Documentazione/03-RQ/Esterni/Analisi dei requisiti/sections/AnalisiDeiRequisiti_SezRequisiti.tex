@@ -1,0 +1,699 @@
+\section{Requisiti}
+\subsection{Classificazione dei requisiti}
+I requisiti sono classificati secondo la seguente notazione:
+\begin{center}
+	R[Importanza][Tipologia][Codice]
+\end{center}
+dove:
+\begin{itemize}
+	\item \textbf{importanza:} può assumere questi valori:
+	\begin{itemize}
+		\item \textbf{O:} indica un requisito obbligatorio;
+		\item \textbf{D:} indica un requisito desiderabile;
+		\item \textbf{F:} indica un requisito opzionale (facoltativo).
+	\end{itemize}
+	\item \textbf{tipologia:} può assumere questi valori:
+	\begin{itemize}
+		\item \textbf{F:} indica un requisito funzionale;
+		\item \textbf{Q:} indica un requisito di qualità;
+		\item \textbf{P:} indica un requisito prestazionale;
+		\item \textbf{V:} indica un requisito di vincolo.
+	\end{itemize}
+	\item \textbf{codice:} codice numerico che identifica il requisito, deve essere univoco ed indicato in forma gerarchica, da sinistra a destra, nella notazione X.Y.Z.
+\end{itemize}
+\subsection{Fonti}
+Le fonti dei requisiti sono una (o più) tra le seguenti:
+	\begin{itemize}
+		\item \textbf{capitolato:} requisito derivante dallo studio del capitolato;
+		\item \textbf{verbale interno:} requisito derivante da uno dei seguenti verbali interni:
+		\begin{itemize}
+			\item \vunoi;
+			\item \vduei;
+			\item \vtrei;
+			\item \vquattroi.
+		\end{itemize}
+	\item \textbf{verbale esterno:} requisito derivante da uno dei seguenti verbali esterni:
+	\begin{itemize}
+		\item \vunoe;
+		\item \vduee.
+	\end{itemize}
+	\item \textbf{interno:} requisito identificato dagli \analisti{} tramite discussioni interne;
+	\item \textbf{caso d'uso:} requisito derivante da un caso d'uso, di cui ne verrà riportato l'identificativo.
+	\end{itemize}
+	
+	
+	Quando la fonte di un requisito è un verbale, verrà riportato l'ID della decisione che ha generato quel requisito. Per avere informazioni sulla classificazione delle decisioni consultare le \ndpv.
+	
+\subsection{Requisiti funzionali}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{1.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione}                                                                                        & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione}                                                                                        & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	
+	ROF1                             & Funzionale\newline               & L'utente può aggiungere un asset                                                                                         & VI_3.3 \newline UC1          
+	\\
+	ROF1.1                           & Funzionale\newline               & L'utente può disegnare il perimetro dell'asset su mappa                                                                  & Interno \newline UC1.1       
+	\\
+	ROF1.1.1                         & Funzionale\newline               & L'utente può aggiungere un segmento del perimetro dell'asset sulla mappa                                                 & Interno \newline UC1.1.1     
+	\\
+	ROF1.1.2                         & Funzionale\newline               & L'utente può cancellare l'ultimo segmento del perimetro dell'asset che sta disegnando sulla mappa                        & Interno \newline UC1.1.2     
+	\\
+	ROF1.1.3                         & Funzionale\newline               & L'utente può chiudere il perimetro dell'asset che sta disegnando sulla mappa, quando l'ultimo nodo coincide con il primo & Interno \newline UC1.1.3     
+	\\
+	ROF1.2                           & Funzionale\newline               & L'utente può compilare i dati dell'asset                                                                                 & Interno \newline UC1.2       
+	\\
+	ROF1.2.1                         & Funzionale\newline               & L'utente può compilare il nome dell'asset                                                                                & Interno \newline UC1.2.1     
+	\\
+	ROF1.2.1.1&Funzionale\newline  & Il nome non deve: 
+	- essere vuoto;
+	- essere più lungo di 50 caratteri;
+	- iniziare e/o finire con uno spazio; 
+	- contenere caratteri speciali & Interno \\
+	ROF1.2.2                         & Funzionale\newline               & L'utente può compilare la descrizione dell'asset                                                                         & Interno \newline UC1.2.2     
+	\\
+	ROF1.2.2.1&Funzionale\newline  & La descrizione dell'asset non deve:
+	- essere vuota;
+	- essere più lunga di 5000 caratteri; 
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali diversi dall'apostrofo & Interno \\
+	ROF1.2.3                         & Funzionale\newline               & L'utente può scegliere il tipo di costruzione dell'asset                                                                 & Interno \newline UC1.2.3     
+	\\
+	ROF1.2.3.1                       & Funzionale\newline               & L'utente può scegliere il tipo di materiale Mattoni                                                                      & Interno                      \\
+	ROF1.2.3.2                       & Funzionale\newline               & L'utente può scegliere il tipo di materiale Calcestruzzo prefabbricato                                                   & Interno                      \\
+	ROF1.2.3.3                       & Funzionale\newline               & L'utente può scegliere il tipo di materiale Acciaio                                                                      & Interno                      \\
+	ROF1.2.3.4                       & Funzionale\newline               & L'utente può scegliere il tipo di materiale Legno                                                                        & Interno                      \\
+	ROF1.2.3.5                       & Funzionale\newline               & L'utente può scegliere il tipo di materiale Struttura costiera                                                           & Interno                      \\
+	ROF1.2.3.6                       & Funzionale\newline               & Il tipo di costruzione deve essere scelto                                                                                 & Interno                      \\
+	ROF1.2.4                         & Funzionale\newline               & L'utente può scegliere a chi appartiene dell'asset                                                                       & Interno \newline UC1.2.4     
+	\\
+	ROF1.2.4.1                       & Funzionale\newline               & L'utente può scegliere se l'asset appartiene all'assicurando                                                             & Interno                      \\
+	ROF1.2.4.2                       & Funzionale\newline               & L'utente può scegliere se l'asset appartiene ad un cliente dell'assicurando                                              & Interno                      \\
+	ROF1.2.4.3                       & Funzionale\newline               & L'utente può scegliere se l'asset appartiene al fornitore dell'assicurando                                               & Interno                      \\
+	ROF1.2.4.4                       & Funzionale\newline               & L'appartenenza dell'asset deve essere scelta                                                                              & Interno                      \\
+	ROF1.2.5                         & Funzionale\newline               & L'utente può scegliere il colore dell'asset                                                                              & Interno \newline UC1.2.5     
+	\\
+	ROF1.2.5.1                       & Funzionale\newline               & L'utente può scegliere il colore da una palette RGB completa                                                             & Interno                      \\
+	ROF1.2.5.2                       & Funzionale\newline               & Il colore dell'asset deve essere scelto                                                                                   & Interno                      \\
+	ROF1.2.6                         & Funzionale\newline               & L'utente può compilare la superficie dell'asset                                                                          & Interno \newline UC1.2.6     
+	\\
+	ROF1.2.6.1&Funzionale\newline  & La superficie (in mq) dell'asset non deve:
+	- essere vuota;
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga  più di 2 per la parte decimale & Interno \\
+	ROF1.2.7                         & Funzionale\newline               & L'utente può compilare il valore unitario dell'asset                                                                     & Interno \newline UC1.2.7     
+	\\
+	ROF1.2.7.1&Funzionale\newline  & Il valore unitario (monetario) dell'asset non deve:
+	- essere più lungo di 20 cifre per la parte intera;
+	- essere più lungo di 2 per la parte decimale & Interno \\
+	ROF1.3                           & Funzionale\newline               & L'utente può interrompere l'aggiunta dell'asset                                                                          & Interno \newline UC30        
+	\\
+	ROF1.4                           & Funzionale\newline               & L'utente può interrompere volontariamente la compilazione dei dati dell'asset                                            & Interno \newline UC1.3       
+	\\
+	ROF1.5                           & Funzionale\newline               & L'utente può confermare l'aggiunta dell'asset                                                                            & Interno \newline UC1.4       
+	\\
+	ROF1.6&Funzionale\newline  & L'utente può visualizzare un errore durante l'aggiunta dell'asset se i dati non sono validi:
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali;
+	- descrizione vuota; più lunga di 5000 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali diversi dall'apostrofo;
+	- tipo di costruzione non scelto;
+	- appartenenza non scelta;
+	- colore non scelto;
+	-superficie (in mq) vuota; più lunga di 5 cifre per la parte intera; più di 2 per la parte decimale;
+	-valore unitario (monetario) vuoto; più lungo di 20 cifre per la parte intera; più di 2 per la parte decimale;
+	- valuta non scelta.
+	& Interno \newline UC1.5
+	\\
+
+	ROF2                             & Funzionale\newline               & L'utente può visualizzare le informazioni di un asset                                                                    & VE_2.7 \newline UC2          
+	\\
+
+	ROF3                             & Funzionale\newline               & L'utente può chiudere la visualizzazione delle informazioni di un asset                                                  & VE_2.7 \newline UC3          
+	\\
+
+	ROF4                             & Funzionale\newline               & L'utente può modificare un asset                                                                                         & VE_2.7 \newline UC4          
+	\\
+	ROF4.1                           & Funzionale\newline               & L'utente può modificare il perimetro dell'asset                                                                          & Interno \newline UC4.1       
+	\\
+	ROF4.1.1                         & Funzionale\newline               & L'utente può aggiungere un segmento durante la modifica del perimetro dell'asset                                         & Interno \newline UC4.1.1     
+	\\
+	ROF4.1.2                         & Funzionale\newline               & L'utente può cancellare l'ultimo segmento durante la modifica del perimetro dell'asset                                   & Interno \newline UC4.1.2     
+	\\
+	ROF4.1.3                         & Funzionale\newline               & L'utente può chiudere il perimetro dell'asset durante la modifica quando l'ultimo nodo coincide con il primo             & Interno \newline UC4.1.3     
+	\\
+	ROF4.2                           & Funzionale\newline               & L'utente può modificare i dati dell'asset                                                                                & Interno \newline UC4.2       
+	\\
+	ROF4.2.1                         & Funzionale\newline               & L'utente può modificare il nome dell'asset                                                                               & Interno \newline UC4.2.1     
+	\\
+	ROF4.2.2                         & Funzionale\newline               & L'utente può modificare la descrizione dell'asset                                                                        & Interno \newline UC4.2.2     
+	\\
+	ROF4.2.2.1&Funzionale\newline  & La descrizione dell'asset non deve:
+	- essere vuota;
+	- essere più lunga di 5000 caratteri; 
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali diversi dall'apostrofo & Interno \\
+	ROF4.2.3                         & Funzionale\newline               & L'utente può modificare il tipo di costruzione dell'asset                                                                & Interno \newline UC4.2.3     
+	\\
+	ROF4.2.3.6                       & Funzionale\newline               & Il tipo di costruzione deve essere scelto                                                                                 & Interno                      \\
+	ROF4.2.4                         & Funzionale\newline               & L'utente può modificare a chi appartiene l'asset                                                                         & Interno \newline UC4.2.4     
+	\\
+	ROF4.2.4.4                       & Funzionale\newline               & L'appartenenza dell'asset deve essere scelta                                                                              & Interno                      \\
+	ROF4.2.5                         & Funzionale\newline               & L'utente può modificare il colore dell'asset                                                                             & Interno \newline UC4.2.5     
+	\\
+	ROF4.2.5.2                       & Funzionale\newline               & Il colore dell'asset deve essere scelto                                                                                   & Interno                      \\
+	ROF4.2.6                         & Funzionale\newline               & L'utente può modificare la superficie del perimetro dell'asset                                                           & Interno \newline UC4.2.6     
+	\\
+	ROF4.2.6.1&Funzionale\newline  & La superficie (in mq) dell'asset non deve:
+	- essere vuota;
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga  più di 2 per la parte decimale & Interno \\
+	ROF4.2.7                         & Funzionale\newline               & L'utente può modificare il  valore unitario dell'asset                                                                   & Interno \newline UC4.2.7     
+	\\
+	ROF4.2.7.1&Funzionale\newline  & Il valore unitario (monetario) dell'asset non deve:
+	- essere più lungo di 20 cifre per la parte intera;
+	- essere più lungo di 2 per la parte decimale & Interno \\
+	ROF4.3                           & Funzionale\newline               & L'utente può interrompere volontariamente la modifica dell'asset                                                         & Interno \newline UC31        
+	\\
+	ROF4.4                           & Funzionale\newline               & L'utente può confermare la modifica dell'asset                                                                           & Interno \newline UC4.3       
+	\\
+	ROF4.5&Funzionale\newline  & L'utente può visualizzare un errore durante la modifica dell'asset se i dati non sono validi:
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali;
+	- descrizione vuota; più lunga di 5000 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali diversi dall'apostrofo;
+	- tipo di costruzione non scelto;
+	- appartenenza non scelta;
+	- colore non scelto;
+	-superficie (in mq) vuota; più lunga di 5 cifre per la parte intera; più di 2 per la parte decimale;
+	-valore unitario (monetario) vuoto; più lungo di 20 cifre per la parte intera; più di 2 per la parte decimale;
+	- valuta non scelta & Interno \newline UC4.4
+	\\
+
+	ROF5                             & Funzionale\newline               & L'utente può eliminare un asset                                                                                          & VE_2.7 \newline UC5          
+	\\
+	ROF5.1                           & Funzionale\newline               & L'utente può confermare l'eliminazione dell'asset                                                                        & Interno \newline UC5.1       
+	\\
+	ROF5.2                           & Funzionale\newline               & L'utente può interrompere volontariamente l'eliminazione dell'asset                                                      & Interno \newline UC32        
+	\\
+	ROF6                             & Funzionale\newline               & L'utente può aggiungere un nodo                                                                                          & VE_2.7 \newline UC6          
+	\\
+	ROF6.1                           & Funzionale\newline               & L'utente può selezionare l'asset di appartenenza del nodo                                                                & Interno \newline UC6.1       
+	\\
+
+	ROF6.2                           & Funzionale\newline               & L'utente può posizionare il nodo all'interno dell'asset                                                                  & Interno \newline UC6.2       
+	\\
+	ROF6.3                           & Funzionale\newline               & L'utente può scegliere la classe del nodo                                                                                & Interno \newline UC6.3       
+	\\
+	ROF6.3.1                         & Funzionale\newline               & L'utente può scegliere come classe del nodo Uscita                                                                       & Interno                      \\
+	ROF6.3.2                         & Funzionale\newline               & L'utente può scegliere come classe del nodo Macchina                                                                     & Interno                      \\
+	ROF6.3.3                         & Funzionale\newline               & L'utente può scegliere come classe del nodo Coda                                                                         & Interno                      \\
+	ROF6.3.4                         & Funzionale\newline               & L'utente può scegliere come classe del nodo Risorsa                                                                      & Interno                      \\
+	ROF6.3.5                         & Funzionale\newline               & L'utente può scegliere come classe del nodo Sorgente                                                                     & Interno                      \\
+	ROF6.3.6                         & Funzionale\newline               & La classe del nodo deve essere scelta                                                                                     & Interno                      \\
+	ROF6.4                           & Funzionale\newline               & L'utente può compilare i dati del nodo di tipo Uscita, se ha scelto tale classe per l'inserimento                        & Interno \newline UC6.5       
+	\\
+	ROF6.5                           & Funzionale\newline               & L'utente può compilare i dati del nodo di tipo Macchina, se ha scelto tale classe per l'inserimento                      & Interno \newline UC6.6       
+	\\
+	ROF6.5.2                         & Funzionale\newline               & L'utente può compilare la capacità  del nodo se il nodo è di classe Macchina                                           & Interno \newline UC6.6.1     
+	\\
+	ROF6.5.2.1&Funzionale\newline  & La capacità del nodo di tipo Macchina non deve:
+	- essere vuota;
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	ROF6.5.3                         & Funzionale\newline               & L'utente può compilare il tempo di processo del nodo se il nodo è di classe Macchina                                    & Interno \newline UC6.6.2     
+	\\
+	ROF6.5.3.1&Funzionale\newline  & Il tempo di processo del nodo di tipo Macchina non deve:
+	- essere vuoto vuoto;
+	- essere più lungo di 5 cifre per la parte intera; più di 2 per la parte decimale & Interno \\
+	ROF6.5.4                         & Funzionale\newline               & L'utente può compilare il valore del nodo se il nodo è di classe Macchina                                               & Interno \newline UC6.6.3     
+	\\
+	ROF6.5.4.1&Funzionale\newline  & Il valore (monetario) del nodo di tipo Macchina non deve:
+	- essere più lungo di 20 cifre per la parte intera;
+	- essere  più lungo di 2 cifre per la parte decimale & Interno \\
+	ROF6.6                           & Funzionale\newline               & L'utente può compilare i dati del nodo di tipo Coda, se ha scelto tale classe per l'inserimento                          & Interno \newline UC6.7       
+	\\
+	ROF6.6.2                         & Funzionale\newline               & L'utente può compilare la capacità del nodo se il nodo è di classe Coda                                                & Interno \newline UC6.6.1     
+	\\
+	ROF6.6.2.1&Funzionale\newline  & La capacità del nodo di tipo Coda non deve:
+	- essere vuota;
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	ROF6.7                           & Funzionale\newline               & L'utente può compilare i dati del nodo di tipo Sorgente, se ha scelto tale classe per l'inserimento                      & Interno \newline UC6.8       
+	\\
+	ROF6.7.2                         & Funzionale\newline               & L'utente può compilare il tempo di consegna del nodo se il nodo è di classe Sorgente                                    & Interno \newline UC6.8.1     
+	\\
+	ROF6.7.2.1&Funzionale\newline  & Il tempo di consegna del nodo di tipo Sorgente non deve:
+	- essere più lungo di 4 cifre per l'ora;
+	- essere più lungo di 2 cifre per i minuti (comprese tra 0 e 59);
+	- essere più lungo di 2 cifre per i secondi (comprese tra 0 e 59) & Interno \\
+	ROF6.8                           & Funzionale\newline               & L'utente può compilare i dati del nodo di tipo Risorsa, se ha scelto tale classe per l'inserimento                       & Interno \newline UC6.9       
+	\\
+	ROF6.9                           & Funzionale\newline               & L'utente può interrompere volontariamente l'aggiunta del nodo                                                            & Interno \newline UC33        
+	\\
+		ROF6.10                          & Funzionale\newline               & L'utente può confermare l'aggiunta del nodo                                                                              & Interno \newline UC6.10      
+	\\
+	ROF6.11&Funzionale\newline  & L'utente può visualizzare un errore durante l'aggiunta del nodo se i dati non sono validi:
+	- classe non scelta;
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali;
+	- capacità vuota; più lunga di 5 cifre per la parte intera; più di 2 per la parte decimale;
+	- tempo di processo vuoto; più lungo di 5 cifre per la parte intera; più di 2 per la parte decimale
+	- valore (monetario) vuoto; più lungo di 20 cifre per la parte intera; più di 2 per la parte decimale;
+	- tempo di consegna vuoto; con più di 4 cifre per l'ora; più di 2 per i minuti (comprese tra 0 e 59); più di 2 per i secondi (comprese tra 0 e 59); & Interno \newline UC6.11
+	\\
+	ROF6.12                          & Funzionale\newline               & L'utente può compilare i dati generici del nodo, a prescindere dalla classe                                              & Interno \newline UC6.4       
+	\\
+	ROF6.12.1                        & Funzionale\newline               & L'utente può compilare il nome del nodo a prescindere dalla classe                                                       & Interno \newline UC6.4.1     
+	\\
+	ROF6.12.1.1&Funzionale\newline  & Il nome del nodo non deve:
+	- essere vuoto;
+	- essere più lungo di 50 caratteri;
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali & Interno \\
+	ROF7                             & Funzionale\newline               & L'utente può visualizzare le informazioni di un nodo                                                                     & VI_3.3 \newline UC7          
+	\\
+	ROF8                             & Funzionale\newline               & L'utente può chiudere la visualizzazione delle informazioni di un nodo                                                   & VI_3.3 \newline UC8          
+	\\
+	ROF9                             & Funzionale\newline               & L'utente può modificare un nodo                                                                                          & VI_3.3 \newline UC9          
+	\\
+	ROF9.1                           & Funzionale\newline               & L'utente può modificare l'asset di appartenenza del nodo                                                                 & Interno \newline UC9.1       
+	\\
+	ROF9.1.1                         & Funzionale\newline               & L'utente può confermare la modifica dell'asset di appartenenza del nodo                                                  & Interno \newline UC9.1.1     
+	\\
+	ROF9.1.3                         & Funzionale\newline               & L'utente può modificare il posizionamento del nodo all'interno dell'asset di appartenenza                                & Interno                      \\
+
+	ROF9.2                           & Funzionale\newline               & L'utente può interrompere volontariamente la modifica dell'asset di appartenenza del nodo                                & Interno \newline UC9.2       
+	\\
+	ROF9.3                           & Funzionale\newline               & L'utente può modificare la classe del nodo                                                                               & Interno \newline UC9.3       
+	\\
+	ROF9.4                           & Funzionale\newline               & L'utente può modificare i dati del nodo di tipo Uscita, se ha scelto un nodo di tale classe per la modifica              & Interno \newline UC9.5       
+	\\
+	ROF9.5                           & Funzionale\newline               & L'utente può modificare i dati del nodo di tipo Macchina, se ha scelto un nodo di tale classe per la modifica            & Interno \newline UC9.6       
+	\\
+	ROF9.5.2                         & Funzionale\newline               & L'utente può modificare la capacità  del nodo se il nodo è di tipo Macchina                                            & Interno \newline UC9.6.1     
+	\\
+	ROF9.5.2.1&Funzionale\newline  & La capacità del nodo di tipo Macchina non deve:
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	ROF9.5.3                         & Funzionale\newline               & L'utente può modificare il tempo di processo del nodo se il nodo è di tipo Macchina                                     & Interno \newline UC9.6.2     
+	\\
+	ROF9.5.3.1&Funzionale\newline  & Il tempo di processo del nodo di tipo Macchina non deve:
+	- essere più lungo di 4 cifre per l'ora;
+	- essere più lungo di di 2 cifre per i minuti (comprese tra 0 e 59);
+	- essere più lungo di 2 cifre per i secondi (comprese tra 0 e 59) & Interno \\
+	ROF9.5.4                         & Funzionale\newline               & L'utente può modificare il valore del nodo se il nodo è di tipo Macchina                                                & Interno \newline UC9.6.3     
+	\\
+	ROF9.5.4.1&Funzionale\newline  & Il valore (monetario) del nodo di tipo Macchina non deve:
+	- essere più lungo di 20 cifre per la parte intera;
+	- essere  più lungo di 2 cifre per la parte decimale & Interno \\
+	ROF9.6                           & Funzionale\newline               & L'utente può modificare i dati del nodo di tipo Coda, se ha scelto un nodo di tale classe per la modifica                & Interno \newline UC9.7       
+	\\
+	ROF9.6.2                         & Funzionale\newline               & L'utente può modificare il tempo di processo del nodo se il nodo è di tipo Coda                                         & Interno                      \\
+	ROF9.6.2.1&Funzionale\newline  & La capacità del nodo di tipo Coda non deve:
+	- essere più lunga di 5 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	ROF9.7                           & Funzionale\newline               & L'utente può modificare i dati del nodo di tipo Sorgente, se ha scelto un nodo di tale classe per la modifica            & Interno \newline UC9.8       
+	\\
+	ROF9.7.2                         & Funzionale\newline               & L'utente può modificare il tempo di consegna del nodo se il nodo è di tipo Sorgente                                     & Interno \newline UC9.8.1     
+	\\
+	ROF9.7.2.1&Funzionale\newline  & Il tempo di consegna del nodo di tipo Sorgente non deve:
+	- essere più lungo di 4 cifre per l'ora;
+	- essere più lungo di 2 cifre per i minuti (comprese tra 0 e 59);
+	- essere più lungo di 2 cifre per i secondi (comprese tra 0 e 59) & Interno \\
+	ROF9.8                           & Funzionale\newline               & L'utente può modificare i dati del nodo di tipo Risorsa, se ha scelto un nodo di tale classe per la modifica             & Interno \newline UC9.9       
+	\\
+	ROF9.9                           & Funzionale\newline               & L'utente può interrompere volontariamente la modifica del nodo                                                           & Interno \newline UC34        
+	\\
+		ROF9.10                          & Funzionale\newline               & L'utente può confermare la modifica del nodo                                                                             & Interno \newline UC9.10      
+	\\
+	ROF9.11&Funzionale\newline  & L'utente può visualizzare un errore durante la modifica del nodo se i dati non sono validi:
+	- classe non scelta;
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o finisce con uno spazio; contiene caratteri speciali;
+	- capacità vuota; più lunga di 5 cifre per la parte intera; più di 2 per la parte decimale;
+	- tempo di processo vuoto; con più di 4 cifre per l'ora; più di 2 per i minuti (comprese tra 0 e 59); più di 2 per i secondi (comprese tra 0 e 59);
+	- valore (monetario) vuoto; più lungo di 20 cifre per la parte intera; più di 2 per la parte decimale;
+	- tempo di consegna vuoto; con più di 4 cifre per l'ora; più di 2 per i minuti (comprese tra 0 e 59); più di 2 per i secondi (comprese tra 0 e 59) & Interno \newline UC9.11
+	\\
+	ROF9.12                          & Funzionale\newline               & L'utente può modificare i dati generici del nodo, a prescindere dalla classe                                             & Interno \newline UC9.4       
+	\\
+	ROF9.12.1                        & Funzionale\newline               & L'utente può modificare il nome del nodo a prescindere dalla classe                                                      & Interno                      \\
+	ROF9.12.1.1&Funzionale\newline  & Il nome del nodo non deve:
+	- essere vuoto;
+	- essere più lungo di 50 caratteri;
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali & Interno \\
+		ROF10                            & Funzionale\newline               & L'utente può eliminare un nodo                                                                                           & VI_3.3 \newline UC10         
+	\\
+	ROF10.1                          & Funzionale\newline               & L'utente può confermare l'eliminazione del nodo                                                                          & Interno \newline UC10.1      
+	\\
+	ROF10.2                          & Funzionale\newline               & L'utente può interrompere volontariamente l'eliminazione del nodo                                                        & Interno \newline UC35        
+	\\
+	ROF11                            & Funzionale\newline               & L'utente può aggiungere un arco                                                                                          & VI_3.3 \newline UC11         
+	\\
+	RFF11.2                          & Funzionale\newline               & L'utente può scegliere se l'arco è di tipo Trasporto                                                                    & Interno                      \\
+	RFF11.3                          & Funzionale\newline               & L'utente può compilare i dati dell'arco se l'arco è di tipo Trasporto                                                   & Interno                      \\
+	RFF11.3.1                        & Funzionale\newline               & L'utente può compilare la lunghezza del trasporto dell'arco                                                              & Interno                      \\
+	RFF11.3.1.1&Funzionale\newline  & La lunghezza (in metri) non deve:
+	- essere vuota;
+	- essere più lunga di 8 cifre per la parte intera; 
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	RFF11.3.2                        & Funzionale\newline               & L'utente può compilare la velocità  di trasporto dell'arco                                                              & Interno                      \\
+	RFF11.3.2.1&Funzionale\newline  & La velocità (in km/h) non deve:
+	- essere più lunga di 4 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	RFF11.6&Funzionale\newline  & L'utente può visualizzare un errore durante l'aggiunta dell'arco se i dati non sono validi:
+	- lunghezza (in metri) vuota; più lunga di 8 cifre per la parte intera; 2 per la parte decimale;
+	- velocità (in km/h) vuota; più lunga di 4 cifre per la parte intera; più di 2 per la parte decimale. & Interno \\
+	RFF11.7                          & Funzionale\newline               & L'utente può inserire un arco di tipo non Trasporto                                                                      & Interno                      \\
+	ROF11.1                          & Funzionale\newline               & L'utente può disegnare un arco                                                                                           & Interno \newline UC11.1      
+	\\
+	ROF11.1.1                        & Funzionale\newline               & L'utente può selezionare il nodo di origine dell'arco                                                                    & Interno \newline UC11.1.1    
+	\\
+	ROF11.1.2                        & Funzionale\newline               & L'utente può selezionare il nodo di destinazione dell'arco                                                               & Interno \newline UC11.1.2    
+	\\
+	ROF11.4                          & Funzionale\newline               & L'utente può interrompere volontariamente l'aggiunta dell'arco                                                           & Interno \newline UC36        
+	\\
+	ROF11.5                          & Funzionale\newline               & L'utente può confermare l'aggiunta dell'arco                                                                             & Interno \newline UC11.6      
+	\\
+	ROF12                            & Funzionale\newline               & L'utente può visualizzare le informazioni di un arco                                                                     & VI_3.3 \newline UC12         
+	\\
+	ROF13                            & Funzionale\newline               & L'utente può chiudere la visualizzazione delle informazioni di un arco                                                   & VI_3.3 \newline UC13         
+	\\
+	ROF14                            & Funzionale\newline               & L'utente può modificare un arco                                                                                          & VI_3.3 \newline UC14         
+	\\
+	RFF14.4                          & Funzionale\newline               & L'utente può modificare la scelta riguardo il trasporto dell'arco                                                        & Interno                      \\
+	RFF14.5                          & Funzionale\newline               & L'utente può modifica i dati dell'arco se l'arco è di tipo Trasporto                                                    & Interno                      \\
+	RFF14.5.1                        & Funzionale\newline               & L'utente può modificare la lunghezza dell'arco se l'arco è di tipo Trasporto                                            & Interno                      \\
+	RFF14.5.1.1&Funzionale\newline  & La lunghezza (in metri) non deve:
+	- essere vuota;
+	- essere più lunga di 8 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	RFF14.5.2                        & Funzionale\newline               & L'utente può modificare la velocità  dell'arco se l'arco è di tipo Trasporto                                           & Interno                      \\
+	RFF14.5.2.1&Funzionale\newline  & La velocità (in km/h) non deve:
+	- essere più lunga di 4 cifre per la parte intera;
+	- essere più lunga di 2 per la parte decimale & Interno \\
+	RFF14.8&Funzionale\newline  & L'utente può visualizzare un errore durante la modifica dell'arco se i dati inseriti non sono validi:
+	-lunghezza (in metri) vuota; più lunga di 8 cifre per la parte intera; 2 per la parte decimale;
+	velocità (in km/h) vuota; più lunga di 4 cifre per la parte intera; più di 2 per la parte decimale  & Interno \\
+	ROF14.1                          & Funzionale\newline               & L'utente può modificare il nodo di origine dell'arco                                                                     & Interno \newline UC14.1      
+	\\
+	ROF14.2                          & Funzionale\newline               & L'utente può modificare il nodo di destinazione dell'arco                                                                & Interno \newline UC14.2      
+	\\
+	ROF14.3                          & Funzionale\newline               & L'utente può interrompere la modifica del nodo di origine o di destinazione                                              & Interno \newline UC14.3      
+	\\
+	ROF14.6                          & Funzionale\newline               & L'utente può interrompere volontariamente la modifica dell'arco                                                          & Interno \newline UC37        
+	\\
+	ROF14.7                          & Funzionale\newline               & L'utente può confermare la modifica dell'arco                                                                            & Interno \newline UC14.8      
+	\\
+	ROF15                            & Funzionale\newline               & L'utente può eliminare un arco                                                                                           & VI_3.3 \newline UC15         
+	\\
+	ROF15.1                          & Funzionale\newline               & L'utente può confermare l'eliminazione dell'arco                                                                         & Interno \newline UC15.1      
+	\\
+	ROF15.2                          & Funzionale\newline               & L'utente può interrompere volontariamente l'eliminazione dell'arco                                                       & Interno \newline UC38        
+	\\
+	%
+	RFF16                            & Funzionale\newline               & L'utente può aggiungere uno scenario di danno                                                                            & VI_3.3 \newline UC16         
+	\\
+	RFF16.1                          & Funzionale\newline               & L'utente può compilare le informazioni dello scenario di danno                                                           & Interno \newline UC16.1      
+	\\
+	RFF16.1.10                       & Funzionale\newline               & L'utente può disegnare lo scenario di danno mediante gradiente con linea                                                 & Interno                      \\
+	RFF16.1.9                        & Funzionale\newline               & L'utente può disegnare lo scenario di danno mediante gradiente radiale                                                   & Interno                      \\
+	RFF16.1.1                        & Funzionale\newline               & L'utente può compilare il nome dello scenario di danno                                                                   & Interno \newline UC16.1.1    
+	\\
+	RFF16.1.1.1 &Funzionale\newline  & Il nome dello scenario non deve:
+	- essere vuoto; 
+	- essere più lungo di 50 caratteri; 
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali & Interno \\
+	RFF16.1.11                       & Funzionale\newline               & L'utente può interrompere volontariamente il disegno dello scenario di danno                                             & Interno \newline UC16.1.11   
+	\\
+	RFF16.1.2                        & Funzionale\newline               & L'utente può compilare la descrizione dello scenario di danno                                                            & Interno \newline UC16.1.2    
+	\\
+	RFF16.1.2.1 &Funzionale \newline  & La descrizione dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 5000 caratteri;
+	- iniziare e/0 finire con uno spazio; 
+	- contenere caratteri speciali diversi dall'apostrofo & Interno \\
+	RFF16.1.3                        & Funzionale\newline               & L'utente può scegliere il tipo di scenario di danno                                                                      & Interno \newline UC16.1.3    
+	\\
+	RFF16.1.3.1                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Ciclone                                                                     & Interno                      \\
+	RFF16.1.3.2                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Siccità                                                                    & Interno                      \\
+	RFF16.1.3.3                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Terremoto                                                                   & Interno                      \\
+	RFF16.1.3.4                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Incendio                                                                    & Interno                      \\
+	RFF16.1.3.5                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Inondazione                                                                 & Interno                      \\
+	RFF16.1.3.6                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Frana                                                                       & Interno                      \\
+	RFF16.1.3.7                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Rottura di macchina                                                         & Interno                      \\
+	RFF16.1.3.8                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Nessun evento                                                               & Interno                      \\
+	RFF16.1.3.9                      & Funzionale\newline               & L'utente può scegliere come tipo di scenario Tornado                                                                     & Interno                      \\
+	RFF16.1.3.10                     & Funzionale\newline               & L'utente può scegliere come tipo di scenario Vulcano                                                                     & Interno                      \\
+	RFF16.1.3.11                     & Funzionale\newline               & Il tipo dello scenario deve essere scelto                                                                                 & Interno                      \\
+	RFF16.1.4                        & Funzionale\newline               & L'utente può compilare l'intensità  dello scenario di danno                                                             & Interno \newline UC16.1.4    
+	\\
+	RFF16.1.4.1&Funzionale\newline  & L'intensità (numerica) dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 20 cifre per la
+	parte intera; 
+	- essere più lunga di 2 cifre per la parte decimale & Interno \\
+	RFF16.1.5                        & Funzionale\newline               & L'utente può compilare l'istante dell'evento dello scenario di danno                                                     & Interno \newline UC16.1.5    
+	\\
+	RFF16.1.5.1&Funzionale\newline  & L'istante (in giorni) non deve:
+	- essere vuoto;
+	- essere più lungo di 5 cifre & Interno \\
+	RFF16.1.6                        & Funzionale\newline               & L'utente può compilare la probabilità  dell'evento dello scenario di danno                                              & Interno \newline UC16.1.6    
+	\\
+	RFF16.1.6.1&Funzionale\newline  & La probabilità (numerica) dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 1 cifra per la parte intera; 
+	- essere più lunga di 4 cifre per la parte decimale;
+	- avere parte intera diversa da 0 e da 1 & Interno \\
+	RFF16.1.7                        & Funzionale\newline               & L'utente può disegnare lo scenario di danno                                                                              & Interno \newline UC16.1.7    
+	\\
+	RFF16.1.7.1                      & Funzionale\newline               & Il disegno dello scenario deve essere tracciato                                                                           & Interno                      \\
+	RFF16.1.8                        & Funzionale\newline               & L'utente può disegnare lo scenario di danno mediante poligono                                                            & Interno \newline UC16.1.8    
+	\\
+	RFF16.1.8.1                      & Funzionale\newline               & Il poligono dello scenario deve essere chiuso                                                                             & Interno                      \\
+	RFF16.2                          & Funzionale\newline               & L'utente può interrompere volontariamente l'aggiunta dello scenario di danno                                             & Interno \newline UC39        
+	\\
+	RFF16.3                          & Funzionale\newline               & L'utente può confermare l'aggiunta dello scenario di danno                                                               & Interno \newline UC16.2      
+	\\
+	RFF16.4 &Funzionale\newline  & L'utente può visualizzare un errore durante l'aggiunta dello scenario di danno se i dati non sono validi:
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o
+	finisce con uno spazio; contiene caratteri speciali;
+	- descrizione vuota; più lunga di 5000 caratteri;
+	inizia e/o finisce con uno spazio; contiene
+	caratteri speciali diversi dall'apostrofo;
+	- tipo non scelto;
+	- intensità (numerica) vuota; più lunga di 20 cifre per la
+	parte intera; più di 2 per la parte decimale;
+	- istante (in giorni) vuoto; più lungo di 5 cifre;
+	- probabilità (numerica) vuota; più lunga di 1 cifra per la
+	parte intera; più di 4 per la parte decimale; parte
+	intera diversa da 0 e da 1;
+	- disegno non tracciato; se poligono, poligono non
+	chiuso. & Interno \newline UC16.3
+	\\
+	%
+	RFF17                            & Funzionale\newline               & L'utente può scegliere quale scenario di danno visualizzare                                                              & VI_3.3 \newline UC17         
+	\\
+	RFF18                            & Funzionale\newline               & L'utente può chiudere la visualizzazione di uno scenario di danno                                                        & VI_3.3 \newline UC18         
+	\\
+	RFF19                            & Funzionale\newline               & L'utente può modificare uno scenario di danno                                                                            & VI_3.3 \newline UC19         
+	\\
+	RFF19.1                          & Funzionale\newline               & L'utente può modificare le informazioni dello scenario di danno                                                          & Interno \newline UC19.1      
+	\\
+	RFF19.1.10                       & Funzionale\newline               & L'utente può modificare il disegno dello scenario di danno mediante gradiente con linea                                  & Interno                      \\
+	RFF19.1.9                        & Funzionale\newline               & L'utente può modificare il disegno dello scenario di danno mediante gradiente radiale                                    & Interno                      \\
+	RFF19.1.1                        & Funzionale\newline               & L'utente può modificare il nome dello scenario di danno                                                                  & Interno \newline UC19.1.1    
+	\\
+	RFF19.1.1.1&Funzionale\newline  & Il nome dello scenario non deve:
+	- essere vuoto; 
+	- essere più lungo di 50 caratteri; 
+	- iniziare e/o finire con uno spazio;
+	- contenere caratteri speciali & Interno \\
+	RFF19.1.11                       & Funzionale\newline               & L'utente può interrompere volontariamente la modifica del disegno dello scenario di danno                                & Interno                      \\
+	RFF19.1.2                        & Funzionale\newline               & L'utente può modificare la descrizione dello scenario di danno                                                           & Interno \newline UC19.1.2    
+	\\
+	RFF19.1.2.1&Funzionale\newline  & La descrizione dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 5000 caratteri;
+	- iniziare e/0 finire con uno spazio; 
+	- contenere caratteri speciali diversi dall'apostrofo & Interno \\
+	RFF19.1.3                        & Funzionale\newline               & L'utente può modificare il tipo di scenario di danno                                                                     & Interno \newline UC19.1.3    
+	\\
+	RFF19.1.3.11                     & Funzionale\newline               & Il tipo dello scenario deve essere scelto                                                                                 & Interno                      \\
+	RFF19.1.4                        & Funzionale\newline               & L'utente può modificare l'intensità  dello scenario di danno                                                            & Interno \newline UC19.1.4    
+	\\
+	RFF19.1.4.1&Funzionale\newline  & L'intensità (numerica) dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 20 cifre per la
+	parte intera; 
+	- essere più lunga di 2 cifre per la parte decimale & Interno \\
+	RFF19.1.5                        & Funzionale\newline               & L'utente può modificare l'istante dell'evento dello scenario di danno                                                    & Interno \newline UC19.1.5    
+	\\
+	RFF19.1.5.1&Funzionale\newline  & L'istante (in giorni) non deve:
+	- essere vuoto;
+	- essere più lungo di 5 cifre & Interno \\
+	RFF19.1.6                        & Funzionale\newline               & L'utente può modificare la probabilità  dell'evento dello scenario di danno                                             & Interno \newline UC19.1.6    
+	\\
+	RFF19.1.6.1&Funzionale\newline  & La probabilità (numerica) dello scenario non deve:
+	- essere vuota;
+	- essere più lunga di 1 cifra per la parte intera; 
+	- essere più lunga di 4 cifre per la parte decimale;
+	- avere parte intera diversa da 0 e da 1 & Interno \\
+	RFF19.1.7                        & Funzionale\newline               & L'utente può modificare il disegno dello scenario di danno                                                               & Interno                      \\
+	RFF19.1.7.1                      & Funzionale\newline               & Il disegno dello scenario deve essere tracciato                                                                           & Interno                      \\
+	RFF19.1.8                        & Funzionale\newline               & L'utente può modificare il disegno dello scenario di danno mediante poligono                                             & Interno                      \\
+	RFF19.2                          & Funzionale\newline               & L'utente può interrompere volontariamente la modifica dello scenario di danno                                            & Interno \newline UC40        
+	\\
+	RFF19.3                          & Funzionale\newline               & L'utente può confermare la modifica dello scenario di danno                                                              & Interno \newline UC19.2      
+	\\
+	RFF19.4&Funzionale\newline  & L'utente può visualizzare un errore durante l'aggiunta dello scenario di danno se i dati non sono validi:
+	- nome vuoto; più lungo di 50 caratteri; inizia e/o
+	finisce con uno spazio; contiene caratteri speciali;
+	- descrizione vuota; più lunga di 5000 caratteri;
+	inizia e/o finisce con uno spazio; contiene
+	caratteri speciali diversi dall'apostrofo;
+	- tipo non scelto;
+	- intensità (numerica) vuota; più lunga di 20 cifre per la
+	parte intera; più di 2 per la parte decimale;
+	- istante (in giorni) vuoto; più lungo di 5 cifre;
+	- probabilità (numerica) vuota; più lunga di 1 cifra per la
+	parte intera; più di 4 per la parte decimale; parte
+	intera diversa da 0 e da 1;
+	- disegno non tracciato; se poligono, poligono non
+	chiuso. & Interno \newline UC19.3
+	\\
+		RFF20                            & Funzionale\newline               & L'utente può eliminare uno scenario di danno                                                                             & VI_3.3 \newline UC20         
+	\\
+	RFF20.1                          & Funzionale\newline               & L'utente può confermare l'eliminazione dello scenario di danno                                                           & Interno \newline UC20.1      
+	\\
+	RFF20.2                          & Funzionale\newline               & L'utente può interrompere volontariamente l'eliminazione dello scenario di danno                                         & Interno \newline UC41        
+	\\
+	RFF21                            & Funzionale\newline               & L'utente può avviare l'analisi di danno                                                                                  & VI_3.3 \newline UC21         
+	\\
+	RFF22                            & Funzionale\newline               & L'utente può visualizzare il risultato dell'analisi di danno su mappa                                                    & VI_3.3 \newline UC22         
+	\\
+	RFF23                            & Funzionale\newline               & L'utente può chiudere la visualizzazione del risultato dell'analisi di danno su mappa                                    & VI_3.3 \newline UC23         
+	\\
+	ROF24                            & Funzionale\newline               & L'utente può interagire con la mappa                                                                                     & Capitolato \newline UC24     
+	\\
+	RFF24.4                          & Funzionale\newline               & L'utente può scegliere la  modalità  di visualizzazione della mappa                                                     & Interno \newline UC24.4      
+	\\
+	ROF24.1                          & Funzionale\newline               & L'utente può aumentare il livello di ingrandimento della mappa                                                           & Interno \newline UC24.1      
+	\\
+	ROF24.2                          & Funzionale\newline               & L'utente può diminuire il livello di ingrandimento della mappa                                                           & Interno \newline UC24.2      
+	\\
+	ROF24.3                          & Funzionale\newline               & L'utente può spostarsi sulla mappa                                                                                       & Interno \newline UC24.3      
+	\\
+	RFF25                            & Funzionale\newline               & L'utente può avviare il tutorial                                                                                         & VI_3.3 \newline UC25         
+	\\
+	RFF25.1&Funzionale\newline  & L'utente può interrompere la fruizione del tutorial & Interno \newline UC46
+	\\
+	RFF26                            & Funzionale\newline               & L'utente può avviare l'assistente vocale                                                                                 & Capitolato \newline UC26     
+	\\
+	RFF26.1&Funzionale\newline  & L'utente può avviare la fruizione dell'assistente vocale & Interno \newline UC47
+	\\
+	ROF39                            & Funzionale\newline               & L'applicazione deve permettere l'interazione col tablet usando la gesture drag                                            & Capitolato                   \\
+		ROF40                            & Funzionale\newline               & L'applicazione deve permettere l'interazione col tablet usando la gesture pinch                                           & Capitolato                   \\
+	ROF41                            & Funzionale\newline               & L'applicazione deve permettere l'interazione col tablet usando la gesture point                                           & Interno                      \\
+	ROF42                            & Funzionale\newline               & L'utente può far ritornare la visualizzazione all'asset selezionato                                                      & Interno \newline UC27        
+	\\
+	ROF43                            & Funzionale\newline               & L'utente può far ritornare la visualizzazione al nodo selezionato                                                        & Interno \newline UC28        
+	\\
+	ROF44                            & Funzionale\newline               & L'utente può far ritornare la visualizzazione all'arco selezionato                                                       & Interno \newline UC29        
+	\\
+	RFF45                            & Funzionale\newline               & L'utente può  selezionare da una lista uno scenario di danno da aggiungere per la successiva analisi di danno            & Interno \newline UC42        
+	\\
+	RFF46                            & Funzionale\newline               & L'utente può deselezionare da una lista uno scenario di danno per la successiva analisi di danno                         & Interno \newline UC43        
+	\\
+	RFF47                            & Funzionale\newline               & L'utente può eliminare un analisi di danno precedentemente calcolata                                                     & Interno \newline UC44        
+	\\
+	RFF48                            & Funzionale\newline               & L'utente può interrompere volontariamente l'eliminazione dell'analisi di danno                                           & Interno \newline UC45        
+	\\
+	RFF48.1                          & Funzionale\newline               & L'utente può confermare l'eliminazione dell'analisi di danno                                                             & Interno \newline UC44.1      
+	\\
+	\rowcolor{white}
+	\caption{Requisiti funzionali}
+\end{longtable}
+\subsection{Requisiti prestazionali}
+Nessun requisito prestazionale identificato.
+\subsection{Requisiti qualitativi}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{1.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	ROQ27&Qualitativo\newline  & Deve essere fornito un manuale utente & VI_3.3 \\
+	RFQ27.2&Qualitativo\newline  & Il manuale utente deve essere disponibile in lingua inglese & Interno \\
+	RFQ27.4&Qualitativo\newline  & Il manuale utente deve includere una sezione contenente un elenco di possibili errori e malfunzionamenti dell'applicazione e le loro possibili cause & Interno \\
+	ROQ27.1&Qualitativo\newline  & Il manuale utente deve essere disponibile in lingua italiana & Interno \\
+	ROQ27.3&Qualitativo\newline  & Il manuale utente deve contenere una sezione in cui viene spiegato come utilizzare l'applicazione & Interno \\
+	ROQ28&Qualitativo\newline  & Deve essere fornito un manuale manutentore & VI_3.3 \\
+	RFQ28.2&Qualitativo\newline  & Il manuale manutentore deve essere disponibile in lingua inglese & Interno \\
+	RFQ28.3&Qualitativo\newline  & Il manuale manutentore deve contenere una sezione in cui viene spiegato come integrare  correttamente l'interfaccia con i sistemi attualmente presenti in RiskApp & Interno \\
+	RFQ28.5&Qualitativo\newline  & Il manuale per gli utenti sviluppatori che intendono estendere l'applicazione deve contenere una sezione che spiega come segnalare eventuali errori o malfunzionamenti & Interno \\
+	ROQ28.1&Qualitativo\newline  & Il manuale manutentore deve essere disponibile in lingua italiana & Interno \\
+	ROQ28.4&Qualitativo\newline  & Deve essere fornito un manuale per gli utenti sviluppatori che intendono estendere l'applicazione & Interno \\
+	ROQ35&Qualitativo\newline  & La progettazione del prodotto rispetta le norme e le metriche indicate nei riferimenti normativi & VI_3.3 \\
+	ROQ36&Qualitativo\newline  & La codifica del prodotto rispetta le norme e le metriche indicate nei riferimenti normativi & VI_3.3 \\
+	\rowcolor{white}
+	\caption{Requisiti qualitativi}
+\end{longtable}
+\subsection{Requisiti di vincolo}
+\def\arraystretch{1.5}
+\rowcolors{2}{D}{P}
+\begin{longtable}{p{2cm}!{\VRule[1pt]}p{2cm}!{\VRule[1pt]}p{5cm}!{\VRule[1pt]}p{1.5cm}}
+	\rowcolor{I}
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endfirsthead 
+	\rowcolor{I} 
+	\color{white} \textbf{Requisito} & \color{white} \textbf{Tipologia} & \color{white} \textbf{Descrizione} & \color{white} \textbf{Fonti} \\ 
+	\endhead 
+	RFV34&Vincolo\newline  & L'applicazione deve essere integrabile nella piattaforma di prodotto & Capitolato \\
+	ROV29&Vincolo\newline  & L'applicazione deve funzionare su tablet & Capitolato \\
+	RDV29.2&Vincolo\newline  & L'applicazione deve funzionare su iPad Air 2 con sistema operativo iOS 10.2 & Interno \\
+	RDV29.2.1&Vincolo\newline  & L'applicazione deve funzionare su Google Chrome 55 o superiore & Interno \\
+	RFV29.2.2&Vincolo\newline  & L'applicazione deve funzionare su Safari 10.0 o superiore & Interno \\
+	RFV29.2.3&Vincolo\newline  & L'applicazione deve funzionare su Firefox 5.3 per iOS 10.2 o superiore & Interno \\
+	ROV29.1&Vincolo\newline  & L'applicazione deve funzionare su tablet Asus P01MA con sistema operativo Android 6.0.1 & Interno \\
+	RFV29.1.2&Vincolo\newline  & L'applicazione deve funzionare su Firefox 50 o superiore & Interno \\
+	ROV29.1.1&Vincolo\newline  & L'applicazione deve funzionare su Google Chrome 55 o superiore & Interno \\
+	ROV30&Vincolo\newline  & L'applicazione deve funzionare su pc desktop & VI_3.3 \\
+	RDV30.2&Vincolo\newline  & L'applicazione deve funzionare su pc desktop con sistema operativo Ubuntu 16.04 & Interno \\
+	RDV30.2.1&Vincolo\newline  & L'applicazione deve funzionare su Google Chrome 55 o superiore & Interno \\
+	RFV30.2.2&Vincolo\newline  & L'applicazione deve funzionare su Firefox 50 o superiore & Interno \\
+	RDV30.3&Vincolo\newline  & L'applicazione deve funzionare su pc desktop con sistema operativo MacOS Sierra 10.2 & Interno \\
+	RDV30.3.1&Vincolo\newline  & L'applicazione deve funzionare su Google Chrome 55.0 o superiore & Interno \\
+	RDV30.3.2&Vincolo\newline  & L'applicazione deve funzionare su Safari 10.0 o superiore & Interno \\
+	RFV30.3.3&Vincolo\newline  & L'applicazione deve funzionare su Firefox 50 o superiore & Interno \\
+	ROV30.1&Vincolo\newline  & L'applicazione deve funzionare su pc desktop con sistema operativo Windows 10 & Interno \\
+	RFV30.1.2&Vincolo\newline  & L'applicazione deve funzionare su Firefox 50 o superiore & Interno \\
+	ROV30.1.1&Vincolo\newline  & L'applicazione deve funzionare su Google Chrome 55 o superiore & Interno \\
+	ROV31&Vincolo\newline  & L'applicazione deve utilizzare il linguaggio JavaScript & Capitolato \\
+	ROV32&Vincolo\newline  & L'applicazione deve utilizzare il linguaggio di markup HTML5 & Capitolato \\
+	ROV33&Vincolo\newline  & L'applicazione deve utilizzare fogli di
+	stile in CSS3 & Capitolato \\
+	ROV37&Vincolo\newline  & Il corretto funzionamento del prodotto richiede una connessione a internet & VI_3.3 \\
+	ROV38&Vincolo\newline  & Il corretto funzionamento del prodotto richiede JavaScript abilitato & VI_3.3 \\
+	\rowcolor{white}
+	\caption{Requisiti di vincolo}
+\end{longtable}
+
+\subsection{Riepilogo}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c c c c c}
+		\rowcolor{I}
+		\color{white} \textbf{Categoria} &\color{white} \textbf{Obbligatorio} & \color{white}\textbf{Desiderabile} & \color{white}\textbf{Opzionale} & \color{white} \textbf{Totale} \\
+		Funzionale & 153 & 0& 88 & 241\\
+		Qualitativo & 8&0 & 5 & 13 \\
+		Prestazionale &0 &0 &0 & 0 \\
+		Vincolo &11 &7 &7 & 25 \\
+		Totale & 172 & 7 & 100 & 279 \\
+	\end{tabular}
+\end{table}

@@ -1,0 +1,93 @@
+
+##############################
+##########  inseriti
+##############################
+
+ad hoc
+Amazon Web Services
+API
+Arco (relativo ad asset)
+area chiave di processo
+Asset
+Astah
+Breakdown Avoidance
+Browser
+CamelCase
+Capitolato
+Ciclo di Deming (se viene modificato il testo)
+Ciclo di vita
+Cloud
+cloud storage
+CMM
+Commit
+Cost Variance
+cross device
+cross platform
+CSS
+database
+Design Pattern
+DoD
+Dropbox
+Failure Avoidance
+Fase
+file hosting
+Git
+Github
+Google Drive
+Gulpease
+Hardware
+Hazard (relativo a scenario di danno)
+HTML
+IDE
+IEC
+Indice Gulpease
+Inspection
+ipertestuale
+ISO
+Issue
+issue tracking
+JavaScript
+Latex
+linguaggio di markup
+linux
+macos
+MySQL
+opensource
+organizzazione
+Package
+PDCA
+Processo
+prodottO
+Progetto
+quality assurance
+repository
+Riskapp
+risorse
+Tag (HTML)
+Team
+Teamwork
+Tool
+Trender
+UML
+Validatore (W3C)
+validazione
+verifica
+W3C
+Walkthrough
+web browser
+windows
+
+
+
+##############################
+##########  da inserire
+##############################
+
+
+
+##############################
+##########  proposte
+##############################
+
+
+casi d'uso

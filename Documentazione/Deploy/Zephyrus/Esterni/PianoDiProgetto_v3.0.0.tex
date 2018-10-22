@@ -1,0 +1,68 @@
+%\documentclass{zemplate}
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplate}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{fixltx2e}
+
+%\externaldocument{../Glossario/Glossario}
+
+\externaldocument{../Esterni/Glossario_v2.0.0}
+
+\docTitle{Piano di progetto}
+\docVersion{3.0.0}
+\docCreationDate{\frmdata{04}{12}{2016}}
+\docLastUpdateDate{\frmdata{07}{04}{2017}}
+\docStatus{Approvato}
+\docEditors{Giovanni Prete \\ & Daniel De Gaspari}
+\docVerificators{Leonardo Brutesco \\ & Giovanni Damo}
+\docApprovers{Daniel De Gaspari}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{
+	3.0.0 & \frmdata{07}{04}{2017} & Daniel De Gaspari & \responsabile & Approvazione\\
+	2.1.0 & \frmdata{07}{04}{2017} & Leonardo Brutesco & \verificatore & Verifica del documento\\
+	2.0.2 & \frmdata{06}{04}{2017} & Daniel De Gaspari & \responsabile & Aggiornata sezione 5.\\
+	2.0.1 & \frmdata{06}{04}{2017} & Daniel De Gaspari & \responsabile & Aggiunta attualizzazione del periodo PCV in sezione 2, aggiornate sezione 4.2.3, 4.3, 4.4, 4.5, 4.6.\\
+	%------------------------------------------------
+	2.0.0 & \frmdata{03}{03}{2017} & Giovanni Damo & \responsabile & Approvazione\\
+	1.2.0 & \frmdata{02}{03}{2017} & Leonardo Brutesco & \verificatore & Verificato il consuntivo di fine periodo e il preventivo a finire\\
+	1.1.3 & \frmdata{02}{03}{2017} & Giovanni Damo & \responsabile & Redatto il preventivo a finire\\
+	1.1.2 & \frmdata{01}{03}{2017} & Giovanni Damo & \responsabile & Redatto il consuntivo di fine periodo\\
+	1.1.1 & \frmdata{10}{02}{2017} & Leonardo Brutesco & \responsabile & Corretti gli errori grammaticali nella sezione 3.1.1.1 e l'introduzione testuale del consuntivo come indicato dal verificatore\\
+	1.1.0& \frmdata{10}{02}{2017} & Jordan Gottardo & \verificatore & Verifica parziale\\
+	1.0.5 & \frmdata{09}{02}{2017} & Leonardo Brutesco & \responsabile & Modificati i prospetti orari della sezione Preventivo sulla base degli accorpamenti effettuati nella sezione di pianificazione.\\
+	1.0.4 & \frmdata{08}{02}{2017} & Leonardo Brutesco & \responsabile & Ristrutturata la pianificazione secondo le osservazioni dei docenti, al fine di rendere chiaro che il modello scelto è quello incrementale. Rimasta invariata la pianificazione dei primi due periodi; raggruppate quelle che prima erano le fasi PdROb, PdRD, PdROp nell'unico periodo PCV caratterizzato da vari incrementi, definiti all'inizio del secondo periodo. Nei diagrammi di Gantt sono stati introdotti i task per le attività di Analisi dei Requisiti e di Progettazione logica.\\
+	1.0.3 & \frmdata{07}{02}{2017} & Leonardo Brutesco & \responsabile & Trasposta l'analisi dei rischi in forma tabellare nella sezione 2\\
+	1.0.2 & \frmdata{06}{02}{2017} & Leonardo Brutesco & \responsabile & Sostituita la parola "fase" con "periodo".\\
+	1.0.1 & \frmdata{29}{01}{2017} & Giovanni Damo & \responsabile & Messi a glossario i termini solo la prima volta che compaiono in ogni section del documento \\
+	%------------------------------------------------
+	1.0.0 & \frmdata{07}{01}{2017} & Giulia Petenazzi & \responsabile & Approvazione \\
+	0.2.0 & \frmdata{07}{01}{2017} & Daniel De Gaspari & \verificatore & Verifica del documento\\
+	0.1.3 & \frmdata{06}{01}{2017} & Giulia Petenazzi & \responsabile & Stesura preventivo a finire\\
+	0.1.2 & \frmdata{05}{01}{2017} & Giulia Petenazzi & \responsabile & Stesura consuntivo di periodo\\
+	0.1.1 & \frmdata{05}{01}{2017} & Giulia Petenazzi & \responsabile & Correzione errori\\
+	0.1.0 & \frmdata{14}{12}{2016} & Marco Pasqualini & \verificatore & Verifica parziale\\
+	0.0.6 & \frmdata{12}{12}{2016} & Giulia Petenazzi & \responsabile & Stesura preventivo \\
+	0.0.5 & \frmdata{07}{12}{2016} & Jordan Gottardo & \responsabile & Stesura organigramma \\
+	0.0.4 & \frmdata{06}{12}{2016} & Jordan Gottardo & \responsabile & Stesura pianificazione \\
+	0.0.3 & \frmdata{05}{12}{2016} & Giulia Petenazzi & \responsabile & Stesura analisi dei rischi \\
+	0.0.2 & \frmdata{05}{12}{2016} & Jordan Gottardo & \responsabile & Stesura introduzione \\
+	0.0.1 & \frmdata{04}{12}{2016} & Jordan Gottardo & \responsabile & Creazione template e indice \\
+}
+\usepackage{multirow}
+\usepackage{float}
+
+\begin{document}
+	Introduzione
+	Introduzione
+
+	\input{sections/PianoDiProgettoSezIntroduzione.tex}
+	\input{sections/PianoDiProgettoSezAnalisiRischi.tex}
+	\input{sections/PianoDiProgettoSezPianificazione.tex}
+	\input{sections/PianoDiProgettoSezPreventivo.tex}
+	\input{sections/PianoDiProgettoSezConsuntivoDiFinePeriodo.tex}
+	\input{sections/PianoDiProgettoSezPreventivoAFinire.tex}
+	\appendix
+	\input{sections/PianoDiProgettoSezOrganigramma.tex}
+\end{document}

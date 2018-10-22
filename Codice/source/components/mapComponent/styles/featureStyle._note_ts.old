@@ -1,0 +1,554 @@
+import * as ol from 'openlayers';
+import { NodeTypes } from '../../../store/types/node';
+import {
+  AssetFeatureInformation, FeatureInformation, FeatureType,
+  NodeFeatureInformation,
+} from '../mapUtils/mapUtils';
+import { isNullOrUndefined } from 'util';
+import { hex2rgb } from '../../../callManager/transformers/callManagerUtils/callManagerUtils';
+import { normalStyles, selectedStyles } from './baseStyle';
+// tslin t:disable
+
+type color = ol.Color|string;
+
+type Style = ol.style.Style;
+
+const whiteV: color = [255, 255, 255, 1];
+const whiteVH: color = 'rgba(255, 255, 255, 0.5)';
+const blueV: color = [0, 153, 255, 1];
+const widthV = 3;
+
+// http://openlayers.org/en/latest/apidoc/ol.geom.html
+// ol.geom.GeometryType
+enum StyleType {
+  NORMAL,
+  SELECTED,
+}
+
+interface StyleParams {
+  feature: ol.Feature;
+  resolution: number;
+  styleType: StyleType;
+}
+
+/*function obj2color(a: {r,g,b,a}): color {
+  return [a.r, a.g, a.b, a.a];
+}*/
+
+class CommonStyle {
+  public static setNodeColorVisibility(show: boolean) {
+    console.log('MAP show color', show);
+    CommonStyle.showNodeColor = show;
+  }
+
+  public static assetStyle(params: StyleParams): Style|Style[] {
+    const { feature } = params;
+    const { resolution } = params;
+    const assetInfo: AssetFeatureInformation = feature.get('_info');
+    const afC = assetInfo.color;
+    const fC = { r:afC.r ,g:afC.g ,b:afC.b , a:1 };
+    // 	color= [63, 229, 244, 0.9];
+    let colorI: color = [200, 229, 244, 0.33];
+    let colorO: color = [200, 229, 244, 1.0];
+    if (fC.a !== 0) {
+      colorO = [fC.r, fC.g, fC.b, fC.a];
+      colorI = [fC.r, fC.g, fC.b, fC.a / 3];
+    }
+    if (params.styleType === StyleType.SELECTED) {
+      // colorI = whiteV;
+      colorI = whiteVH;
+      // colorO = blueV;
+    }
+    const strokeV = new ol.style.Stroke({ color: colorO, width: 2 });
+    const styles: ol.style.Style[] = [];
+
+    styles.push(new ol.style.Style({
+      text: new ol.style.Text({
+        text: assetInfo.name, //  + ' ' + Math.round(Math.random() * 100),
+        stroke: CommonStyle.whiteStroke,
+        fill: CommonStyle.blackStroke,
+        scale: 2,
+      }),          // textBaseline: 'bottom',      // offsetY: -6,
+      zIndex: 10000,
+    }));
+    styles.push(new ol.style.Style({
+      stroke: strokeV,
+      fill: new ol.style.Fill({ color: colorI }),
+      zIndex: 10,
+    }));
+    return styles;
+  }
+
+  public static nodeStyle(params: StyleParams): Style |Style[] {
+    const { feature } = params;
+    const { resolution } = params;
+    console.log('MAP node style show:', CommonStyle.showNodeColor);
+
+    const nodeInfo: NodeFeatureInformation = feature.get('_info');
+    const pi = 3.14159265359;
+    const shape = CommonStyle.nodeKindToShape[nodeInfo.kind];
+    let fillColor: color = 'rgba(8, 73, 79, 0.2)';
+    let strokeColor: color = 'rgba(8, 73, 79, 1)';
+    if (!isNullOrUndefined(nodeInfo.color) && CommonStyle.showNodeColor === true) {
+      const a = hex2rgb(nodeInfo.color);
+      fillColor = [a.r, a.g, a.b, 0.2];
+      strokeColor = [a.r, a.g, a.b, 1];
+    }
+    if (params.styleType === StyleType.SELECTED) {
+      fillColor = whiteV;
+    }
+    const fill = new ol.style.Fill({ color: fillColor });
+    const stroke = new ol.style.Stroke({ color: strokeColor, width: 2 });
+    const blackStroke = new ol.style.Stroke({ color: [0, 0, 0, 0.5], width: 1 });
+    let image = null;
+    let points = 0;
+    let radius = 0;
+    let angle = 0;
+    let drawCircle = false;
+    let showText = true;
+    let textV = null;
+    let tScale = 1;
+    switch (shape) {
+      case 'square':		points = 4;	angle = pi / 4;		break;
+      case 'triangleDown':points = 3;	angle = pi;		break;
+      case 'circle':		drawCircle = true;			break;
+      default: 			drawCircle = true;			break;
+    }
+    if (resolution < 0.6) {
+      radius = 15;
+      tScale = 1.5;
+    }else if (resolution < 1.2) {
+      radius = 6;
+      tScale = 1.2;
+    }else {
+      radius = 1;
+      showText = false;
+    }
+    if (showText === true) {
+      textV = new ol.style.Text({
+        text:nodeInfo.label,
+        textBaseline: 'bottom',
+        offsetY: -8,
+        stroke: blackStroke,
+        scale: tScale,
+      });
+    }
+    if (shape === 'dot') {
+      image = new ol.style.Circle({
+        radius: widthV * 2,
+        fill: new ol.style.Fill({ color: fillColor }),
+        stroke: new ol.style.Stroke({ color: strokeColor, width: widthV / 2 }),
+      });
+    }else if (drawCircle === true) {
+      image = new ol.style.Circle({ radius, fill, stroke, snapToPixel: false });
+    }else {
+      image = new ol.style.RegularShape({
+        radius, points, angle, fill, stroke, snapToPixel: false,
+      });
+    }
+    const styles: Style[] = [];
+    styles.push(new ol.style.Style({ stroke, image, zIndex: 20 }));
+    styles.push(new ol.style.Style({ text: textV,zIndex: 10000 }));
+    return styles;
+  }
+
+  public static edgeStyle(params: StyleParams): ol.style.Style|ol.style.Style[] {
+    const { feature } = params;
+    const { resolution } = params;
+    const geometry: any = feature.getGeometry();
+    let col: ol.Color|string = '#ffcc33';
+    if (params.styleType === StyleType.SELECTED) {
+      col = whiteV;
+    }
+    const stroke = new ol.style.Stroke({ color: col, width: 2 });
+    const styles = [new ol.style.Style({ stroke })];
+    let iScale = 1;
+    if (resolution < 0.6) {
+      iScale = 1;
+    }else if (resolution < 2) {
+      iScale = 0.8;
+    }else {
+      iScale = 0.6;
+    }
+    const add = (a1: ol.Coordinate, a2: ol.Coordinate): ol.Coordinate => {
+      return [a1[0] + a2[0], a1[1] + a2[1]];
+    };
+    const rotate = (cx: ol.Coordinate, point: ol.Coordinate, angle: number): ol.Coordinate => {
+      const radians = angle / 180 * Math.PI;
+      const cos = Math.cos(radians);
+      const sin = Math.sin(radians);
+      return [
+        (cos * (point[0] - cx[0])) + (sin * (point[1] - cx[1])) + cx[0],
+        (cos * (point[1] - cx[0])) - (sin * (point[0] - cx[0])) + cx[1],
+      ];
+    };
+    geometry.forEachSegment((start: ol.Coordinate, end: ol.Coordinate) => {
+      const dx = end[0] - start[0];
+      const dy = end[1] - start[1];
+      const rotation = Math.atan2(dy, dx);
+      const rotD = rotation * 180 / Math.PI;
+      const u = 1 / iScale;
+      const a: ol.Coordinate = add(end, rotate([0,0], [-10 * u, -10 * u], 90 - rotD));
+      const b: ol.Coordinate = add(end, rotate([0,0], [10 * u, -10 * u], 90 - rotD));
+      const coords: ol.Coordinate[] = [a, end, b];
+      // console.log('MAP ', coords, a, rotD);
+      styles.push(new ol.style.Style({ stroke, geometry: new ol.geom.LineString(coords) }));
+    });
+
+    return styles;
+  }
+
+  public static styleFunctionNormal(featureP: ol.Feature, resolutionP: number): Style|Style[] {
+    const info: FeatureInformation = featureP.get('_info');
+    let style: Style|Style[] = normalStyles;
+    if (!isNullOrUndefined(info)) {
+      const params: StyleParams = {
+        feature: featureP,
+        resolution: resolutionP,
+        styleType: StyleType.NORMAL,
+      };
+      if (info.type === FeatureType.ASSET) {
+        style = CommonStyle.assetStyle(params);
+      }else if (info.type === FeatureType.NODE) {
+        style = CommonStyle.nodeStyle(params);
+      }else if (info.type === FeatureType.EDGE) {
+        style = CommonStyle.edgeStyle(params);
+      }
+    }
+    return style;
+  }
+
+  public static styleFunctionSelected(featureP: ol.Feature, resolutionP: number): Style|Style[] {
+    const t = featureP.getGeometry().getType();
+    let style: Style|Style[] = selectedStyles[t];
+    const info: FeatureInformation = featureP.get('_info');
+    if (!isNullOrUndefined(info)) {
+      const params: StyleParams = {
+        feature: featureP,
+        resolution: resolutionP,
+        styleType: StyleType.SELECTED,
+      };
+      if (info.type === FeatureType.ASSET) {
+        style = CommonStyle.assetStyle(params);
+      }else if (info.type === FeatureType.NODE) {
+        style = CommonStyle.nodeStyle(params);
+      }else if (info.type === FeatureType.EDGE) {
+        style = CommonStyle.edgeStyle(params);
+      }
+    }
+    return style;
+  }
+
+  //
+  //
+
+  private static readonly assetDefaultInnerColor: color = [200, 229, 244, 0.33];  // 0.2
+  private static readonly assetDefaultOuterColor: color = [200, 229, 244, 1.0];
+  private static readonly nodeDefaultInnerColor: color  = [8, 73, 79, 0.2];
+  private static readonly nodeDefaultOuterColor: color  = [200, 229, 244, 1.0];
+  private static readonly selectedDefaultColor: color   = [255, 255, 255, 1.0];
+  private static readonly blackStroke = new ol.style.Stroke({ color:[0, 0, 0, 0.5], width:2 });
+  private static readonly whiteStroke = new ol.style.Stroke({ color:[255, 255, 255, 1], width:2 });
+  private static readonly nodeKindToShape = {
+    [NodeTypes.Coda]: 'database',   // TODO da fare
+    [NodeTypes.Risorsa]: 'dot',     // TODO da migliorare
+    [NodeTypes.Macchina]: 'square',
+    [NodeTypes.Uscita]: 'circle',
+    [NodeTypes.Sorgente]: 'triangleDown',
+  };
+  private static showNodeColor: boolean = false;
+}
+/*
+function assetStyle(params: StyleParams): Style|Style[] {
+  const { feature } = params;
+  const { resolution } = params;
+  const assetInfo: AssetFeatureInformation = feature.get('_info');
+  const afC = assetInfo.color;
+  const fC = { r:afC.r ,g:afC.g ,b:afC.b , a:1 };
+  // 	color= [63, 229, 244, 0.9];
+  let colorI: color;
+  let colorO: color;
+  if (fC.a === 0) {
+    colorO = [200, 229, 244, 1.0];
+    colorI = [200, 229, 244, 0.33];
+  }else {
+    colorO = [fC.r, fC.g, fC.b, fC.a];
+    colorI = [fC.r, fC.g, fC.b, fC.a / 3];
+  }
+  if (params.styleType === StyleType.SELECTED) {
+    // colorI = whiteV;
+    colorI = whiteVH;
+    // colorO = blueV;
+  }
+  const strokeV = new ol.style.Stroke({ color: colorO, width: 2 });
+  const blackStroke = new ol.style.Stroke({ color: [0, 0, 0, 0.5], width: 1 });
+  const whiteStroke = new ol.style.Stroke({ color: [255, 255, 255, 1], width: 2 });
+  const styles: ol.style.Style[] = [];
+
+  styles.push(new ol.style.Style({
+    text: new ol.style.Text({
+      text: assetInfo.name + ' ' + Math.round(Math.random() * 100),
+      stroke: whiteStroke,
+      fill: blackStroke,
+      scale: 2,
+
+    }),      // text:feature.get('_name'),      // textBaseline: 'bottom',      // offsetY: -6,
+    zIndex: 10000,
+  }));
+  styles.push(new ol.style.Style({
+    stroke: strokeV,
+    fill: new ol.style.Fill({ color: colorI }),
+    zIndex: 10,
+  }));
+  return styles;
+  /*return new ol.style.Style({
+    stroke: strokeV,
+    fill: new ol.style.Fill({ color: colorI }),
+    text: new ol.style.Text({
+      text:assetInfo.name + ' ' + Math.round(Math.random() * 100),
+      stroke: whiteStroke,
+      fill: blackStroke,
+      scale: 2,
+
+    }),      // text:feature.get('_name'),      // textBaseline: 'bottom',      // offsetY: -6,
+    // zIndex: 1
+  });*/
+/*}
+
+/*  NodeTypes
+QUEUE => database
+RESOURCE => dot (non funziona sulla vm...)
+MACHINE => square
+EXIT => circle
+SOURCE => triangleDown
+     */
+/*function nodeStyle(params: StyleParams): Style |Style[] {
+  const { feature } = params;
+  const { resolution } = params;
+  // const ///<"/>
+
+  const kindToShape = {
+    [NodeTypes.Coda]: 'database',   // TODO da fare
+    [NodeTypes.Risorsa]: 'dot',     // TODO da migliorare
+    [NodeTypes.Macchina]: 'square',
+    [NodeTypes.Uscita]: 'circle',
+    [NodeTypes.Sorgente]: 'triangleDown',
+  };
+  const nodeInfo: NodeFeatureInformation = feature.get('_info');
+  const pi = 3.14159265359;
+  const shape = kindToShape[nodeInfo.kind];
+  let col: color = 'rgba(8, 73, 79, 0.2)';
+  let colO: color = 'rgba(8, 73, 79, 1)';
+  if (!isNullOrUndefined(nodeInfo.color)) {
+    const a = hex2rgb(nodeInfo.color);
+    col = [a.r, a.g, a.b, 0.2];
+    colO = [a.r, a.g, a.b, 1];
+  }
+  if (params.styleType === StyleType.SELECTED) {
+    col = whiteV;
+  }
+  const fillV = new ol.style.Fill({ color: col });
+  const strokeV = new ol.style.Stroke({ color: colO, width: 2 });
+  const blackStroke = new ol.style.Stroke({ color: [0, 0, 0, 0.5], width: 1 });
+  let imageV = null;
+  let pointsV = 0;
+  let radiusV = 0;
+  let angleV = 0;
+  let drawCircle = false;
+  let showText = true;
+  let textV = null;
+  let tScale = 1;
+  switch (shape) {
+    case 'square':		pointsV = 4;	angleV = pi / 4;		break;
+    case 'triangleDown':pointsV = 3;	angleV = pi;		break;
+    case 'circle':		drawCircle = true;			break;
+    default: 			drawCircle = true;			break;
+  }
+  if (resolution < 0.6) {
+    radiusV = 15;
+    tScale = 1.5;
+  }else if (resolution < 1.2) {
+    radiusV = 6;
+    tScale = 1.2;
+  }else {
+    radiusV = 1;
+    showText = false;
+  }
+  if (showText === true) {
+    textV = new ol.style.Text({
+      text:nodeInfo.label,
+      textBaseline: 'bottom',
+      offsetY: -8,
+      stroke: blackStroke,
+      scale: tScale,
+    });
+  }
+  if (drawCircle === true) {
+    imageV = new ol.style.Circle({
+      radius: radiusV,
+      snapToPixel: false,
+      fill: fillV,
+      stroke: strokeV,
+    });
+  }else {
+    imageV = new ol.style.RegularShape({
+      radius: radiusV,
+      points: pointsV,
+      angle: angleV,
+      snapToPixel: false,
+      fill: fillV,
+      stroke: strokeV,
+    });
+  }
+  if (shape === 'dot') {
+    imageV = new ol.style.Circle({
+      radius: widthV * 2,
+      fill: new ol.style.Fill({
+        // color: blueV,
+        color: col,
+      }),
+      stroke: new ol.style.Stroke({
+        // color: whiteV,
+        color: colO,
+        width: widthV / 2,
+      }),
+    });
+  }
+  const styles: Style[] = [];
+  styles.push(new ol.style.Style({ stroke: strokeV, image: imageV, zIndex: 20 }));
+  styles.push(new ol.style.Style({ text: textV,zIndex: 10000 }));
+  return styles;
+  // const style =	new ol.style.Style({ stroke: strokeV, image: imageV, text: textV });
+  // return style;
+
+}
+
+// function styleFunctionEdge(feature: any, resolution: any) {
+function edgeStyle(params: StyleParams): ol.style.Style|ol.style.Style[] {
+  const { feature } = params;
+  const { resolution } = params;
+  const geometry: any = feature.getGeometry();
+  let col: ol.Color|string = '#ffcc33';
+  if (params.styleType === StyleType.SELECTED) {
+    col = whiteV;
+  }
+  const styles = [    // linestring
+    new ol.style.Style({
+      stroke: new ol.style.Stroke({
+        color: col,
+        width: 2,
+      }),
+      // zIndex: 3
+    }),
+  ];
+  let iScale = 1;
+  if (resolution < 0.6) {
+    iScale = 1;
+  }else if (resolution < 2) {
+    iScale = 0.8;
+  }else {
+    iScale = 0.6;
+  }
+
+  /*new ol.style.Style({ image: new ol.style.Icon({
+   anchor: [0.5, 1],
+   src: 'https://openlayers.org/en/v4.0.1/examples/data/icon.png'
+   }) })*/
+/*  geometry.forEachSegment((start: ol.Coordinate, end: ol.Coordinate) => {
+    const dx = end[0] - start[0];
+    const dy = end[1] - start[1];
+    const rotation = Math.atan2(dy, dx);
+    let srcV = './arrowU.png';  // arrows
+    if (params.styleType === StyleType.SELECTED) {
+      srcV = './arrowS.png';
+    }
+    styles.push(new ol.style.Style({
+      geometry: new ol.geom.Point(end),
+      image: new ol.style.Icon({
+        // src: 'https://openlayers.org/en/v4.0.1/examples/data/arrow.png',
+        src: srcV,
+        anchor: [0.75, 0.5],
+        scale: iScale,
+        rotateWithView: true,
+        rotation: -rotation,
+      }),
+    }));
+  });
+
+  return styles;
+}*/
+
+//
+//
+// function styleFunction(params: StyleParams): Style| Style[] {
+//   const info: FeatureInformation = featureP.get('_info');
+//   let style: Style|Style[] = null; // normalStyles[0];
+//   // console.log('STY');
+//   if (!isNullOrUndefined(info)) {
+//     const params: StyleParams = {
+//       feature: featureP,
+//       resolution: resolutionP,
+//       styleType: StyleType.NORMAL,
+//     };
+//     if (info.type === FeatureType.ASSET) {
+//       style = assetStyle(params);
+//     }else if (info.type === FeatureType.NODE) {
+//       style = nodeStyle(params);
+//     }else if (info.type === FeatureType.EDGE) {
+//       style = edgeStyle(params);
+//     }
+//   }
+//   return style;
+// }
+
+/*function styleFunctionNormal(featureP: ol.Feature, resolutionP: number): Style|Style[] {
+  const info: FeatureInformation = featureP.get('_info');
+  let style: Style|Style[] = null; // normalStyles[0];
+  // console.log('STY');
+  if (!isNullOrUndefined(info)) {
+    const params: StyleParams = {
+      feature: featureP,
+      resolution: resolutionP,
+      styleType: StyleType.NORMAL,
+    };
+    if (info.type === FeatureType.ASSET) {
+      style = assetStyle(params);
+    }else if (info.type === FeatureType.NODE) {
+      style = nodeStyle(params);
+    }else if (info.type === FeatureType.EDGE) {
+      style = edgeStyle(params);
+    }
+  }
+  return style;
+}
+
+//
+
+function styleFunctionSelected(featureP: ol.Feature, resolutionP: number): Style|Style[] {
+  const info: FeatureInformation = featureP.get('_info');
+  const t = featureP.getGeometry().getType();
+  let style: Style|Style[] = null; // selectedStyles[t];
+  if (!isNullOrUndefined(info)) {
+    const params: StyleParams = {
+      feature: featureP,
+      resolution: resolutionP,
+      styleType: StyleType.SELECTED,
+    };
+    if (info.type === FeatureType.ASSET) {
+      style = assetStyle(params);
+    }else if (info.type === FeatureType.NODE) {
+      style = nodeStyle(params);
+    }else if (info.type === FeatureType.EDGE) {
+      style = edgeStyle(params);
+    }
+  }
+  return style;
+}*/
+
+export { CommonStyle };
+
+// export { StyleType };
+
+export { StyleParams };
+
+// export { assetStyle, nodeStyle, edgeStyle };

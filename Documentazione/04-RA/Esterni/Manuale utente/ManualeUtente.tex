@@ -1,0 +1,104 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{../../../Template/zemplate}
+
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+%\setcounter{tocdepth}{2}
+%\RequirePackage[acronym, toc]{glossaries}
+\usepackage[acronym, toc]{glossaries}
+%\newcommand{\glo}[1]{#1$_{\textit{G}}$}
+% glossario
+% per includerlo nel documento bisogna:
+% 1. compilare una prima volta ManualeUtente.tex;
+% 2. eseguire: 
+% makeindex -s ManualeUtente.ist -t ManualeUtente.glg -o ManualeUtente.gls ManualeUtente.glo
+% 3. eseguire:
+%  makeindex -s ManualeUtente.ist -t ManualeUtente.alg -o ManualeUtente.acr ManualeUtente.acn
+% 4. compilare due volte ManualeUtente.tex.
+	
+\docTitle{Manuale Utente}
+\docVersion{2.0.0}
+\docCreationDate{\frmdata{23}{03}{2017}}
+\docLastUpdateDate{\frmdata{18}{08}{2017}}
+\docStatus{Approvato}
+\docEditors{Giulia Petenazzi}
+\docVerificators{Jordan Gottardo}
+\docApprovers{Marco Pasqualini}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{
+	2.0.0 & \frmdata{18}{08}{2017} & Marco Pasqualini & \responsabile & Approvazione del documento\\
+	1.1.0 & \frmdata{18}{08}{2017} & Jordan Gottardo & \verificatore & Verifica del documento\\
+	1.0.1 & \frmdata{16}{08}{2017} & Giulia Petenazzi & \programmatore & Aggiunte sezioni 9 e 10\\
+	1.0.0 & \frmdata{06}{04}{2017} & Giovanni Prete & \responsabile & Approvazione del documento\\
+	0.3.0 & \frmdata{05}{04}{2017} & Jordan Gottardo & \verificatore & Verifica del documento\\
+	0.2.1 & \frmdata{04}{04}{2017} & Daniel De Gaspari & \progettista & Stesura glossario\\
+	0.2.0 & \frmdata{01}{04}{2017} & Jordan Gottardo & \verificatore & Verifica del documento in
+		forma parziale\\
+	0.1.2 & \frmdata{28}{03}{2017} & Daniel De Gaspari & \progettista & Stesura sezione messaggi d'errore, segnalazione problemi e appendice validazioni\\
+	0.1.1 & \frmdata{27}{03}{2017} & Daniel De Gaspari & \progettista & Stesura sezione gestione asset, nodo e arco\\
+	0.1.0 & \frmdata{26}{03}{2017} & Jordan Gottardo & \verificatore & Verifica del documento in
+	forma parziale\\
+	0.0.3 & \frmdata{25}{03}{2017} & Giulia Petenazzi & \progettista & Stesura sezione interazione con la mappa\\
+	0.0.2 & \frmdata{24}{03}{2017} & Giulia Petenazzi & \progettista & Stesura sezione introduzione, requisiti di sistema e azioni preliminari \\
+	0.0.1 & \frmdata{23}{03}{2017} & Giulia Petenazzi & \progettista & Creazione template e indice\\
+}
+\newcommand\VRule[1][\arrayrulewidth]{\color{white} \vrule width 1pt}
+\catcode`\_=12
+
+\input{sections/GlossarioManUtente.tex}
+
+\makeglossaries
+\begin{document}
+%\setcounter{secnumdepth}{2} % to block out subsubparagraph from showing out with its numbering (index etc.)
+
+\input{sections/ManUtIntroduzione.tex}
+\input{sections/ManUtRequisitiDiSistema.tex}
+\input{sections/ManUtAzioniPreliminari.tex}
+\input{sections/ManUtIntroduzioneAppDeGeOP.tex}
+\input{sections/ManUtInterazioneMappa.tex}
+\input{sections/ManUtGestioneAsset.tex}
+\input{sections/ManUtGestioneNodo.tex}
+\input{sections/ManUtGestioneArco.tex}
+\input{sections/ManUtGestioneScenario.tex}
+\input{sections/ManUtGestioneAnalisi.tex}
+\input{sections/ManUtMessaggiErrore.tex}
+\input{sections/ManUtSegnalazioneProblemi.tex}
+\appendix
+\input{sections/ManUtValidazioni.tex}
+\input{sections/ManUtGlossario.tex}
+%\clearpage
+
+\appendix
+\printglossaries
+
+\end{document}
+
+
+%Manuale utente: come fa l’utente a ottenere copia dell’applicazione?
+
+%LEAF
+%Manuale utente: buono, con giusto equilibrio tra immagini e testo. Bene la
+%descrizione dettagliata dell’installazione e della procedura di segnalazione dei
+%problemi. Completare la descrizione delle funzionalità disponibili.
+
+%
+%Manuale utente: Per quale motivo a un utente finale dovrebbero interessare i
+%riferimenti informativi tecnologici riportati? §2: indicare la versione minima
+%di Android sulla quale il prodotto è assicurato funzionare. Uniformare gli
+%screenshot al medesimo look-and-feel. Non chiara la dicitura (Funzionalità
+%non presente) su alcune funzionalità: non presente perché non ancora
+%sviluppata o perché non verrà supportata? Buono per struttura, ma alcuni degli
+%screenshot forniti non sono adeguatamente descritti. Completare.
+
+%AAA Manca completamente un Glossario dedicato.
+%AAA Qual è l’URL al quale collegarsi per accedere al sistema? 
+%AAA Non è descritto il processo di segnalazione di eventuali errori del prodotto. Il documento è completamente privo di immagini che aiutino l’utente a collegare le descrizioni presenti al prodotto vero e proprio.
+
+%TODO 1) Evidenziare le tecnologie utillzate,
+%TODO 2) Strumenti necessari
+%TODO 3) Glossario Dedicato
+%TODO Estensione funzionalità
+%TODO Estensione del codice

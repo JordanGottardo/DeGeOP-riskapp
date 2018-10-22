@@ -1,0 +1,28 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplate}
+
+
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\externaldocument{../Glossario/Glossario}
+
+\docTitle{Nuovo Documento}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{01}{02}{2017}}
+\docLastUpdateDate{\frmdata{07}{01}{2017}}
+\docStatus{Approvato}
+\docEditors{Nome Cognome \\ & Nome Cognome}
+\docVerificators{Nome Cognome}
+\docApprovers{Nome Cognome}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{		
+	0.0.1 & \frmdata{01}{02}{2017} & Nome Cognome & \analista & Creazione template e indice\\
+}
+\begin{document}
+	\input{sections/Capitolo1.tex}
+	\input{sections/Capitolo2.tex}
+	\input{sections/Capitolo3.tex}
+\end{document}

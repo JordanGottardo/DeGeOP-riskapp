@@ -1,0 +1,63 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplateVerb}
+
+%\externaldocument{path/to/glossario}
+%\includeGlossario
+
+\docVerbV{6}
+\docTitle{Verbale interno - \getdocVerbV}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{21}{02}{2017}}
+\docLastUpdateDate{\frmdata{21}{02}{2017}}
+\docStatus{Approvato}
+\docEditors{Marco Pasqualini}
+\docVerificators{Daniel De Gaspari}
+\docApprovers{Leonardo Brutesco}
+\docUse{Interno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus }
+\docJournal{
+1.0.0 & \frmdata{22}{02}{2016} & Leonardo Brutesco & \responsabile & Approvazione \\
+0.1.0 & \frmdata{21}{02}{2016} & Daniel De Gaspari & \verificatore & Verifica documento \\
+0.0.1 & \frmdata{21}{02}{2016} & Marco Pasqualini & \analista & Stesura documento \\
+}
+
+\begin{document}
+	\section{Estremi della riunione}
+	\begin{itemize}
+		\item \textbf{data:} \frmdata{21}{02}{2016};
+		\item \textbf{ora inizio:} \frmora{14}{00};
+		\item \textbf{ora fine:} \frmora{16}{00};
+		\item \textbf{luogo:} Torre Archimede - Padova;
+		\item \textbf{segretario:} Marco Pasqualini;
+		\item \textbf{partecipanti:}
+			\begin{itemize}
+				\item Daniel De Gaspari;
+				\item Giovanni Damo;
+				\item Giovanni Prete;
+				\item Giulia Petenazzi;
+				\item Jordan Gottardo;
+				\item Leonardo Brutesco;
+				\item Marco Pasqualini.
+			\end{itemize}
+		\item \textbf{assenti:}
+			\begin{itemize}
+			 \item nessuno.
+			\end{itemize}
+	\end{itemize}
+	\section{Ordine del giorno}
+		\begin{itemize}
+			\item discussione delle scelte progettuali dei progettisti e degli strumenti per lo sviluppo testing del prodotto.
+		\end{itemize}
+	\section{Verbale della riunione}
+		\begin{itemize}
+		\item discussione dell'architettura del prodotto;
+		\item discussione tecnologie da utilizzare per lo sviluppo del prodotto;
+		\item discussione tecnologie da utilizzare per il testing del prodotto.
+		\end{itemize}
+	\section{Decisioni prese}
+	\begin{itemize}
+		\itemVI stabilite le tecnologie di testing proposte dagli amministratori che saranno riportate nelle \ndp;
+		\itemVI confermate le tecnologie proposte dai progettisti quali JavaScript ES6, JSX, Redux, ReactToolbox, OpenLayers, OpenStreetMap API, Bing Map API, ReactColor, Hammer, HTML5, CSS3;
+		\itemVI stabilite le componenti dell'architettura del prodotto che saranno riportate nella \st.
+	\end{itemize}
+\end{document}

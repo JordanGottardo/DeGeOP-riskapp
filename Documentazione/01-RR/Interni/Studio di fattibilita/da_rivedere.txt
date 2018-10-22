@@ -1,0 +1,16 @@
+[Su tutti i documenti]:
+
+- Controllare corrispondenza riferimenti normativi (norme di progetto)
+con il relativo documento.
+- Controllare i ";" alla fine di ogni voce elenco.
+
+- C1
+	- Descrizione:
+		- Controllare operazioni di base/estese
+	- Dominio tecnologico:
+		- corretto dire "viene richiesto" in questo caso?
+		- inserire swagger? dal capitolato C1, dovrebbe essere già compreso sotto a "Jolie"
+	- Aspetti positivi:
+		- l’utilizzo di Jolie ci offre la possibilità di estendere il linguaggio stesso e di aggiungere nuove funzionalità
+	- Aspetti negativi:
+		- tutti da rivedere

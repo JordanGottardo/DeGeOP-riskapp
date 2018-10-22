@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "typeRoots": [ "../node_modules/@types"],
+    "noStrictGenericChecks": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "silent": true
+  }
+}

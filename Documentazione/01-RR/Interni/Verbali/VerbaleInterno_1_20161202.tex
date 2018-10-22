@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplateVerb}
+
+%\externaldocument{path/to/glossario}
+\docVerbV{1}
+\docTitle{Verbale interno - \getdocVerbV}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{02}{12}{2016}}
+\docLastUpdateDate{\frmdata{04}{12}{2016}}
+\docStatus{Approvato}
+\docEditors{Daniel De Gaspari}
+\docVerificators{Leonardo Brutesco}
+\docApprovers{Jordan Gottardo}
+\docUse{Interno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus }
+\docJournal{
+	1.0.0 & \frmdata{04}{12}{2016} & Jordan Gottardo &  \responsabile & Approvazione \\
+	0.1.0 & \frmdata{02}{12}{2016} & Leonardo Brutesco &  \verificatore & Verifica documento\\
+	0.0.1 & \frmdata{02}{12}{2016} & Daniel De Gaspari & \analista & Stesura documento \\
+}
+
+\begin{document}
+	\section{Estremi della riunione}
+	\begin{itemize}
+		\item \textbf{data:} \frmdata{02}{12}{2016};
+		\item \textbf{ora inizio:} \frmora{16}{00};
+		\item \textbf{ora fine:} \frmora{18}{00};
+		\item \textbf{luogo:} Torre Archimede - Padova;
+		\item \textbf{segretario:} Daniel De Gaspari;
+		\item \textbf{partecipanti:}
+			\begin{itemize}
+			 \item Daniel De Gaspari;
+			 \item Giovanni Damo;
+			 \item Giovanni Prete;
+			 \item Giulia Petenazzi;
+			 \item Jordan Gottardo;
+			 \item Leonardo Brutesco;
+			 \item Marco Pasqualini.
+			\end{itemize}
+		\item \textbf{assenti:}
+			\begin{itemize}
+			 \item nessuno
+			\end{itemize}
+	\end{itemize}
+	\section{Ordine del giorno}
+		\begin{itemize}
+			\item studio di fattibilità dei capitolati;
+			\item scelta capitolato;
+			\item definizione generale strumenti da utilizzare.
+		\end{itemize}
+	\section {Verbale della riunione}
+	Il gruppo si è ritrovato per lo studio di fattibilità dei capitolati e la definizione di alcuni strumenti da utilizzare.
+	\section{Decisioni prese}
+	\begin{itemize}
+		\itemVI viene scelto il capitolato C3 a seguito dello studio di fattibilità precedentemente svolto;
+		\itemVI viene stabilito di utilizzare i seguenti strumenti:
+			\begin{itemize}
+				\item {\textbf{GitHub:} per la gestione del repository Git};
+				\item {\textbf{Asana:} come strumento di project management};
+				\item {\textbf{Tracy:} per il tracciamento dei requisiti};
+				\item {\textbf{TeXstudio:} per la redazione della documentazione in LaTeX};
+				\item {\textbf{Astah:} per il disegno di diagrammi UML};
+				\item {\textbf{Slack:} per la comunicazione tra i membri del gruppo}.
+			\end{itemize}
+	\end{itemize}
+\end{document}

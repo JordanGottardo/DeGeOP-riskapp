@@ -1,0 +1,29 @@
+- Asset:
+	- insertAsset();
+	- editAsset();
+	- deleteAsset();
+	- getAssetTypeList(); NO ACTION
+		//per elencare le tipologie di asset presenti, in fase di creazione dell'oggetto grafico (?)
+- Node:
+	- insertNode();
+	- editNode();
+	- deleteNode();
+	- getNodeTypeList(); NO ACTION
+		//per elencare le tipologie di nodo presenti, in fase di creazione dell'oggetto grafico (?)
+- Edge:
+	- insertEdge();
+	- editEdge();
+	- deleteEdge();
+- Scenario:
+	- insertScenario();
+	- editScenario();
+	- deleteScenario();
+	- getScenarioTypeList();  NO ACTION
+		//per elencare le tipologie di scenario presenti, in fase di creazione dell'oggetto grafico (?)
+- Analysis:
+	- startAnalysis();
+	- appendScenario()
+	- removeScenario();
+	- getScenarioList();  NO ACTION
+		//per elencare gli scenari presenti, in fase di creazione dell'oggetto grafico (?)
+	- updateAllAnalysisState(); IN FORSE, da discutere con Marco

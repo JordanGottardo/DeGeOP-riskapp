@@ -1,0 +1,57 @@
+			\small
+			\begin{table}[H]
+			\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+			\arrayrulecolor{lightgray}
+			
+			\toprule				
+				\textbf{Descrizione}
+				& &
+				TESTO
+			\\
+			\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				TESTO
+			\\
+			\midrule
+				\textbf{Prevenzione}
+				& &
+				TESTO
+			\\
+			\midrule
+				\textbf{Identificazione}
+				& &
+				TESTO
+			\\
+			\midrule
+				\textbf{Contenimento}
+				& &
+				TESTO
+			\\
+			\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: TESTO
+				\newline
+				\textbf{Impatto}: TESTO
+			\\
+			\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: TESTO
+				\newline
+				\textbf{Impatto}: TESTO
+			\\
+			\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}: TESTO
+				\newline
+				\textbf{Pl}: TESTO
+			\\
+			
+			\bottomrule	
+			\end{tabular}
+			\end{center}
+			\end{table}			

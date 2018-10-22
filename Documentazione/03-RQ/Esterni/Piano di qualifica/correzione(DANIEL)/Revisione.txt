@@ -1,0 +1,569 @@
+0) Aggiungere informazioni mancanti in prima pagina;
+
+1) Introduzione
+	1.1) Scopo del documento:
+		- "che il team si è prefissato"
+			-modificare con: "che il gruppo Zephyrus ha deciso di perseguire"
+		- glossario:
+			- team
+			- verifica
+			- validazione
+
+	1.2) Uniformare con gli altri documenti
+	1.3) Uniformare con gli altri documenti
+	1.4)
+		1.4.1)
+			- Modificare versione Norme di progetto
+		1.4.2)
+			- Modificare versione Piano di progetto
+			- Aggiungere ISO 9126 (link wikipedia)
+
+
+2) Visione generale della strategia di gestione della qualità
+	2.1) Obiettivi di qualità
+		- glossario:
+			-team
+		- "che il team si è prefissato"
+			- modificare con: "che il gruppo Zephyrus ha deciso di perseguire durante lo svolgimento dell'intero progetto."	
+		- "sono stati scelti standard, modelli e metriche"
+			- modificare con: "il team ha deciso di adottare standard, modelli e metriche"
+		-!!! "Ognuno di questi utilizza una scala fissata a priori"
+			- stiamo dando corrispondenza 1-1 , ovvero standard, modelli e metriche hanno UNA sola scala ciascuno.
+			- se è corretto allora ok;
+			- altrimenti modificare con: "Ognuno di questi fa uso di scale differenti e fissate a priori"
+		-!!! "[...] per ogni criterio, il team ha fissato dei range di accettabilità e ottimalità
+			- range (di valori?)
+			- range di valori ottimi non ha molto senso, c'è IL valore ottimo, non un range di valori ottimi
+			- range di accettabilità _E_ range di ottimalità
+			- modificherei con "per ogni criterio, il team ha fissato sia un range di valori da considerare come accettabili, sia dei valori ottimali.
+		- "A prescindere dal livello raggiunto in ogni misurazione, l'obiettivo da perseguire è il miglioramento continuo"
+			- aggiungerei: "[A prescindere...continuo] della qualità, realizzata attraverso il ciclo PDCA (glossario).
+		- "Dato che la qualità non è intrinseca nei vari processi, ..."
+			-modificare "La qualità non è una proprietà intrinseca dei processi; è dunque necessario ricorrere a buoni (BUONI?) strumenti per effettuare le misurazioni."
+		-"è possibile trovarne una spiegazione nel documento appena citato."
+			-cambierei...
+		2.1.1)
+			- glossario:
+				- quality assurance
+				- processo
+
+			- "garantire la qualità del processo è fondamentale se si vogliono ottenere prodotti di qualità"
+				- userei il plurale: "dei processi" piuttosto di "del processo"
+			- "L'unico modo di garantire quality assurance è far sì che i processi abbiano una buona qualità"
+				- non scriverei "buona qualità"
+				- modificherei in: "Per garantire quality assurance è necessario far sì che i processi siano di qualità.
+			- "Inoltre, è possibile anche ottenere maggiore efficienza, efficacia e ripetibilità dei risultati"
+				- modificherei con: "Processi di qualità garantiscono inoltre una maggiore efficienza ed efficacia, oltre alla ripetibilità dei risultati;"
+			- "Gli obiettivi in questi ambiti sono spiegati nel Piano di Progetto v1.0.0."
+				- modificare in:"[... ;] nel documento Piano di Progetto v1.0.0 è possibile trovare gli obiettivi relativamente a tali ambiti.
+			- "Le caratteristiche che i processi dovrebbero vere sono le seguenti:"
+				- modificherei con: "Il team desidera che i processi posseggano le seguenti caratteristiche:"
+			-!!! "le performance di un processo dovrebbe essere misurabili." 
+				- "le performance di un processo (g) dovrebbeRO essere misurabili"
+			- "Seguono gli obiettivi e le metriche riguardanti la qualità di processo che il team si è prefissato."
+				- lasciare una riga di spazio prima;
+				- modificare con:
+					-"Di seguito, vengono enunciati gli obiettivi e le metriche riguardanti la qualità di processi che il team (g) intende perseguire."
+				
+				2.1.1.1)
+					- glossario:
+						-CMM
+						-*Ciclo di Deming (se viene modificato il testo)
+						-LCMM
+
+					- "Per quantificare il livello di performance raggiunto dai processi, si è deciso di adottare il modello CMM. L'obiettivo è miglirare costantemente tale livello."
+						- modificherei con: "Per ottenere una valutazione quantitativa sul livello di performance raggiunto dai processi, si è deciso di adottare il modello CMM (g). Si mira inoltre al miglioramento costante, secondo quanto definito dal Ciclo di Deming. (g)
+					-!!! nell'elenco , non è corretto indicare "soglia XYZ >=2" . "Soglia" indica un valore minimo, quindi togliere ">="
+					-!!! nell'elenco, non è corretto indicare "soglia di ottimalità >=4". Non è possibile avere due valori distinti (4,5) ottimi.
+					-!!! nell'elenco, "LCMMA" modificare con "LCMM"
+				2.1.1.2)
+					- glossario:
+						- Schedule Variance
+
+					- "Qualora non la si rispettasse, è molto probabile che il processo non abbia le caratteristiche di qualità desiderate."
+						- è corretto il ragionamento?
+					- "soglia di accettabilità": come prima, "soglia" e "<=" non vanno d'accordo;
+					- "soglia di ottimalità": come prima
+					-!!! "SV <= 0 giorni rispetto a quanto pianificato, ovvero essere in anticipo"
+						- se SV == 0 non sono in anticipo, sono in linea
+						- modificherei con " SV <=0 giorni rispetto a quanto pianificato, ovvero essere in linea o in anticipo"
+				2.1.1.3)
+					- glossario:
+						- Cost Variance
+
+					- "soglia di accettabilità": come prima, "soglia" e "<=" non vanno d'accordo;
+					- "soglia di ottimalità": come prima
+				2.1.1.4)
+					- glossario:
+						- team
+
+					-!!! indice inventato. mi piace l'idea, ma non inserirei nuovi criteri "inventati".
+					- soglie puramente casuali (essendo un indice inventato)
+			2.1.2)
+				- glossario:
+					- team
+					- prodotti/prodotto
+					- software
+
+				- "Oltre alla qualità del processo, il team desidera anche garantire determinate caratteristiche di qualità dei prrodotti."
+					- modificare con: "Il team, per garantire la migliore qualità del prodotto, desidera garantire determinate caratteristiche di qualità del processo da cui tale prodotto proviene."
+				-!!! "Si è stabilito di basarsi sullo standard ISO/IEC 9126."
+					- modificare con: "A tal fine, è stato deciso di seguire lo standard ISO/IEC 9126."
+				- "ISO/IEC 9126"
+					- specificare l'anno? es: ISO/IEC 9126:2001 ?
+						- [controllare l'anno!]
+				-"Le tipologie di prodotti [...]
+					- modificare: andare a capo prima dell'inizio di questa frase.
+				- "Le tipologie di prodotti che verranno realizzati sono due:"
+					- modificare con: "Lo svolgimento del progetto porterà alla realizzazione delle seguenti due tipologie di prodotti:"
+				2.1.2.1)
+					-glossario:
+						- software
+						- soggetti interni
+						- soggetti esterni
+
+					- "[...] documenti di alta qualità. "
+						- corretto? cosa si intende con "alta qualità?"
+					- "Essi infatti sono fondamentali [...]"
+						- meglio "Essi sono infatti fondamentali [...]"
+					2.1.2.1.1)
+						- glossario:
+							- Indice Gulpease
+
+						- "soglia di accettabilità": come prima, "soglia" e "<=" non vanno d'accordo;
+						- "soglia di ottimalità": come prima
+					2.1.2.1.2)
+						- OK.
+					2.1.2.1.3)
+						- "soglia di accettabilità": come prima, "soglia" e "<=" non vanno d'accordo;
+					2.1.2.1.4) [AGGIUNGERE]
+						- AGGIUNGERE: "Adesione alle norme interne"
+							- vedi 2.2.1.4 VAULT_TECH
+
+				2.1.2.2)
+					- glossario:
+						- software
+						- team
+
+					- !!! "Seguono le caratteristiche e le metriche riguardanti la qualità dei documenti che il team si è prefissato.
+						- QUALITà DEI DOCUMENTI?
+						- modificare in "Seguono le caratteristiche e le metriche riguardanti la qualità del software che il team si è prefissato."
+					2.1.2.2.1)
+						- OK
+					2.1.2.2.2)
+						- OK
+					2.1.2.2.3)
+						- glossario:
+							- Statement
+							- package
+							- 
+
+						-!!! "L'obiettivo è fornire codice senza incomprensioni e mantenibile nel tempo"
+							- modificare con: L'obiettivo è fornire codice privo di incomprensione e manutenibile nel tempo."
+						- "soglia di accettabilità": come prima, "soglia" e "<=" non vanno d'accordo;
+						- "soglia di ottimalità: come prima
+						- i link finali a 2.1.2.2.3 li metterei sotto ad ogni voce anzichè tutti qui. ****Io lo vedo come obiettivo unico che riguarda il codice. Questo obiettivo ha tante metriche che vengono tutte elencate, quindi i link secondo me stanno bene alla fine.
+						- AGGIUNGERE: "Linee di codice per linee di commento" ****ok
+							- vedi 2.7.3.4 FELLOWSHIP
+					2.1.2.2.4)
+						- glossario:
+							- HTML
+							- W3C
+							- browser
+							- tag
+						- "di accettabilità"
+							- manca un termine davanti ****ok
+							- dato che si parla di errori (e non warnings) di validazione metterei NEV<=0; ****Ho lasciato il valore un po' più alto perchè può essere che ci siano errori che in realtà non lo sono (ne era successo 1 a noi a tecweb l'anno scorso, abbiamo consegnato con il validatore che segnalava un errore e l'abbiamo motivato in relazione. Alla fine anche in internet si trovavano thread simili ed era palesemente un falso positivo)
+						- "di ottimalità" ****ok
+							- manca un termine davanti
+					2.1.2.2.5)
+						- "Assicurare la copertura dei test è fondamentale per poter verificare l'implementazione delle funzionalità previste dai requisiti" ****ok
+							- modificare con: "Assicurare la copertura dei test è fondamentale per poter verificare LA CORRETTA implementazione delle funzionalità previste dai requisiti"
+						- "di accettabilità" ****ok
+							- manca un termine davanti
+						- "di ottimalità" ****ok
+							- manca un termine davanti
+					2.1.2.2.6)
+						- glossario:
+							- prodotto
+				2.1.2.3)
+					- !!! Questa voce è posizionata correttamente? al momento è sotto "Qualità di Prodotto". I Leaf l'hanno messo ad un livello di indice inferiore, quindi da noi diventerebbe 2.1.3, sotto a "Obiettivi di qualità". ****spostata
+					
+					
+****************FINO A QUA FATTO************************
+3) La strategia di gestione della qualità nel dettaglio
+	3.1) Risorse
+		- glossario:
+			- processo
+			- risorse
+			- team
+
+		- "Il processo di verifica necessita di risorse per poter ottenere gli obiettivi prefissati. I team ha identificato i seguenti tipi di risorse:"
+			- modificare in: "Il processo di verifica necessita di risorse per ottenere il raggiungimento degli obiettivi prefissati. IL team ha identificato le seguenti tipologie di risorse:"
+		3.1.1)
+			3.1.1.1)
+				-!!! aggiungere: "Informazioni più dettagliate circa sui ruoli sono riportate nelle Norme di Progetto v1.0.0.
+			3.1.1.2)
+				-!!! "Le risorse hardware comprendono i computer computer con una potenza di calcolo sufficiente a sopportare il carico di lavoro."
+					- modificare con: "Le risorse harware comprendono i computer con una potenza di calcolo sufficiente a sopportare il carico di lavoro."
+					- !!! computer? o specificare anche tablet ecc.
+			3.1.1.3)
+				- glossario:
+					- software
+					-* tool (se c'è)
+				- Sono tutte le risorse software di cui abbiamo bisogno? Inoltre, l'ultima frase sembra troppo specifica in contronto alla prima.
+				- "Inoltre, è necessario  un tool per il tracciamento dei requisiti e il controllo dei test."
+					- se lo lasciamo, modificherei con: "E' inoltre necessario uno strumento software per il tracciamento dei requisiti e per il controllo dei test.".
+		3.1.2)
+			3.1.2.1)
+				- glossario:
+					- team
+			3.1.2.2)
+				- AGGIUNGERE anche i tablet tra i dispositivi disponibili.
+			3.1.2.3)
+				- glossario:
+					- tool
+					- indice Gulpease
+					- Trender
+					- issue
+					- Github
+				-!!! "Trender" per tracciamento dei test?
+
+	3.2)
+		3.2.1)
+			- glossario:
+				- PDCA
+			- sotto a negativo: "Per alcune metriche [...]"
+				- corretto?
+			- "ottimale"
+				-!!! ha senso dire che si vuole superare un qualcosa di ottimo?
+		3.2.2)
+			- !!! Inserire frase di presentazione, come fatto su "Metriche per i prodotti [3.2.3], in modo tale da uniformare.
+
+			3.2.2.1)
+				- glossario:
+					- CMM
+					- team
+					- fase
+					- processo
+
+				-!!! "Per misurare l'efficacia del miglioramento costante, il team ha deciso di utilizzare la metrica fornita dal modello CMM."
+					- CMM non misura l'efficacia del miglioramento costante, bensì fornisce un valore che descrive la qualità della fase presa in esame "staticamente"; successivamente si potrà comparare tale indice con valori passati relativi alla stessa fase potendo così identificare l'eventuale miglioramento.
+					- modificherei con: "Per valutare la qualità dei processi, il team adotterà le metrice fornite dal modello CMM: ad ogni fase di lavoro verrà dunque assegnato un indice, relativo ad una scala definita dal CMM, che descriverà la qualità di tale fase. Grazie a tale indice, sarà possibile individuare il livello di maturità di un processo."
+			3.2.2.2)
+				- (tralasciabile) non mi piace l'impostazione grafica dei due acronimi BCWP e BCWS.
+					- modificherei in:
+						dove:
+						- BCWP =
+						- BCWS =
+			3.2.2.3)
+				- OK
+			3.2.2.4) [ricopio quanto scritto in 2.1.1.4]
+					-!!! indice inventato. mi piace l'idea, ma non inserirei nuovi criteri "inventati".
+					- soglie puramente casuali (essendo un indice inventato)
+		3.2.3)
+			3.2.3.1)
+				- glossario:
+					- team
+					- software
+
+				- "Le metriche che il team ha scelto per i documenti sono il più oggettive possibili. Da sole non garantiscono la qualità generale del documento, quindi è necessario un’ulteriore e accurata verifica, soprattutto per evitare gli errori concettuali e di forma.
+					-!!! errore: "è necessario un'ulteriore e accurata verifica."
+						- modificare "necessario" con "necessaria"
+					- modificherei in: "Le metriche scelte dal team riguardanti i documenti, non sono sufficienti a garantire la qualità generale del documento. E' pertanto necessaria un' ulteriore e accurata verifica in modo tale da individuare eventuali errori concettuali e di forma. Le metriche selezionate prendono dunque in esame parametri oggettivi, misurabili in modo automatico mediante utilizzo di strumenti software."
+				3.2.3.1.1)
+					- glossario:
+						- Indice Gulpease
+					- "La metrica utilizzata è L'indice Gulpease (IG), un indice di leggibilità [...]"
+						- ripetizione delle parola "indice"
+						- modificare con: "La metrica utilizata è l'Indice Gulpease (IG), che fornisce un valore sulla leggibilità di un testo [...]".
+					- specificherei meglio su cosa si basa tale indice (Vedi LEAF, 3.2.3.1.1)
+					-(tralasciabile) non mi piace l'impostazione grafica degli acronimi NF, NL e NP.
+						- modificherei in:
+							dove:
+							- NF =
+							- NL =
+							- NP =
+				3.2.3.1.2)
+					- glossario:
+						- fase
+					- "Il contatore fa riferimento ad una specifica fase e viene azzerato successivamente."
+						- "successivamente" non è chiaro.
+				3.2.3.1.3)
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi ECC e ECR.
+						- modificherei in:
+							dove:
+							- ECC =
+							- ECR =
+			3.2.3.2)
+				- glossario:
+					- software
+
+				- modificare la tabella con eventuali metriche aggiunte precedentemente.
+				- "Come descritto nello standard ISO/IEC 9126 [...]"
+					- specificare l'anno? (solo se inserito anche prima)
+				-!!! Nella tabella, la voce "Validazione web" non dovrebbe avere come caratteristica "Affidabilità" ?
+				3.2.3.2.1)
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi ROS e ROI
+						- modificherei in:
+							dove:
+							- ROS =
+							- ROI =
+				3.2.3.2.2)
+					-!!! Le descrizioni degli acronimi sono sbagliate, sono relative al punto precedente! MODIFICARE.
+					-!!! L'acronimo IFO su valore negativo/accettabile/ottimale è sbagliato, è relativo al punto precedente! MODIFICARE.
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi RDS e RDI
+						- modificherei in:
+							dove:
+							- RDS =
+							- RDI =
+					-!!! "Le seguenti metriche fanno riferimento all'obiettivo di Manutenibilità e comprensibilità del codice riportato alla sezione 2.1.2.2.3"
+						- UNIFORMARE: non va bene avere qui dei un indice associato ad ogni voce, a differenza della sezione 2.1.2.2.3 nella quale tutte le voci collassavano all'interno di un unico indice.			
+							-soluzione: nella sezione 2.1.2.2.3 non possiamo attribuire un indice ad ogni voce, in quanto ciò comporterebbe il superamento dei 5 livelli dell'indice. Dunque, dire che non ci resta che far collassare da (3.2.3.2.3) a (3.2.3.2.7) all'interno di un'unica voce, come fatto in 2.1.2.2.3 .
+				3.2.3.2.3)
+					- aggiungere frase introduttiva
+				3.2.3.2.4)
+					- aggiungere frase introduttiva
+				3.2.3.2.5)
+					- aggiungere frase introduttiva
+					-!!!  "metrica utilizzata:Nnumero Campi Dati Per Classe (NCDPC);"
+						- modificare con: "metrica utilizzata: Numero Campi Dati Per Classe (NCDPC);"
+				3.2.3.2.6)
+					- glossario:
+						- package
+				3.2.3.2.7)
+					- !!! valutare se mettere e,n,p MAIUSCOLE. In un esito, veniva scritto che gli acronimi devono avere tutte le lettere maiuscole. Sono acronimi?
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi e, n, p
+						- modificherei in:
+							dove:
+							- e =
+							- n =
+							- p =
+				3.2.3.2.8)
+					- glossario:
+						- W3C
+				3.2.3.2.9)
+					- !!! "I test presi in considerazione sono quelli necessari a verificare l'implementazione delle funzionalità previste dai requisita."
+						- modificare con: "Tale metrica accerta che la percentuale di successo dei test ricavati dai requisiti rientri tra i valori definiti da essa."
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi TS e TR
+						- modificherei in:
+							dove:
+							- TS =
+							- TR =
+				3.2.3.2.10)
+					- Glossario
+						- Breakdown Avoidance
+
+					- migliorare frase iniziale. aggiungere un po' di contenuto.
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi NI e NSA
+						- modificherei in:
+							dove:
+							- NI =
+							- NSA =
+				3.2.3.2.11)
+					- glossario:
+						- Failure Avoidance
+					- migliorare frase iniziale. aggiungere un po' di contenuto.
+					- !!! Nella formula, sostituire "BA =" con "FA ="
+					- (tralasciabile) non mi piace l'impostazione grafica degli acronimi SAE e SAT
+						- modificherei in:
+							dove:
+							- SAE =
+							- SAT =
+
+4) CMM
+	- !!! Mettere come Appendice
+	- glossario:
+		- software
+		- SEI
+		- ISO 9001 [sarebbe da aggiungere anche tra i riferimenti informativi...]
+		- DoD
+		- CMM
+
+	- "Il CMM (Capability Maturity Model) è un modello che mira a migliorare e rifinire i processi software di un’organizzazione."
+		- modificare con : "Il CMM (Capability Maturity Model) è un modello che mira a migliorare e rifinire i processi DI SVILUPPO software di un’organizzazione."
+	- "Sviluppato e promosso dal SEI per valutare [...]"
+		- modificare con: "Sviluppato dal SEI, promosso e finanziato dal DoD Statunitense per valutare [...]"
+	- toglierei il riferimento ad ISO 9001, oppure aggiungerei un appendice per ISO 9001... (meglio la prima)
+	- aggiungere linea vuota sopra a "Il CMM fornisce".
+	- aggiungere ";" agli elenchi, e "." sull'ultima voce degli elenchi
+	4.1)
+		- glossario:
+			- processo
+			- area chiave di processo
+
+	- aggiungere ";" agli elenchi, e "." sull'ultima voce degli elenchi
+	- "Area Chiave di Processo: identifica un insieme di attività correlate che, quando eseguite assieme, raggiungono un set di obiettivi considerati importanti."
+		- modificheferei "consideranti importanti" con "considerati strategici."
+	- "Obiettivi: gli obiettivi di un’Area Chiave di Processo riassumono gli stati che devono esistere perché quell’Area Chiave di Processo sia implementata in modo efficacie e duraturo. Il grado in cui sono stati ottenuti gli obiettivi è un’indicatore di quanta abilità ha raggiunto l’organizzazione in quel livello. Gli obiettivi denotano l’ambito, i limiti e lo scopo di ogni Area Chiave di Processo."
+		- lasciare Area Chiave di Processo? (relativamente alle maiscuole)
+		- troppe ripetizioni di "Area Chiave di Processo"
+		- "implementata" è sbagliato. il referimento è agli stati, non all'area.
+			- modificherei in: "Obiettivi: gli obiettivi di un’area chiave di processo riassumono gli stati che devono esistere per tale area, in modo da poter essere implementati in modo efficacie e duraturo. La quantità di obiettivi che sono stati raggiunti è un’indicatore del livello di convergenza di un processo rispetto agli scopi per cui è stato definito, da parte dell'organizzazione, in un certo livello di maturità. Gli obiettivi denotano l’ambito, i limiti e lo scopo di ogni area chiave di processo."
+
+		- Caratteristiche Comuni:
+			- mancano i ; nell'elenco, e il . sull'ultima voce dell'elenco.
+	4.2)
+		- glossario
+			- ad hoc
+			- processo
+			- organizzazione
+
+		- "Livello 1: [...] portano a un ambiente imprevedibile."
+			-modificare: "Livello 1: [...] portano AD un ambiente imprevedibile."
+		- Livello 2: periodi di stress?
+			- da chiarire
+		- Livello 3: processo di business standard?
+			- perchè "business"?
+		- "Livello 3: [...]; gli standard di processo sono definiti e documentati e soggetti a un po' di miglioramento nel tempo; questi standard sono in atto e usati per stabilire consistenza nella presentazione di processo in tutta l'azienda."
+			- modificare con: "Livello 3: [...]; gli standard di processo sono definiti, documentati e soggetti a miglioramenti nel lungo periodo. A questo livello, gli standard di processo sono in atto e vengono usati per consolidare l'esecuzione dei processi all'interno dell'organizzazione."
+		-  "Livello 4 - Gestito: il processo è controllato quantitativamente in accordo alle metriche pre-stabilite; usando metriche di processo si può effettivamente controllare lo stato del processo; l’amministrazione può aggiustare e adattare il processo a particolari progetti senza perdite sensiibili di qualità o deviazioni dalle specifiche."
+			- frase troppo lunga.
+			- modificare con: "Livello 4 - Gestito: il processo è controllato quantitativamente in accordo alle metriche pre-stabilite. Ricorrendo alle metriche di processo si può effettivamente controllare lo stato del processo. L’amministrazione può aggiustare e adattare il processo a particolari progetti senza perdite sensiibili di qualità o deviazioni dalle specifiche."
+		- "Livello 5 - Ottimizzato: la gestione di processo include l’ottimizzazione ponderata; in questo livello si è focalzzati sul miglioramento continuo con cambiamenti o miglioramenti tecnologici incrementali e innovativi.
+			- spezzare la frase.
+			- "focalzzati"
+			- modificare con: "Livello 5 - Ottimizzato: la gestione di processo include l’ottimizzazione ponderata. In questo livello si è focalizzati al miglioramento continuo con cambiamenti E miglioramenti tecnologici incrementali e innovativi."
+
+5) ISO/IEC 9126
+	- !!! Mettere come Appendice
+	- glossario:
+		- ISO
+		- IEC
+
+	- "Lo standard ISO/IEC 9126 sono una serie di normative [...]"
+		- modificare con: "Lo standard ISO/IEC 9126 prevede una serie di normative [...]"
+	- mancano i ; sull'elenco, e il . sulla voce finale dell'elenco.
+	5.1)
+		- glossario:
+			- 
+
+		-"Il Modello della Qualità del Softwareviene definito nella prima parte dello standard e viene ulteriormente diviso in 2 sottomodelli: Il Modello della Qualità Esterna e Interna e il Modello della Qualità in Uso. Le caratteristiche dei modelli sono misurabili con delle metriche definite nelle parti seguenti dello standard."
+
+			- modificare con: "
+Il modello della qualità del software, viene definito nella prima parte dello standard e viene suddiviso in:
+	- modello della qualità esterna ed interna;
+	- modello della qualità in uso.
+Le caratteristiche contenute in tali modelli sono misurabili attraverso l'utilizzo di metriche.
+Di seguito, troviamo le caratteristiche distintive dei modelli:
+"
+
+		5.1.1)
+			- glossario:
+				- prodotto
+				- software
+
+			- "Il Modello della Qualità Esterna e Interna classifica [...]"
+				- toglierei le maiusole.
+			- !!! Nelle varie voci, togliere le maiuscole (funzionalità, affidabilità, usabilità, efficienza).
+			- Voce "Funzionalità":
+				- la definizione dermina senza punteggiatura.
+			- Voce "Usabilità":
+				- errore, "sftware" .
+					- modificare con "software".
+			- Voce "Efficienza":
+				- errori: "Efficienza: rappresenta la capacità del prodotto software di realizzare le funzioni richieste nel minor tempo possibile e utilizzando nel miglior modo possibile le risorse necessarie e a disposizione;"
+					- modificare con: "Efficienza: rappresenta la capacità del prodotto software di realizzare le funzioni richieste nel minor tempo possibile, utilizzando inoltre le risorse a disposizione nel miglior modo possibile;"
+			- Voce "Manutenibilità:"
+				- errore: "correzzioni"
+					- modificare con "correzioni"
+				- "auspicabile"
+					- direi che è un termine troppo ricercato... modificherei in "desiderabile".
+				- "Le modifiche possono includere correzzioni (scenario non auspicabile, in quanto conseguente ad errori o falle nel prodotto software), o adattamenti o migliorie del software (scenari preferibili);
+					- modificare in: "Le modifiche possono includere correzioni (scenario non desiderabile, in quanto conseguente ad errori o falle nel prodotto software), adattamenti o migliorie del software;"
+			- Voce "Portabilità":
+				- "[...] di poterE essere trasportato da un ambiente all'altro [...]"
+					- modificare: "di poter essere".
+
+		5.1.2)
+			- glossario:
+				- prodotto
+				- software
+
+			- "Il Modello della Qualità in Uso presenta 4 categorie:"
+				- togliere le maiuscole;
+				- modificare con: "Gli attributi del modello della qualità in uso vengono suddivisi nelle seguenti 4 categorie:"
+			- Voce "efficacia"
+				- modificare "permetter" con "permetterE"
+
+	5.2) 
+		- glossario:
+			- prodotto
+
+		-!!! Rinominare il titolo in "Qualità Esterna e relative metriche"
+			- (o qualcosa del genere, basta che si specifichi che sono presenti anche le metriche.)
+		- Togliere le maiuscole dal corpo del testo.
+		-  " Le metriche per la [...] tecnico rilevante; sono scelte in base alle caratteristiche che il prodotto finale dovrà dimostrare durante la sua esecuzione in esercizio."
+			- modificare con: "Le metriche per la [...] tecnico rilevante. Tali metriche vengono selezionata sulla base delle caratteristiche che il prodotto finale dovrà dimostrare di possedere durante la sua esecuzione."
+
+	5.3)
+		- glossario:
+			- prodotto
+			- software
+
+		-!!! Rinominare il titolo in "Qualità Interna e relative metriche"
+			- (o qualcosa del genere, basta che si specifichi che sono presenti anche le metriche.)
+		- Togliere le maiuscole dal corpo del testo.
+		- errore: "spftware"
+			- modificare con "software".
+		-"Le Metriche per la Qualità Interna si applicano al software non eseguibile (e.g. il codice sorgente) e alla documentazione; le misure [...]"
+				- terminare la frase con "." prima di "le misure", anzichè mettere ";".
+
+	5.4)
+		- glossario:
+			- prodotto
+			- software
+			- stato
+			- stabile
+
+		-!!! Rinominare il titolo in "Qualità in Uso e relative metriche"
+			- (o qualcosa del genere, basta che si specifichi che sono presenti anche le metriche.)
+		- Togliere le maiuscole dal corpo del testo.
+		- errore: "dalpunto"
+			- modificare in "dal punto".
+		- "[...]; sono perciò rilevabili solo allo stato di prodotto stabile in condizioni reali."
+			- chiuderei la frase prima di "sono" con "." anzichè ";".
+			- rivedere la frase:
+				- stiamo parlando del prodotto finale?
+				- esprimere più chiaramente il concetto.
+				- "condizioni reali" ?
+
+6) PDCA
+	- !!! Mettere come Appendice
+	- glossario:
+		- PDCA 
+
+	-!!! Errore: "ciclo di Stewhart"
+		- modificare con: "ciclo di Shewhart" (H anzichè T)
+	-!!! "[...] è un metodo per la gestione delle attività di processo ripetibili e misurabili e per la manutenibilità degli stessi processi."
+		- Direi di no, PDCA NON è un metodo per GESTIRE le attività di processo.
+		- modificherei con: "[...] è un modello grazie al quale è possibile ambire ad un miglioramento continuo della qualità."
+	6.1)
+		- ";" alla fine di ogni voce, e "." sull'ultima volce.
+		- Iniziali dell'elenco minuscole (?)
+		- Voce "Plan"
+			- frase troppo lunga. Inserire dei "."
+		- troppo spazio tra "plan e do"
+		- troppo spazio tra "do e check"
+		- voce "Check"
+			- errore: "consdierate"
+				- modificare con: "considerate"
+			- "[...] determinate metriche, tra cui [...]"
+				- troppo generico
+			- "(NdP)" è sbagliato.
+			- "completezza dei risultati attesi soddisfatti"
+				- cioè?
+			-modificherei con: "
+
+Check : consiste nel verificare i risultati ottenuti (per efficienza ed efficacia) in seguito all’attuazione delle strategie di miglioramento. I risultati verrano analizzati e studiati anche attraverso grafici e tabelle riassuntive, in modo tale da avere una visione chiara di quanto rilevato. Se gli obiettivi sono
+stati raggiunti, ovvero se è avvenuto un miglioramento, si può passare alla fase successiva; in caso contrario è necessario ripetere il ciclo PDCA sullo stesso problema, analizzando gli stadi del ciclo precedente e individuando le cause del non raggiungimento degli obietivi stabiliti.
+
+L’esito del processo può essere di tre tipi:
+– miglioramento secondo le aspettative
+– miglioramento superiore alle aspettative
+– miglioramento inferiore alle aspettative
+"
+		- voce "Act": "Act : i miglioramenti indivuati vengono regolamentati e integrati nello standard dell’organizzazione e tutti i membri del gruppo vengono informati e conseguentemente formati. verrà quindi eseguita una nuova iterazione."
+			- cosa si intende con "integrati nello standard dell'organizzazione?"
+			- non credo sia necessario informare TUTTI i membri del gruppo. 
+			- "verrà" deve avere la V maiuscola.

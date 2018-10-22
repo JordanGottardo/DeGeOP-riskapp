@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplateVerb}
+
+%\externaldocument{path/to/glossario}
+\docVerbV{4}
+\docTitle{Verbale esterno - \getdocVerbV}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{20}{03}{2017}}
+\docLastUpdateDate{\frmdata{20}{03}{2017}}
+\docStatus{Approvato}
+\docEditors{Giovanni Prete}
+\docVerificators{Giulia Petenazzi}
+\docApprovers{Daniel De Gaspari}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{
+	1.0.0 & \frmdata{20}{03}{2017} & Daniel De Gaspari & \responsabile  & Approvazione \\
+	0.1.0 & \frmdata{20}{03}{2017} & Giulia Petenazzi & \verificatore & Verifica documento\\
+	0.0.1 & \frmdata{20}{03}{2017} & Giovanni Prete & \programmatore & Stesura documento\\
+}
+
+\begin{document}
+	\section{Estremi della riunione}
+	\begin{itemize}
+		\item \textbf{data:} \frmdata{18}{03}{2017};
+		\item \textbf{ora inizio:} \frmora{14}{00};
+		\item \textbf{ora fine:} \frmora{19}{00};
+		\item \textbf{luogo:} chat di Slack;
+		\item \textbf{segretario:} Giovanni Prete;
+		\item \textbf{partecipanti:}
+		\begin{itemize}
+			 \item Daniel De Gaspari;
+			 \item Federico Carturan (proponente);
+			 \item Giovanni Damo;
+			 \item Giovanni Prete;
+			 \item Giulia Petenazzi;
+			 \item Jordan Gottardo;
+			 \item Leonardo Brutesco;
+			 \item Marco Pasqualini;
+			 \item Pierpaolo Toniolo (proponente).
+		\end{itemize}
+		\item \textbf{assenti:}
+			\begin{itemize}
+					 \item nessuno.
+			\end{itemize}
+	\end{itemize}
+	\section{Ordine del giorno}
+		\begin{itemize}
+			\item richiesta di ambienti di sviluppo alternativi alla Virtual Box;
+			\item richiesta delle API riguardanti gli scenari e l'analisi.
+		\end{itemize}
+	\section{Verbale della riunione}
+	\begin{itemize}
+		\item vengono richiesti degli ambienti su cui sviluppare e testare il prodotto alternativi alla Virtual Box fornita dal proponente;
+		\item il proponente consiglia caldamente l'utilizzo della Virtual Box;
+		\item vengono chieste informazioni riguardanti le API riguardanti per gli scenari e l'analisi;
+		\item Pierpaolo afferma che le API sopracitate non verranno scritte a breve e che non sono più interessati ai requisiti relativi agli scenari e all'analisi.
+	\end{itemize}
+	\section{Decisioni prese}
+	\begin{itemize}
+		\itemVE il proponente, ritratta quanto stabilito con la decisione VE\_2.2: non saranno fornite le API riguardanti gli scenari e l'analisi;
+		\itemVE il proponente non è più interessato ai requisiti riguardanti gli scenari e l'analisi: ROF16, ROF17, ROF18, ROF19, ROF20, ROF21, RDF22, RDF23 e figli; ne viene quindi modificata l'importanza da obbligatorio a opzionale;
+
+		\itemVE in seguito a questi cambiamenti è stato concordata una diminuzione del preventivo del prodotto di 80€.
+	\end{itemize}
+\end{document}

@@ -1,0 +1,633 @@
+%\section {Analisi dei rischi}
+\section {Analisi dei rischi}
+\label{sec:analisirischi}
+\subsection {Introduzione}
+In questa sezione vengono descritti i rischi che potrebbero verificarsi durante lo svolgimento del progetto.
+I rischi possono essere a livello:
+\begin{itemize}
+	\item {tecnologico};
+	\item {personale};
+	\item {organizzativo};
+	\item {dei requisiti}.
+\end{itemize}
+Per ogni rischio deve essere indicato:
+\begin{itemize}
+	\item {nome};
+	\item {descrizione};
+	\item {possibili conseguenze};
+	\item {analisi}:
+	\begin{itemize}
+		\item \textbf{probabilità di occorrenza}: (alta/media/bassa) mostra una stima preventiva della probabilità che il rischio si verifichi senza aver attuato alcuna misura di prevenzione;
+		\item \textbf{impatto}: (alto/medio/basso) mostra una stima preventiva dell'impatto del rischio, nel caso in cui si verificasse senza aver deciso di attuare alcuna procedura di contenimento.
+	\end{itemize}
+	\item \textbf{{prevenzione}:} spiega come si è deciso di prevenire il verificarsi del rischio;
+	\item \textbf{{identificazione}:} mostra come il \glo{Gruppo}{gruppo} riuscirà a capire che il rischio si sta verificando e come verrà attivata la procedura di contenimento;
+	\item \textbf{{contenimento}:} spiega come si è deciso di contenere le conseguenze del rischio una volta verificato. Oltre alle misure descritte successivamente per ogni specifico rischio, si è deciso di inserire dei tempi di \glo{Slack}{slack} nel piano di lavoro, sfruttabili nel caso in cui il \responsabilediprogetto{} lo ritenesse necessario al verificarsi dei rischi;
+	\item \textbf{{analisi mitigata}:}
+	\begin{itemize}
+		\item \textbf{probabilità mitigata di occorrenza}: (alta/media/bassa) mostra una stima preventiva della probabilità che il rischio si verifichi dopo aver attuato le opportune misure di prevenzione sopra descritte;
+		\item \textbf{impatto mitigato}: (alto/medio/basso) mostra una stima preventiva dell'impatto del rischio, nel caso in cui si verificasse, decidendo di attuare le opportune misure di contenimento sopra descritte.
+	\end{itemize}
+	
+	\item \textbf{{attualizzazione nel periodo}:} viene descritto se il rischio si è verificato, le reazioni del gruppo e le conseguenze effettivamente prodotte.
+	\\Per le sigle relative ai periodi si veda: \ref{Pdrob-ProcessiAttività}.
+\end{itemize}
+
+
+
+
+\subsection {Panoramica generale}
+Viene mostrata una tabella che illustra i rischi individuati, la loro probabilità mitigata di occorrenza, il loro impatto mitigato.
+\begin{table}[H]
+	\begin{center}
+		\small
+		\begin{tabular}{lllll}
+			\toprule
+			Livello & Rif. & Rischio & Probabilità & Impatto \\
+			\midrule
+			\multirow{3}{*}{Tecnologico}
+			& (\ref{subsec:malfunzionamenttiSwHw})
+			& Malfunzionamenti software e hardware
+			& Bassa & Basso \\
+			& (\ref{subsec:difficoltaTecnol})
+			& Difficoltà nell'uso delle tecnologie
+			& Media & Medio \\
+			& (\ref{subsec:indisponibilitaTablet})
+			& Indisponibilità tablet
+			& Media & Basso \\
+			\midrule
+			\multirow{3}{*}{Personale}
+			& (\ref{subsec:pbmDeiMembri})
+			& Problemi dei membri
+			& Media & Medio \\
+			& (\ref{subsec:pbmTraMembri})
+			& Problemi tra i membri
+			& Bassa & Medio\\
+			& (\ref{subsec:pbmProponente})
+			& Problemi con il proponente
+			& Bassa & Medio \\
+			\midrule
+			Organizzativo & (\ref{subsec:errataPianificazione})
+			& Errata pianificazione dell'uso delle risorse
+			& Bassa & Medio \\
+			\midrule
+			Dei Requisiti & (\ref{subsec:erratiRequisiti})
+			& Errata o incompleta analisi dei requisiti
+			& Bassa & Medio \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Rischi individuati}
+	\label{tab:rischi}
+\end{table}
+
+\newpage
+\subsection {Livello tecnologico}
+\subsubsection {Malfunzionamenti software e hardware}
+\label{subsec:malfunzionamenttiSwHw}
+\small
+\begin{table}[H]
+	\begin{center}			
+		\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+			\arrayrulecolor{lightgray}
+			
+			\toprule				
+			\textbf{Descrizione}
+			& &
+			Ogni membro del gruppo userà i propri dispositivi (computer, smartphone, tablet).
+			Non si escludono rotture o danneggiamenti di tali dispositivi, malfunzionamenti dei software necessari allo svolgimento del progetto o problemi di compatibilità.
+			\\
+			\midrule
+			\textbf{Possibili \newline conseguenze}
+			& &
+			Ritardi nei lavori, perdita dei dati.
+			\\
+			\midrule
+			\textbf{Prevenzione}
+			& &
+			I membri del gruppo eseguiranno backup regolari nel \glo{Repository}{repository}.
+			\\
+			\midrule
+			\textbf{Identificazione}
+			& &
+			I membri del gruppo dovranno controllare periodicamente i propri dispositivi, i software utilizzati ed i dati prodotti. In caso di malfunzionamenti avviseranno il \responsabilediprogetto.
+			\\
+			\midrule
+			\textbf{Contenimento}
+			& &
+			Il \responsabilediprogetto, dopo essersi consultato con i membri che hanno riscontrato il malfunzionamento, potrà eventualmente decidere di alleggerire o modificare il loro carico di lavoro. Eventuali dati persi a causa del malfunzionamento dovranno, se possibile, essere ripristinati dal repository. In caso di necessità si potranno usare i computer dei laboratori, messi a disposizione dall'università, per la continuazione del lavoro.
+			\\
+			\midrule
+			\textbf{Analisi \newline non mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Bassa
+			\newline
+			\textbf{Impatto}: Alto
+			\\
+			\midrule
+			\textbf{Analisi \newline mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Bassa
+			\newline
+			\textbf{Impatto}: Basso
+			\\
+			\midrule
+			\textbf{Attualizzazione}
+			& &
+			\textbf{An}: Il rischio non si è verificato.
+			\newline
+			\textbf{Pl}: Il rischio non si è verificato.
+			\newline
+			\textbf{PCV}: Il rischio non si è verificato.
+			\newline
+			\textbf{Va}: Il rischio non si è verificato.
+			\\
+			
+			\bottomrule	
+		\end{tabular}
+	\end{center}
+\end{table}			
+
+\newpage
+\subsubsection {Difficoltà nell'uso delle tecnologie}
+\label{subsec:difficoltaTecnol}
+
+
+\small
+\begin{table}[H]
+	\begin{center}			
+		\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+			\arrayrulecolor{lightgray}
+			
+			\toprule				
+			\textbf{Descrizione}
+			& &
+			Per lo svolgimento del progetto sarà necessario utilizzare tecnologie con le quali non tutti i membri del gruppo hanno esperienza. Potrebbero quindi sorgere difficoltà nell'utilizzo di queste tecnologie.
+			\\
+			\midrule
+			\textbf{Possibili \newline conseguenze}
+			& &
+			Ritardi nei lavori.
+			\\
+			\midrule
+			\textbf{Prevenzione}
+			& &
+			Le tecnologie da usare verrano decise con congruo anticipo. Saranno previsti nel piano di lavoro momenti di formazione. Gli \amministratori{} forniranno la documentazione e i riferimenti necessari allo studio autonomo delle tecnologie.
+			\\
+			\midrule
+			\textbf{Identificazione}
+			& &
+			Sarà compito del \responsabilediprogetto{} e degli \amministratori{} verificare il grado di conoscenza delle tecnologie richieste. I membri del gruppo che dovessero trovare difficoltà nell'uso delle tecnologie richieste durante lo svolgimento dovranno avvisare il \responsabilediprogetto.
+			\\
+			\midrule
+			\textbf{Contenimento}
+			& &
+			Il \responsabilediprogetto{} potrà sollevare momentaneamente il membro carente dal proprio incarico. Il piano di lavoro potrà essere variato per permettere al membro carente di aggiornarsi nel minor tempo possibile. Nel caso in cui il membro non riesca a utilizzare la tecnologia allora dovrà essere sostituito. Se possibile la tecnologia potrà essere sostituita da una tecnologia equivalente.
+			\\
+			\midrule
+			\textbf{Analisi \newline non mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Alta
+			\newline
+			\textbf{Impatto}: Alto
+			\\
+			\midrule
+			\textbf{Analisi \newline mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Media
+			\newline
+			\textbf{Impatto}: Medio
+			\\
+			\midrule
+			\textbf{Attualizzazione}
+			& &
+			\textbf{An}: Lo strumento di gestione di progetto scelto inzialmente si è dimostrato poco flessibile, carente di alcune funzionalità e poco integrato negli smartphone. Il \responsabilediprogetto{} e gli \amministratori{} hanno deciso di sostituire lo strumento con un altro più completo e maggiormente integrato. Ci sono stati inoltre problemi con il software di tracciamento dei requisiti. Il \responsabilediprogetto, dopo aver provato a modificare lo strumento, ha deciso di sostituirlo con uno equivalente.
+			\newline
+			\textbf{Pl}: Il rischio non si è verificato.
+			\newline
+			\textbf{PCV}: Il rischio si è in parte verificato in quanto i membri del gruppo hanno dovuto continuare lo studio delle tecnologie. Siccome il piano di lavoro teneva conto di queste difficoltà, il verificarsi di questo rischio non ha avuto un grosso impatto. I membri si sono documentati utilizzando i riferimenti forniti gli \amministratori.
+			\newline
+			\textbf{Va}: Il rischio si è verificato in quanto l'introduzione di TypeScript ha richiesto lo studio di queste due tecnologie. Il verificarsi di questo rischio ha portato a lievi variazioni nelle rendicontazioni orarie.
+			\\
+			\bottomrule	
+		\end{tabular}
+	\end{center}
+\end{table}			
+
+\newpage
+\subsubsection{Indisponibilità tablet}
+\label{subsec:indisponibilitaTablet}
+
+
+\small
+\begin{table}[H]
+	\begin{center}			
+		\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+			\arrayrulecolor{lightgray}
+			
+			\toprule				
+			\textbf{Descrizione}
+			& &
+			Il progetto richiede lo sviluppo di un'interfaccia utilizzabile da tablet. Specialmente per quanto riguarda l'attività di testing sarà quindi necessario avere almeno un tablet a disposizione su cui testare il funzionamento dell'applicazione. Due membri sono dotati di tablet personale, ma è da prendere in considerazione il caso in cui non ci sia la possibilità di averli a disposizione.
+			\\
+			\midrule
+			\textbf{Possibili \newline conseguenze}
+			& &
+			Ritardi nei lavori.
+			\\
+			\midrule
+			\textbf{Prevenzione}
+			& &
+			I due membri del gruppo comunicano al \responsabilediprogetto{} i giorni in cui offrono la disponibilità del tablet.
+			\\
+			\midrule
+			\textbf{Identificazione}
+			& &
+			Nel caso in cui i due membri del gruppo non possano mettere a disposizione il tablet nei giorni stabiliti, informeranno preventivamente il \responsabilediprogetto{}.
+			\\
+			\midrule
+			\textbf{Contenimento}
+			& &
+			Il \responsabilediprogetto{} comunicherà il problema agli altri membri del gruppo che dovranno quindi eseguire i test su smartphone o strumenti equivalenti.
+			\\
+			\midrule
+			\textbf{Analisi \newline non mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Alta
+			\newline
+			\textbf{Impatto}: Medio
+			\\
+			\midrule
+			\textbf{Analisi \newline mitigata}
+			& &
+			\textbf{Probabilità di occorrenza}: Media
+			\newline
+			\textbf{Impatto}: Basso
+			\\
+			\midrule
+			\textbf{Attualizzazione}
+			& &
+			\textbf{An}: Il rischio non si è verificato.
+			\newline
+			\textbf{Pl}: Il rischio non si è verificato.
+			\newline
+			\textbf{PCV}: Il rischio non si è verificato.
+			\newline
+			\textbf{Va}: Il rischio non si è verificato.
+			\\
+			
+			\bottomrule	
+		\end{tabular}
+	\end{center}
+\end{table}			
+
+\newpage
+\subsection {Livello personale}
+\subsubsection {Problemi dei membri}
+\label{subsec:pbmDeiMembri}
+
+
+\begin{table}[H]
+	\begin{center}
+		\resizebox{0.98\textwidth}{!}{
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				
+				\toprule				
+				\textbf{Descrizione}
+				& &
+				Gli impegni personali e universitari dei singoli membri possono far sì che non sempre questi siano disponibili a lavorare sul progetto o a presenziare alle riunioni.
+				\\
+				\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				Ritardi nei lavori.
+				\\
+				\midrule
+				\textbf{Prevenzione}
+				& &
+				Viene predisposto un orario settimanale condiviso su cui segnare gli impegni ricorrenti dei membri del gruppo per facilitare l'organizzazione delle riunioni. Il \responsabilediprogetto{} dovrà scegliere per le riunioni i giorni e gli orari con il maggior numero di presenze. Durante la pianificazione del lavoro si dovrà tener conto dei periodi di maggiore indisponibilità dei membri come, ad esempio, sessioni d'esame.
+				\\
+				\midrule
+				\textbf{Identificazione}
+				& &
+				In caso di imprevisti i membri del gruppo dovranno informare in maniera tempestiva il \responsabilediprogetto{} sfruttando gli strumenti di comunicazione messi a disposizione.
+				\\
+				\midrule
+				\textbf{Contenimento}
+				& &
+				In caso si tratti di imprevisti sulla partecipazione ad una riunione, il \responsabilediprogetto{} potrà decidere di spostare la riunione. Al termine di ogni riunione viene stilato un verbale di cui il membro mancante potrà prendere visione. In caso si tratti di imprevisti sul lavoro da svolgere, il \responsabilediprogetto{} potrà provvedere a modificare la pianificazione e se necessario, riassegnare il lavoro.
+				\\
+				\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Alta
+				\newline
+				\textbf{Impatto}: Alto
+				\\
+				\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Media
+				\newline
+				\textbf{Impatto}: Medio
+				\\
+				\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}: Il rischio si è in parte verificato in quanto un membro del gruppo, essendo impegnato in attività di stage, non ha potuto partecipare ad alcune riunioni. Il membro si è tenuto aggiornato con le decisioni prese attraverso i canali di comunicazione e prendendo visione di tutti i verbali.
+				\newline
+				\textbf{Pl}: Il rischio si è verificato per due motivi.
+				- Innanzitutto un membro del gruppo ha avuto gravi problemi di salute durante la seconda parte del mese di Febbraio. Il membro, non appena è venuto a conoscenza del problema, ossia verso inizio mese, ha informato tempestivamente il \responsabile. Quest'ultimo (come descritto da questa analisi nella sezione "Contenimento") ha riorganizzato la pianificazione al fine di anticipare le ore di lavoro del membro colpito alla prima parte di Febbraio. Questi cambiamenti 
+				rispetto al preventivo sono evidenziati in tabella \ref{tab:orePl}. In questo modo l'impatto dato dal verificarsi di questo rischio è stato ben attutito.
+				- In secondo luogo, a causa della sessione esami, alcuni membri hanno lavorato poco nei momenti iniziali di questo periodo di Progettazione logica. Questo rischio era stato preventivato, e la pianificazione teneva già conto di questa impossibilità, pertanto il rischio non ha avuto un grosso impatto.
+				\\
+				\bottomrule	
+			\end{tabular}}
+		\end{center}
+	\end{table}			
+	
+	\newpage
+	\small
+	\begin{table}[H]
+		\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				\textbf{Attualizzazione}
+				& &
+				\textbf{PCV}: Il rischio si è verificato per due motivi. Innanzitutto l'università (peraltro con scarsissimo preavviso) ha istanziato un corso di inglese con frequenza obbligatoria indispensabile per l'ingresso alla laurea magistrale. Questo corso ha occupato due membri per tre pomeriggi a settimana portando grossi disagi nei loro orari di lavoro. In secondo luogo il membro di cui al punto "Pl" ha continuato ad avere problemi di salute per la prima e l'ultima settimana di questo periodo. Il \responsabile, conscio della situazione ha riorganizzato la pianificazione al fine di concentrare le ore di lavoro del membro colpito nella parte centrale di questo periodo.
+				\newline
+				\textbf{Va}: Il rischio si è verificato, in quanto cinque membri del gruppo sono stati coinvolti in attività di stage. Il \responsabilediprogetto{} in accordo con i membri ha stabilito un piano di lavoro tale da permettere l'avanzamento, seppur rallentato del progetto anche durante i tempi di stage.
+				\\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	
+	\newpage
+	\subsubsection {Problemi tra i membri}
+	\label{subsec:pbmTraMembri}
+	
+	\small
+	\begin{table}[H]
+		\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				
+				\toprule				
+				\textbf{Descrizione}
+				& &
+				I membri del gruppo non hanno mai lavorato ad un progetto di gruppo di così grandi dimensioni. Potrebbero verificarsi contrasti tra i membri del gruppo, e quindi problemi di collaborazione.
+				\\
+				\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				Ambiente non adatto al lavoro cooperativo, ritardi nei lavori.
+				\\
+				\midrule
+				\textbf{Prevenzione}
+				& &
+				I membri del \glo{Gruppo}{team} cercheranno di fornire critiche solo se costruttive.
+				\\
+				\midrule
+				\textbf{Identificazione}
+				& &
+				Ogni membro del gruppo comunicherà al \responsabilediprogetto{} eventuali dissapori al fine di risolvere al più presto eventuali situazioni problematiche.
+				\\
+				\midrule
+				\textbf{Contenimento}
+				& &
+				Il \responsabilediprogetto{} dovrà capire il problema e appianare le divergenze. Se necessario potrà provvedere alla riorganizzazione del piano di lavoro separando i membri coinvolti.
+				\\
+				\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Bassa
+				\newline
+				\textbf{Impatto}: Alto
+				\\
+				\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Bassa
+				\newline
+				\textbf{Impatto}: Medio
+				\\
+				\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}: Il rischio non si è verificato.
+				\newline
+				\textbf{Pl}: Il rischio non si è verificato.
+				\newline
+				\textbf{PCV}: Il rischio non si è verificato.
+				\newline
+				\textbf{Va}: Il rischio non si è verificato.
+				\\
+				
+				\bottomrule	
+			\end{tabular}
+		\end{center}
+	\end{table}			
+	
+	\newpage
+	\subsubsection {Problemi col proponente}
+	\label{subsec:pbmProponente}
+	
+	
+	\small
+	\begin{table}[H]
+		\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				
+				\toprule				
+				\textbf{Descrizione}
+				& &
+				Potrebbero verificarsi ritardi da parte del proponente nelle comunicazioni o nel fornire il materiale richiesto.
+				\\
+				\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				Ritardi nei lavori.
+				\\
+				\midrule
+				\textbf{Prevenzione}
+				& &
+				Le scadenze a cui è soggetto il gruppo saranno rese note al proponente al fine di migliorare le tempistiche di collaborazione.
+				\\
+				\midrule
+				\textbf{Identificazione}
+				& &
+				Nel caso in cui non si ottenessero le risposte o il materiale atteso entro una settimana dalle richieste, il \responsabilediprogetto{} provvederà ad inviare un sollecito.
+				\\
+				\midrule
+				\textbf{Contenimento}
+				& &
+				Il \responsabilediprogetto{} potrà valutare se riorganizzare il piano di lavoro per procedere con l'esecuzione di altri lavori non dipendenti dalle risposte del proponente.
+				\\
+				\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Media
+				\newline
+				\textbf{Impatto}: Alto
+				\\
+				\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Bassa
+				\newline
+				\textbf{Impatto}: Medio
+				\\
+				\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}: Il rischio si è in parte verificato in quanto il proponente non ha sempre risposto prontamente alle e-mail. Inoltre parte del materiale richiesto è pervenuto tre giorni dopo rispetto a quanto previsto.
+				\newline
+				\textbf{Pl}: Il rischio non si è verificato.
+				\newline
+				\textbf{PCV}: Il rischio si è in parte verificato in quanto il proponente ha ritrattato quanto stabilito in precedenza e trascritto nella decisione VE\_2.2. Il gruppo aveva concordato di interagire con il server del proponente tramite le API che il proponente stesso avrebbe fornito, come descritto da capitolato. Alcune API necessarie però non sono state sviluppate. Il gruppo si ritrova quindi impossibilitato a sviluppare alcune parti dell'applicazione. E' stato concordato con il proponente di modificare l'importanza dei requisiti che richiedevano l'utilizzo di quelle API da obbligatorio a opzionale. Quanto scritto viene riportato nel \textit{Verbale Esterno - 4}, ha avuto ripercussioni nel documento di \adr{}, sul consuntivo e sul preventivo a finire.
+				\newline
+				\textbf{Va}: Il rischio si è verificato. In seguito alla revisione di qualifica, il gruppo ha chiesto al proponente di trovare un punto d'accordo riguardo analisi e scenari. Il proponente ha quindi dichiarato di poter fornire le API per analisi e scenari. Entro fine maggio le nuove API sono state messe a disposizione con documentazione minimale. Successivamente i programmatori hanno nuovamente riscontrato dei problemi con le chiamate delle analisi. Sono state discusse con il proponente possibili soluzioni, ma per problemi di incompatibilità si è concordato di sviluppare un mock che simuli lo svolgimento delle analisi. Quanto scritto viene riportato nel \textit{Verbale Esterno - 6}, e ha avuto ripercussioni sul consuntivo.
+				\\
+				\bottomrule	
+			\end{tabular}
+		\end{center}
+	\end{table}			
+	
+	
+	\newpage
+	\subsection{Livello organizzativo}
+	\subsubsection {Errata pianificazione di uso delle risorse}
+	\label{subsec:errataPianificazione}
+	
+	\small
+	\begin{table}[H]
+		\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				
+				\toprule				
+				\textbf{Descrizione}
+				& &
+				È possibile che le stime dei tempi e dei costi siano troppo ottimistiche.
+				\\
+				\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				Ritardi nella consegna, aumento del costo preventivato.
+				\\
+				\midrule
+				\textbf{Prevenzione}
+				& &
+				La pianificazione iniziale dovrà essere essere eseguita con particolare attenzione e sottoposta a più verifiche per assicurare che non sia troppo ottimistica. I membri del gruppo dovranno utilizzare sistemi di rendicontazione del tempo di lavoro per assicurare il rispetto dei tempi previsti.
+				\\
+				\midrule
+				\textbf{Identificazione}
+				& &
+				Dovranno essere utilizzati sistemi automatici che permettano al \responsabilediprogetto{} di controllare in maniera rapida ed efficiente lo stato dei lavori.
+				\\
+				\midrule
+				\textbf{Contenimento}
+				& &
+				Il \responsabilediprogetto{} potrà modificare il piano di lavoro al fine di recuperare il ritardo. Nel caso in cui il ritardo accumulato sia eccessivo si dovrà valutare col proponente di ritrattare la scadenza.
+				\\
+				\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Media
+				\newline
+				\textbf{Impatto}: Alto
+				\\
+				\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Bassa
+				\newline
+				\textbf{Impatto}: Medio
+				\\
+				\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}:  Il rischio non si è verificato.
+				\newline
+				\textbf{Pl}: Il rischio non si è verificato.
+				\newline
+				\textbf{PCV}: Il rischio non si è verificato.
+				\newline
+				\textbf{Va}: Il rischio non si è verificato.
+				\\
+				
+				\bottomrule	
+			\end{tabular}
+		\end{center}
+	\end{table}			
+	
+	\newpage
+	\subsection {Livello dei requisiti}
+	\subsubsection {Errata o incompleta analisi dei requisiti}
+	\label{subsec:erratiRequisiti}
+	
+	\small
+	\begin{table}[H]
+		\begin{center}			
+			\begin{tabular}{p{2.5cm}p{0.5cm}p{11cm}}
+				\arrayrulecolor{lightgray}
+				
+				\toprule				
+				\textbf{Descrizione}
+				& &
+				È possibile che i requisiti individuati non rispecchino in maniera completa ed esaustiva le richieste del proponente.
+				\\
+				\midrule
+				\textbf{Possibili \newline conseguenze}
+				& &
+				Ritardi nei lavori.
+				\\
+				\midrule
+				\textbf{Prevenzione}
+				& &
+				Saranno organizzate riunioni con il proponente durante le quali il gruppo potrà mostrare il lavoro svolto, ricevere eventuali feedback e porre domande. Verrà inoltre predisposta una chat condivisa con il proponente che potrà essere utilizzata per chiarire eventuali dubbi in maniera più immediata rispetto all'email o alle riunioni.
+				\\
+				\midrule
+				\textbf{Identificazione}
+				& &
+				Durante l'intera durata del progetto ogni membro del gruppo dovrà porre particolare attenzione alle richieste del proponente. Qualsiasi dubbio sulle richieste dovrà essere esposto al \responsabilediprogetto.
+				\\
+				\midrule
+				\textbf{Contenimento}
+				& &
+				Nel caso in cui il rischio si verificasse dovrà essere fatto il possibile per riadattarsi alle esigenze del proponente. Il \responsabilediprogetto{} potrà valutare a seconda dei casi se rinegoziare i requisiti con il proponente.
+				\\
+				\midrule
+				\textbf{Analisi \newline non mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Media
+				\newline
+				\textbf{Impatto}: Alto
+				\\
+				\midrule
+				\textbf{Analisi \newline mitigata}
+				& &
+				\textbf{Probabilità di occorrenza}: Bassa
+				\newline
+				\textbf{Impatto}: Medio
+				\\
+				\midrule
+				\textbf{Attualizzazione}
+				& &
+				\textbf{An}: Il rischio non si è verificato.
+				\newline
+				\textbf{Pl}: Il rischio non si è verificato.
+				\newline
+				\textbf{PCV}: Il rischio non si è verificato.
+				\newline
+				\textbf{PCV}: Il rischio non si è verificato.
+				\\
+				
+				\bottomrule	
+			\end{tabular}
+		\end{center}
+	\end{table}			

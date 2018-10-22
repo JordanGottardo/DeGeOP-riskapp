@@ -1,0 +1,32 @@
+- rendere le immagini (figures) statiche (non float)
+	RequirePackage{float} -> begin{figure}[H]
+- refactoring dei pageStyle per un template più leggibile
+- 
+
+==================================== Old zemplate content =================================
+
+	%-------------------INIZIO create zable--------------------------------------
+\NewDocumentEnvironment{zable}{m o o}
+{
+	\rowcolors{2}{gray!50}{white}
+	\begin{longtabu} to \textwidth {#1}
+		\IfNoValueF{#2}{\rowcolor{gray!70} #2 \\ \toprule}
+		\endhead
+}
+{
+	\bottomrule
+	\IfNoValueF{#3}{\caption{#3}}
+	\end{longtabu}
+	\vspace{0.3em}
+}
+%-------------------FINE create zable--------------------------------------
+
+%-------------------INIZIO env appendixes--------------------------------------
+\newenvironment{appendices}
+{
+	\appendix
+	\addcontentsline{toc}{section}{Appendices}
+	\section*{Appendici}
+}
+{}
+%-------------------FINE env appendixess--------------------------------------

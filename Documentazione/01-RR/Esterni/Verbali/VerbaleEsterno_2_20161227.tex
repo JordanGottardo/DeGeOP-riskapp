@@ -1,0 +1,81 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplateVerb}
+
+%\externaldocument{path/to/glossario}
+\docVerbV{2}
+\docTitle{Verbale esterno - \getdocVerbV}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{27}{12}{2016}}
+\docLastUpdateDate{\frmdata{28}{12}{2016}}
+\docStatus{Approvato}
+\docEditors{Giovanni Damo}
+\docVerificators{Daniel De Gaspari}
+\docApprovers{Giulia Petenazzi}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{
+	1.0.0 & \frmdata{28}{12}{2016} & Giulia Petenazzi & \responsabile  & Approvazione \\
+	0.1.0 & \frmdata{27}{12}{2016} & Daniel De Gaspari & \verificatore & Verifica documento\\
+	0.0.1 & \frmdata{27}{12}{2016} & Giovanni Damo & \analista & Stesura documento\\
+}
+
+\begin{document}
+	\section{Estremi della riunione}
+	\begin{itemize}
+		\item \textbf{data:} \frmdata{27}{12}{2016};
+		\item \textbf{ora inizio:} \frmora{09}{30};
+		\item \textbf{ora fine:} \frmora{13}{00};
+		\item \textbf{luogo:} ufficio \riskapp{} con sede a Conselve - Padova;
+		\item \textbf{segretario:} Giovanni Damo;
+		\item \textbf{partecipanti:}
+		\begin{itemize}
+			 \item Daniel De Gaspari;
+			 \item Federico Carturan (proponente);
+			 \item Giovanni Damo;
+			 \item Giovanni Prete;
+			 \item Giulia Petenazzi;
+			 \item Jordan Gottardo;
+			 \item Leonardo Brutesco;
+			 \item Marco Pasqualini;
+			 \item Pierpaolo Toniolo (proponente).
+		\end{itemize}
+		\item \textbf{assenti:}
+			\begin{itemize}
+					 \item nessuno.
+			\end{itemize}
+	\end{itemize}
+	\section{Ordine del giorno}
+		\begin{itemize}
+			\item esposizione e discussione dei casi d'uso;
+			\item chiarimenti tecnici struttura applicazione.
+		\end{itemize}
+	\section{Verbale della riunione}
+	\begin{itemize}
+		\item viene esposto e disegnato un mock-up dell'interfaccia;
+        \item il proponente commenta il mock-up evidenziando gli aspetti da rivedere o cambiare;
+		\item sono chiariti i ruoli dei seguenti componenti: asset, archi, nodi e scenari;
+		\item vengono discusse le differenze di rappresentazione tra le lavorazioni per processo e quelle per commessa;
+		\item viene discusso come rappresentare sulla mappa gli scenari di danno;
+        \item vengono esposti e discussi i casi d'uso preparati dal gruppo;
+		\item assieme a Pierpaolo vengono discussi anche i seguenti aspetti tecnici:
+		\begin{itemize}
+			\item la realizzazione dell'applicazione in forma di web-app o stand-alone;
+			\item la gestione della traduzione delle lingue;
+			\item la gestione del login;
+			\item la modalità di fruizione del tutorial e la sua realizzazione;
+			\item possibilità di integrare il prodotto nell'applicazione del proponente e possibili complicazioni tecniche.
+		\end{itemize}
+	\end{itemize}
+	\section{Decisioni prese}
+	\begin{itemize}
+		\itemVE  il proponente rinuncia al requisito, presente nel capitolato, riguardante il funzionamento off-line dell'applicazione. La realizzazione del prodotto sarà pertanto sotto forma di web-app;
+		\itemVE presa in carico da parte del proponente della creazione delle API necessarie per la realizzazione del prodotto;
+		\itemVE impegno da parte del gruppo a decidere lo stack tecnologico da utilizzare, in tempi brevi;
+		\itemVE invio dei casi d'uso aggiornati e corretti per una revisione da parte del proponente;
+		\itemVE la rappresentazione sulla mappa prenderà il considerazione un solo processo;
+		\itemVE gli scenari di danno saranno rappresentati sulla mappa sotto forma di: poligono, gradiente radiale e gradiente lungo una linea;
+		\itemVE visti i rapidi cambiamenti di versione dell'applicazione del proponente, è stato concordato che la versione utilizzata per lo sviluppo del progetto sarà quella disponibile all'inizio della fase di progettazione;
+		\itemVE disponibilità da parte del proponente di fornire un ambiente con utente già autenticato.
+		
+	\end{itemize}
+\end{document}

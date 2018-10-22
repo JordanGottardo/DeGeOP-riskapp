@@ -1,0 +1,60 @@
+\section{Descrizione generale}
+\subsection{Contesto d'uso del prodotto}
+Il prodotto dovrà essere utilizzabile su browser Google Chrome versione 55 o successiva, sia da sistemi desktop che tablet.
+\subsection{Funzioni del prodotto}
+	Lo scopo del prodotto consiste nella creazione di un'interfaccia web contenente una mappa geografica su cui potranno essere rappresentati:
+	\begin{itemize}
+		\item il processo produttivo aziendale;
+		\item gli scenari di danno;
+		\item i risultati dell'analisi dei rischi.
+	\end{itemize}
+	Il prodotto verrà utilizzato da agenti assicuratori per l'inserimento delle informazioni utili allo svolgimento dell'analisi dei rischi dell'assicurando.\\
+	Più in particolare l'utente dovrà aver la possibilità di:
+	\begin{itemize}
+        \item interagire con la mappa geografica;
+		\item inserire, visualizzare, modificare, eliminare \glo{Asset}{assets};
+		\item inserire, visualizzare, modificare, eliminare \glo{Nodo}{nodi};
+		\item inserire, visualizzare, modificare, eliminare \glo{Arco}{archi};
+		\item inserire, visualizzare, modificare, eliminare scenari di danno;
+		\item avviare l'analisi dei rischi del processo produttivo;
+		\item visualizzare il risultato dell'analisi dei rischi.
+	\end{itemize}
+	Il poligono rappresentante il perimetro di un asset deve poter essere disegnabile direttamente sulla mappa. Un asset è caratterizzato dalle seguenti informazioni:
+		\begin{itemize}
+			\item nome;
+			\item descrizione;
+			\item tipo di costruzione;
+			\item proprietario;
+			\item colore;
+			\item superficie;
+			\item valore unitario;
+			\item valuta del valore.
+		\end{itemize}
+	I nodi devono poter essere posizionabili sulla mappa all'interno di un dato asset. Ogni nodo è identificato da un nome e appartiene ad una classe a scelta tra macchina, coda, risorsa, fonte. Un nodo di tipo macchina è caratterizzato da capacità, tempo di processo e valore. Un nodo di tipo coda è caratterizzato dalla capacità. Un nodo di tipo fonte è caratterizzato dal tempo di consegna.\\
+	Gli archi sono orientati e collegano due nodi, chiamati nodo di origine e nodo di destinazione. Un arco può essere di tipo trasporto. Un arco di tipo trasporto è caratterizzato dalla lunghezza e dalla velocità. \\
+	Gli scenari di danno devono poter essere disegnabili sulla mappa utilizzando:
+	\begin{itemize}
+			\item un poligono avente intensità costante;
+			\item un gradiente radiale;
+			\item doppio gradiente lineare.
+	\end{itemize}
+	Uno scenario di danno è caratterizzato dalle seguenti informazioni:
+		\begin{itemize}
+		\item nome;
+		\item tipo dell'evento;
+		\item intensità;
+		\item istante dell'evento;
+		\item probabilità dell'evento.
+		\end{itemize}
+	L'utente deve poter aumentare o diminuire il livello di ingrandimento della mappa e spostarsi su di essa. Inoltre, dovrà poter essere in grado di specificare la modalità di visualizzazione della mappa, scegliendo tra visualizzazione mappa e satellite.
+	Per aiutare l'utente, l'applicazione dovrebbe fornire la possibilità di avviare un tutorial che gli permetta di eseguire tutte le possibili azioni, guidandolo nelle scelte.
+	
+		
+	Infine, sperabilmente l'utente dovrebbe essere in grado di avviare un assistente vocale, che gli permetta di effettuare le operazioni con l'ausilio della voce.
+\subsection{Caratteristiche degli utenti}
+Come emerso durante le riunioni con il proponente, il prodotto si rivolge ad utenti identificati come agenti assicurativi già autenticati. Non è quindi inecessario implementare la gestione di diversi utenti con privilegi differenti.
+\subsection{Vincoli generali}
+L'applicazione dovrà essere integrabile nel sistema attualmente in uso da \riskapp{} in quanto il gruppo ha deciso di soddisfare il requisito di Integrabilità richiesto dal proponente. 
+\\Più nello specifico, il proponente fornirà la parte di applicazione su cui il gruppo dovrà integrare il proprio prodotto. Pertanto alcune funzionalità (come ad esempio la login, la gestione del cliente ecc...) sono gestite dal modulo fornito dal proponente e non vengono prese in considerazione nel presente documento. Il gruppo fornirà, invece, la parte di applicazione che riguarda il disegno del processo produttivo su mappa, accedibile da interfaccia dalla scheda di menu denominata come "Productive process and Analysis" e descritta nel presente documento. Il prodotto fornito dal gruppo non ha quindi senso di esistere  se non all'interno della parte di applicazione fornita da \riskapp.
+\subsection{Assunzione dipendenze}
+Per il corretto funzionamento dell’applicazione sarà necessario l’utilizzo di Google Chrome versione 55 e successive, purchè retrocompatibili, sia su sistemi desktop \glo{Windows}{Windows} che su tablet Apple o Android.

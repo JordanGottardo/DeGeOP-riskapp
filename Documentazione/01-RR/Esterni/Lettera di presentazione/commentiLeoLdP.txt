@@ -1,0 +1,66 @@
+
+0) usare il template (font, Header, Footer, tabelle, etc )
+0.1) dove c'è scritto (NdP?) vuol dire che si dovrebbe confrontare con le NdP
+
+
+1) alla cortese [...]: nomi +addr un po a dx
+
+
+2) !!! oggetto
+2.1) metterei: "Oggetto: presentazione della proposta per il capitolato d'appalto C2"
+	oggetto in grassetto (NdP?)
+
+
+3) Con la presente il gruppo Zephyrus intende comunicarLe   (senza "si comunica che" (ripetizione))
+
+
+4) formattazione nome azienda? (corsivo, ...) (NdP?)
+4.1) s.r.l. non andrebbe tutto minuscolo?
+4.2) alla fine c'è: s.r.l.. (2 punti) non mi piace e non so se sia corretto
+
+
+5) ripetizione "alla presente ..." : si allegano i seguenti documenti [...];
+	toglierei "tutti" :
+cambierei con: "Si allegano i seguenti documenti contenenti i dettagli relativi all'offerta:"
+
+
+6) allegati:
+6.1) rispetto alla posizione dei file, io farei al più le cartelle Interni e Esterni, senza sottocartelle per ogni singolo documento (NdP?)
+6.2) inserirei l'elenco delle date dei verbali (così il prof sa subito quanti verbali dovrebbe trovare)
+6.3) nomi dei file: senza spazi ma con '_' (underscore) (li cambierei) (NdP?)
+
+
+7) come scritto nel piano di progetto v1.0.0? (la versione)
+
+
+8) testo pre e post tabella allineato a sx;
+8.1) testo post tabella: 
+cambierei con:
+"Rimango a Sua completa disposizione per qualsiasi chiarimento.
+Distinti saluti."	(ovvero togliendo "ringraziandola ...")
+
+
+9) mail complete (leo.br@stud...)
+9.1) usare le tabelle del template (senza colori doppi)
+9.2) nome, email a allineati a sx;
+	 matricola allineata a dx
+
+
+10):
+	il responsabile ...  
+	giulia ...
+	<firma>
+
+10.1) !!! firma più piccola ->
+
+
+11) !!! Header e footer  come in tutti gli altri documenti
+
+
+12) inserire la mail del gruppo (che io metterei nel footer) da qualche parte, magari sotto il logo in prima pagina 
+	<LOGO>
+	ing ...
+	gruppo...
+	<mail>
+
+

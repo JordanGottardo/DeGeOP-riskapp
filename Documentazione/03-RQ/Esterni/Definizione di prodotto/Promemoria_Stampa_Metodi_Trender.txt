@@ -1,0 +1,1 @@
+nell'ovveride dei metodi cambia il tipo di ritorno; dato che il tipo di ritorno lo sto mettendo su un campo apposito, direi che basta che fai un controllo sulla firma del metodo, se è presente nella superclasse allora copi i dati di quella (attributi, descrizione ecc) e gli attacchi il tipo di ritorno specificato in questa

@@ -1,0 +1,437 @@
+\newpage
+
+
+
+\section{Obiettivi di qualità}
+	In questa sezione vengono espressi gli obiettivi di qualità che il \glo{Gruppo}{team} si è prefissato. Data la difficoltà (e in alcuni casi l'impossibilità) nel misurare direttamente la qualità, sono stati scelti standard, modelli e metriche.
+	Ognuno di questi fa uso di scale differenti e fissate a priori. Per ogni criterio, il team ha fissato dei range di valori accettabili e ottimi. A prescindere dal livello raggiunto in ogni misurazione, l'obiettivo da perseguire è il miglioramento continuo della qualità, realizzata attraverso il ciclo \glo{PDCA}{PDCA}. Nel caso in cui non si raggiungesse l'obiettivo minimo, dovranno essere attuate misure correttive come previsto dalle \ndpv.	
+	Siccome la qualità non è una proprietà intrinseca dei processi, è fondamentale dotarsi di buoni strumenti per effettuare le misurazioni.\\
+	Ogni volta che viene effettuata una misurazione si ottiene un valore, ovvero una misura. Per poter comparare due valori è necessario rapportarli su una scala: facendo ciò si crea una metrica.
+	È possibile trovare una descrizione degli strumenti e delle metriche nelle \ndpv. \\
+	Tenendo conto degli obiettivi che verranno stabiliti, il valore può avere giudizio:
+	\begin{itemize}
+		\item \textbf{negativo:} obiettivo non raggiunto. È necessario fare ulteriori verifiche o correzioni. Per alcune metriche, le azioni da intraprendere in caso di valori negativi sono descritte nelle \ndpv;
+		\item \textbf{accettabile:} obiettivo raggiunto, soglia di accettabilità superata.
+		Se il criterio a cui il valore si riferisce è un obiettivo importante in ottica PDCA, è necessario attuare azioni per migliorare la qualità;
+		\item \textbf{ottimale:} obiettivo raggiunto, soglia di ottimalità superata. Anche in questo caso vale quanto detto nel punto precedente riguardo il miglioramento continuo.
+	\end{itemize}
+
+	\subsection{Qualità di processo}
+		Garantire la qualità dei processi è fondamentale se si vogliono ottenere prodotti di qualità. L'unico modo di garantire \glo{Quality assurance}{quality assurance} è far sì che i processi siano normati e misurati. Inoltre, è possibile anche ottenere maggiore efficienza, efficacia e ripetibilità dei risultati. Gli obiettivi relativi a questi ambiti sono illustrati nel \pdpv.
+		Le caratteristiche che i processi dovrebbero avere sono le seguenti:
+		\begin{itemize}
+			\item un processo dovrebbe essere in grado di migliorare continuamente le proprie performance:
+			\begin{itemize}
+				\item le performance di un processo dovrebbero essere misurabili;
+				\item un processo dovrebbe perseguire obiettivi quantitativi di miglioramento.
+			\end{itemize}
+			\item i processi e le loro attività dovrebbero rispettare i tempi e i costi stabiliti dal \pdpv.\\
+		\end{itemize}
+		Seguono gli obiettivi e le relative metriche riguardanti la qualità di processo che il team ha stabilito.
+		% tutti i processi
+		\subsubsection{Tutti i processi}
+			In questa sezione sono definiti gli obiettivi generici per tutti i processi.
+			
+			\paragraph{Miglioramento costante} 
+				\label{OMC}
+				Per quantificare il livello di performance raggiunto dai processi, si è deciso di adottare il modello \glo{CMM}{CMM}. L'obiettivo è migliorare costantemente tale livello, secondo quanto definito dal ciclo PDCA.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Livello CMM ($LCMM$);
+					\item \textbf{valore negativo:} 1;
+					\item \textbf{valore accettabile:} 2 e 3;
+					\item \textbf{valore ottimale:} 4 e 5.
+				\end{itemize}
+				Per una descrizione più dettagliata del modello CMM, si faccia riferimento all'\hyperref[appendice A]{appendice A}. 
+					
+%						\begin{table}[H]
+%							\centering
+%							\begin{tabular}{|c | c| c |}
+%								\hline
+%								
+%								Valore negativo & Valore accettabile  & Valore ottimale\\
+%								\hline
+%								1 & 2 e 3 & 4 e 5 \\
+%						
+%								\hline
+%								
+%							\end{tabular}
+%							\label{MMC}
+%						\end{table}
+
+			\paragraph{Rispetto della pianificazione}
+				\label{ORDP}
+				Rispettare la pianificazione del lavoro stabilita nel \pdpv{} è fondamentale per evitare ritardi e garantire la qualità del processo. Qualora non la si rispettasse, è molto probabile che il processo non abbia le caratteristiche di qualità desiderate.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Schedule Variance ($SV$);
+					\item \textbf{valore negativo:} $SV\geq5$ giorni;
+					\item \textbf{valore accettabile:} $0<SV\leq 4$ giorni;
+					\item \textbf{valore ottimale:} $SV\leq0$ giorni.
+				\end{itemize}
+
+			\paragraph{Rispetto del budget}
+				\label{ORDB}
+				Rispettare il budget stabilito nel \pdpv{} è un obiettivo importante per evitare inefficienze nell'utilizzo delle risorse. Il team desidera che il costo effettivo non si discosti eccessivamente da quanto pianificato.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Cost Variance ($CV$);
+					\item \textbf{valore negativo:} $CV>10\%$;
+					\item \textbf{valore accettabile:} $0\%<CV\leq 10\%$;
+					\item \textbf{valore ottimale:} $CV\leq 0\%$.
+				\end{itemize}
+			
+			\paragraph{Completezza dell'analisi dei rischi}
+				\label{OCDADR}
+				Il team desidera che l'analisi dei rischi sia il più completo possibile, così da ridurre la probabilità di subire danni da rischi non preventivati. 
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} $RNP$;
+					\item \textbf{valore negativo:} $RNP>2$;
+					\item \textbf{valore accettabile:} $1\leq RNP\leq 2$;
+					\item \textbf{valore ottimale:} $RNP=0$.
+				\end{itemize}
+			
+		\subsubsection{Processo di documentazione}
+			Oltre agli obiettivi precedentemente enunciati, relativi a tutti i processi, il team ha identificato degli obiettivi particolari riguardanti il processo di documentazione. 
+			
+			\paragraph{Impegno nella documentazione}
+				\label{OIND}
+				Il team desidera che il tempo impiegato nella redazione dei documenti non venga sprecato. Inoltre, una scrittura del documento troppo veloce potrebbe significare scarsa attenzione e quindi generare troppi errori. È quindi necessario fissare un giusto grado di produttività.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Righe Documento Per Ora ($RDPO$);
+					\item \textbf{valore negativo:} $RDPO>30, RDPO<5$;
+					\item \textbf{valore accettabile:} $5 \leq RDPO <15$;
+					\item \textbf{valore ottimale:} $15 \leq RDPO \leq 30$.
+				\end{itemize}
+			
+			\paragraph{Qualità del template}
+				\label{OQDT}
+				L'obiettivo è realizzare un template di qualità per garantire che gli \analisti{} che redigono i documenti non abbiano necessità di decidere la struttura del documento. Inoltre, il  template fornirà tutti i comandi necessari per la stesura del documento. Il team desidera minimizzare il numero di comandi aggiuntivi richiesti dagli \analisti{} al \responsabile{} in quanto tutte le necessità in questo ambito dovrebbero già essere soddisfatte dal template.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Numero Comandi Richiesti ($NCR$);
+					\item \textbf{valore negativo:} $NCR>3$;
+					\item \textbf{valore accettabile:} $0<NCR \leq 3$;
+					\item \textbf{valore ottimale:} $NCR=0$.
+				\end{itemize}
+			
+			\paragraph{Qualità delle immagini}
+				\label{OQDI}
+				Il team desidera che le immagini incluse nei documenti siano di qualità. È stato decisa una risoluzione verticale minima per tutte le immagini che compaiono nei documenti, sia esterni che interni. È preferibile avere a disposizione un'immagine ad alta risoluzione e ridurne la grandezza utilizzando gli appositi comandi \glo{Latex}{\LaTeX{}} invece di avere un'immagine di scarsa qualità ma di giuste dimensioni dall'inizio. Tuttavia, è necessario non eccedere con la risoluzione per non appesantire troppo il documento e i tempi di compilazione.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Risoluzione Verticale ($RV$);
+				\item \textbf{valore negativo:} $RV<720$, $RV>400$;
+				\item \textbf{valore accettabile:} $2160 \leq RV \leq 4000$;
+				\item \textbf{valore ottimale:} $720 \leq RV < 2160$.
+			\end{itemize}
+		
+			\paragraph{Tracciamento delle modifiche}
+				\label{OTDM}
+				L'obiettivo è rendere le modifiche ai documenti tracciabili. Un'alta tracciabilità semplifica di molto l'attività dei \verificatori{} ed evita che essi debbano chiedere supporto ai redattori del documento riguardo le sezioni modificate. Ogni task completato relativo ad un documento deve produrre un avanzamento di versione con un relativo inserimento nel registro delle modifiche, come definito dalle \ndpv.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Percentuale Tracciamento Modifiche ($PTM$);
+					\item \textbf{valore negativo:} $PTM<100\%$;
+					\item \textbf{valore accettabile:} $PTM=100\%$;
+					\item \textbf{valore ottimale:} $PTM=100\%$.
+				\end{itemize}
+			
+		\subsubsection{Processo di sviluppo}
+			Oltre al processo di documentazione, anche il processo di sviluppo ha degli obiettivi specifici. Esso infatti è particolarmente vasto e copre molte attività, come l'analisi dei requisiti, la progettazione e la codifica.
+			
+			\paragraph{Impegno nella codifica}
+				\label{OINC}
+				Il team desidera che il tempo impiegato nella produzione di codice non sia sprecato. Tuttavia, una scrittura di un elevato numero di \glo{Statement}{statement} in poco tempo provoca spesso errori, codice confusionario e istruzioni inutili. È necessario quindi porsi un obiettivo che non sia ai due estremi.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Righe Codice Per Ora ($RCPO$);
+					\item \textbf{valore negativo:} $RCPO>20$, $RCPO<3$;
+					\item \textbf{valore accettabile:} $ 3 \leq RCPO \leq 10$;
+					\item \textbf{valore ottimale:} $10<RCPO\leq 20$.
+				\end{itemize}
+			
+			\paragraph{Assegnazione scenari principali}
+				\label{OASP}
+				Ad ogni use case dev'essere assegnato uno scenario principale, dato che aiuta la comprensione del flusso principale degli eventi. Il team desidera che nessuno use case sia privo di scenario principale.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Use Case senza Scenario Principale ($UCSP$);
+					\item \textbf{valore negativo:} $UCSP>0$;
+					\item \textbf{valore accettabile:} $UCSP=0$;
+					\item \textbf{valore ottimale:} $UCSP=0$.
+				\end{itemize}
+			
+			\paragraph{Copertura requisiti obbligatori}
+				\label{OCRO}
+				Il team desidera che l'attività di progettazione produca un'architettura di qualità. Infatti, l'obiettivo è progettare componenti che siano in grado come minimo di soddisfare tutti i requisiti obbligatori.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Percentuale di Requisiti Obbligatori Coperti ($PROC$);
+					\item \textbf{valore negativo:} $PROC<100\%$;
+					\item \textbf{valore accettabile:} $PROC=100\%$;
+					\item \textbf{valore ottimale:} $PROC=100\%$.
+				\end{itemize}
+			
+			\paragraph{Basso grado di accoppiamento}
+				\label{OBGDA}
+				Il grado di accoppiamento indica le dipendenze uscenti da una \glo{Componente}{componente} del sistema verso le altre. Un numero di dipendenze troppo elevato è sintomo di scarsa coesione e quindi di cattiva progettazione. Eliminare completamente l'accoppiamento tuttavia è impossibile; uno degli obiettivi della progettazione è quello di mantenere basso tale livello.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Grado di Accoppiamento ($GA$);
+					\item \textbf{valore negativo:} $GA > 10$;
+					\item \textbf{valore accettabile:} $3<GA \leq 10$;
+					\item \textbf{valore ottimale:} $GA\leq3$.
+				\end{itemize}
+		
+			\paragraph{Alto grado di utilità}
+				\label{OAGDU}
+				Il grado di utilità indica le dipendenze entranti in una componente del sistema. Un alto grado di utilità per le componenti è sintomo di buona progettazione, in quanto viene favorito il riuso.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Grado di Utilità ($GU$);
+					\item \textbf{valore negativo:} $GU=0$;
+					\item \textbf{valore accettabile:} $1<GU\leq5$;
+					\item \textbf{valore ottimale:} $GU>5$.
+				\end{itemize}
+				
+	\subsection{Qualità di prodotto}
+		Oltre alla qualità dei processi, il team desidera anche garantire determinate caratteristiche di qualità dei prodotti. Per raggiungere questo obiettivo, è necessario che il processo con cui tale prodotto viene realizzato sia controllato e vincolato. A tal fine, è stato scelto di seguire lo standard \glo{ISO}{ISO}/\glo{IEC}{IEC} 9126:2001.\\
+		Le tipologie di prodotti che verranno realizzati sono due:
+		\begin{itemize}
+			\item documenti;
+			\item software.
+		\end{itemize}
+	
+	\subsubsection{Qualità dei documenti}
+		Il team si pone come obiettivo la produzione di documenti di qualità. Essi sono infatti fondamentali per la comprensione del prodotto software fin dal concepimento, sia da parte di soggetti interni che esterni. Le metriche che il team ha scelto per i documenti sono il più oggettive possibili. Da sole non garantiscono la qualità generale del documento, quindi è necessario un'ulteriore e accurata verifica, soprattutto per evitare gli errori concettuali e di forma.
+		
+		
+		Seguono gli obiettivi e le metriche riguardanti la qualità dei documenti che il team si è prefissato.
+
+		\paragraph{Leggibilità e comprensibilità}
+			\label{OLEC}
+			La leggibilità e comprensibilità dei documenti sono caratteristiche fondamentali affinché essi siano utili a coloro che li leggono. Dovrà essere posta particolare attenzione alla lunghezza delle frasi e alla complessità delle parole utilizzate. Il team desidera che i testi siano comprensibili da persone con almeno un diploma superiore.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} \glo{Indice Gulpease}{Indice Gulpease} ($IG$);
+				\item \textbf{valore negativo:} $IG<40$;
+				\item \textbf{valore accettabile:} $40\leq IG <60$;
+				\item \textbf{valore ottimale:} $IG\geq 60$.
+			\end{itemize}
+
+		\paragraph{Adesione alle norme interne}
+			\label{OAANI}
+			Aderire alle regole di stesura dei documenti definite nelle \ndpv{} è fondamentale per assicurare l'omogeneità del testo e della terminologia. Alcuni esempi di norme riguardanti i documenti sono quelle relative ai loro nomi (e relativa versione), agli elenchi puntati, ai ruoli dei membri, ecc. L'obiettivo è aderire in modo completo alle norme interne, eliminando tutti gli errori che le violino.			
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Errori riguardanti le Norme interne e Non Corretti ($ENNC$);
+				\item \textbf{valore negativo:} $ENNC>0$;
+				\item \textbf{valore accettabile:} $ENNC=0$;
+				\item \textbf{valore ottimale:} $ENNC=0$.
+			\end{itemize}
+
+		\paragraph{Correttezza ortografica}
+			\label{OCO}
+			Il team desidera che i documenti prodotti siano completamente esenti da errori ortografici rilevati e non corretti. I \verificatori, oltre ad utilizzare gli strumenti automatici definiti nelle \ndpv, dovranno prestare particolare attenzione durante la lettura del documento per scoprire errori non rilevati.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Errori Ortografici Non Corretti ($EONC$);
+				\item \textbf{valore negativo:} $EONC>0$;
+				\item \textbf{valore accettabile:} $EONC=0$;
+				\item \textbf{valore ottimale:} $EONC=0$.
+			\end{itemize}
+
+		\paragraph{Correttezza concettuale}
+			\label{OCC}
+			L'obiettivo è ridurre il più possibile il numero di errori concettuali rinvenuti e non corretti. Gli errori concettuali sono più gravi di quelli ortografici, in quanto veicolano un messaggio sbagliato al lettore. I \verificatori, in caso di dubbio sulla correzione di errori concettuali, dovranno utilizzare la procedura di gestione delle anomalie definita nelle \ndpv.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Errori Concettuali Non Corretti ($ECNC$)
+				\item \textbf{valore negativo:} $ECNC>5\%$;
+				\item \textbf{valore accettabile:} $ECNC\leq5\%$;
+				\item \textbf{valore ottimale:} $ECNC=0\%$.
+			\end{itemize}
+		
+		\paragraph{Basso livello di annidamento dell'indice} 
+		\label{OBLDAI}
+		L'obiettivo è contenere il livello di annidamento dei paragrafi del documento. Un livello di annidamento troppo elevato appensantisce la leggibilità del documento. Una struttura tabellare è un'alternativa preferibile all'eccessivo annidamento dei paragrafi, qualora i contenuti ne beneficiassero.
+		\begin{itemize}
+			\item \textbf{metrica utilizzata:} Livello Annidamento Indice ($LAI$);
+			\item \textbf{valore negativo:} $LAI>5$;
+			\item \textbf{valore accettabile:} $3<LAI\leq5$;
+			\item \textbf{valore ottimale:} $LAI\leq3$.
+		\end{itemize}
+		
+		
+	\subsubsection{Qualità del software}
+		Il team desidera che il software prodotto sia di qualità.
+		
+		
+		Seguono gli obiettivi e le metriche riguardanti la qualità del software che il team si è prefissato.
+
+		\paragraph{Implementazione delle funzionalità obbligatorie}
+			\label{OIDFO}
+			Il software deve implementare completamente le funzionalità descritte nei requisiti obbligatori. È fondamentale che i requisiti obbligatori siano soddisfatti, in quanto senza di essi non si avrebbe un prodotto accettabile.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Implementazione delle Funzionalità Obbligatorie ($IFO$)
+				\item \textbf{valore negativo:} $IFO<100\%$;
+				\item \textbf{valore accettabile:} $IFO=100\%$;
+				\item \textbf{valore ottimale:} $IFO=100\%$.
+			\end{itemize}
+
+		\paragraph{Implementazione delle funzionalità desiderabili}
+		\label{OIDFD}
+		Il software deve implementare il maggior numero possibile delle funzionalità descritte nei requisiti desiderabili. Pur non essendo obbligatoriamente richieste dal proponente, il team reputa che esse siano di particolare importanza per la realizzazione di un software di qualità.
+		\begin{itemize}
+			\item \textbf{metrica utilizzata:} Implementazione delle Funzionalità Desiderabili ($IFD$);
+			\item \textbf{valore negativo:} $IFD<80\%$;
+			\item \textbf{valore accettabile:} $80\% \leq IFD <100\%$;
+			\item \textbf{valore ottimale:} $IFD=100\%$.
+		\end{itemize}
+
+		\paragraph{Basso numero di statement per metodo}
+			\label{OBNDSPM}
+			Al fine di fornire metodi facilmente comprensibili, il team desidera contenere il numero di statement di ognuno di essi.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Numero di \glo{Statement}{Statement} per Metodo ($NSM$);
+				\item \textbf{valore negativo:} $NSM>60$;
+				\item \textbf{valore accettabile:} $30< NSM\leq 60$;
+				\item \textbf{valore ottimale:} $NSM\leq 30$.
+			\end{itemize}
+			
+		\paragraph{Basso numero di parametri per metodo}
+			\label{OBNDPPM}
+			Un numero troppo elevato di parametri per metodo influenza negativamente la comprensibilità dello stesso e l'attività di codifica. 
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Numero di Parametri per Metodo ($NPM$);
+				\item \textbf{valore negativo:} $NPM>12$;
+				\item \textbf{valore accettabile:} $5<NPM \leq 12$;
+				\item \textbf{valore ottimale:} $NPM\leq5$.
+			\end{itemize}
+
+		\paragraph{Basso numero di campi dati per classe}
+			\label{OBNDCDPC}
+			Una classe con un numero troppo elevato di campi dati indica che essa non è abbastanza specializzata. Quasi sicuramente è possibile spezzarla in due o più classi con un minore numero di campi dati.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Numero Campi Dati Per Classe ($NCDPC$);
+				\item \textbf{valore negativo:} $NCDPC>15$;
+				\item \textbf{valore accettabile:} $10<NCDPC \leq 15$;
+				\item \textbf{valore ottimale:} $NCDPC\leq10$.
+			\end{itemize}
+		
+		\paragraph{Bassa complessità ciclomatica}
+			\label{OBCC}
+			La complessità ciclomatica indica il numero di cammini linearmente indipendenti presenti all'interno del codice. Un valore particolarmente elevato implica una grande difficoltà durante l'esecuzione di testing, in quanto alcuni rami del grafo di controllo del programma potrebbero essere difficilmente raggiungibili. Una bassa complessità ciclomatica aiuta a raggiungere la copertura del 100\% del codice durante la creazione ed esecuzione dei test.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Numero Ciclomatico ($NC$);
+				\item \textbf{valore negativo:} $NC>20$;
+				\item \textbf{valore accettabile:} $10<NC \leq 20$;
+				\item \textbf{valore ottimale:} $NC\leq10$.
+			\end{itemize}
+		
+		\paragraph{Assenza di variabili dichiarate e non utilizzate}
+			\label{OADVDENU}
+			Il team desidera che non siano presenti variabili dichiarate e non utilizzate all'interno del codice. La presenza di una di esse complicherebbe la leggibilità del codice e indicherebbe uno statement completamente inutile.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Numero di Variabili dichiarate e Non Utilizzate ($NVNU$);
+				\item \textbf{valore negativo:} $NVNU>0$;
+				\item \textbf{valore accettabile:} $NVNU=0$;
+				\item \textbf{valore ottimale:} $NVNU=0$.
+			\end{itemize}
+
+
+		\paragraph{Documentazione del codice}
+			\label{ODDC}
+			Scrivere codice documentato è importante per garantire manutenibilità e comprensibilità dello stesso. Il mezzo con cui si intende raggiungere tale obiettivo è commentare il codice. Verrà posta particolare attenzione nello scrivere commenti comprensibili anche a eventuali manutentori, che potranno  essere soggetti esterni.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Rapporto tra le linee di Commento e le linee di Codice ($RCC$);
+				\item \textbf{valore negativo:} $RCC<10\% , 300\%>RCC$;
+				\item \textbf{valore accettabile:} $10\% \leq RCC$;
+				\item \textbf{valore ottimale:} $30\% \leq RCC\leq 300\%$.
+			\end{itemize}
+
+		
+		\paragraph{Superamento dei test pianificati}
+			\label{OSDTP}
+			Assicurare il superamento dei test è fondamentale per poter verificare la corretta implementazione delle funzionalità previste dai requisiti.
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Superamento dei Test Pianificati ($STP$);
+					\item \textbf{valore negativo:} $STP<80\%$;
+					\item \textbf{valore accettabile:} $80\leq STP<90\%$;
+					\item \textbf{valore ottimale:} $90\% \leq STP \leq 100\%$.
+				\end{itemize}
+
+		
+		\paragraph{Robustezza}
+			\label{OR}
+			Il prodotto non deve interrompere il suo funzionamento al verificarsi di situazioni anomale e di errore. È preferibile la segnalazione dell'errore all'arresto improvviso.
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Breakdown Avoidance ($BA$);
+				\item \textbf{valore negativo:} $BA< 80\%$;
+				\item \textbf{valore accettabile:} $80 \leq BA<95\%$;
+				\item \textbf{valore ottimale:} $BA\geq 95\%$.
+			\end{itemize}
+		
+		
+		\paragraph{Correzione delle situazioni di fallimento}
+			\label{OCDSDF}
+			Il prodotto deve superare la maggior parte dei test che provino a compromettere la sua stabilità. Una situazione di fallimento scoperta e non corretta indica che il risultato di un test non è stato sfruttato al massimo. L'obiettivo è correggere tutte le situazioni di fallimento scoperte durante i test. 
+				\begin{itemize}
+					\item \textbf{metrica utilizzata:} Failure Avoidance ($FA$);
+					\item \textbf{valore negativo:} $FA< 80\%$;
+					\item \textbf{valore accettabile:} $80\leq FA<95\%$;
+					\item \textbf{valore ottimale:} $FA\geq 95\%$.
+				\end{itemize}
+			
+		\paragraph{Copertura degli statement}
+			\label{OCDS}
+			Ottenere una copertura degli statement elevata in fase di testing indica che durante un test vengono eseguite molte linee di codice di un metodo. Più linee di codice sono testate, più facile è scoprire gli errori.
+			
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Statement Coverage ($SC$);
+				\item \textbf{valore negativo:} $SC< 70\%$;
+				\item \textbf{valore accettabile:} $70\leq SC<90\%$;
+				\item \textbf{valore ottimale:} $SC\geq 90\%$.
+			\end{itemize}
+		
+		\paragraph{Copertura dei branch}
+			\label{OCDB}
+			La copertura dei branch indica quanti flussi logici di un metodo vengono testati da un test. È un tipo di copertura più potente rispetto a quella degli statement in quanto è in grado di scoprire più errori.
+		
+			\begin{itemize}
+				\item \textbf{metrica utilizzata:} Branch Coverage ($BC$);
+				\item \textbf{valore negativo:} $BC< 70\%$;
+				\item \textbf{valore accettabile:} $70\leq BC<90\%$;
+				\item \textbf{valore ottimale:} $SC\geq 90\%$.
+			\end{itemize}		
+
+	\subsubsection{Corrispondenza obiettivo - caratteristica di qualità}
+		Gli obiettivi (e quindi anche le metriche) che il team ha scelto per misurare la qualità del software si possono riferire a:
+		\begin{itemize}
+			\item qualità interna;
+			\item qualità esterna;
+			\item qualità in uso.
+		\end{itemize}
+		Come descritto nello standard ISO/IEC 9126:2001, ogni metrica corrisponde a determinate caratteristiche di qualità. Segue una tabella che associa ogni metrica scelta alla relativa caratteristica. Inoltre è specificato a quale tipologia di qualità essa fa riferimento.
+		
+		\begin{table}[H]
+		\centering
+		\small
+		\begin{tabular}{l | c| c| c}
+			\hline
+			%						\toprule
+			\textbf{Obiettivo}                         & \textbf{Metrica} & \textbf{Tipo} & \textbf{Caratteristica} \\ \hline
+			%						\midrule
+			\hyperref[OIDFO]{Implementazione  funzionalità obbligatorie} 						& \hyperref[MIDFO]{IFO}              & Esterna       & Funzionalità            \\
+			\hyperref[OIDFD]{Implementazione funzionalità desiderabili}                         & \hyperref[MIDFD]{IFD}              & Esterna       & Funzionalità            \\
+			\hyperref[OBNDSPM]{Basso numero di statement per metodo}                                   & \hyperref[MBNDSPM]{NSM}              & Interna       & Manutenibilità          \\
+			\hyperref[OBNDPPM]{Basso numero di parametri per metodo}                                    & \hyperref[MBNDPPM]{NPM}              & Interna       & Manutenibilità          \\
+			\hyperref[OBNDCDPC]{Basso numero di campi dati per classe}                                   	& \hyperref[MBNDCDPC]{NCD}              & Interna       & Manutenibilità          \\
+			\hyperref[OBCC]{Bassa complessità ciclomatica}                                                   & \hyperref[MBCC]{NC}               & Interna       & Manutenibilità          \\
+			\hyperref[OADVDENU]{Assenza di variabili dichiarate e non utilizzate}                                   & \hyperref[MADVDENU]{NVNU}             & Interna       & Manutenibilità          \\
+			\hyperref[ODDC]{Documentazione del codice}                                             & \hyperref[MDDC]{RCC}              & Interna       & Manutenibilità          \\
+			\hyperref[OSDTP]{Superamento dei test pianificati}                                              & \hyperref[MSDTR]{STP}              & Esterna       & Affidabilità            \\
+			\hyperref[OR]{Robustezza}                                                                     & \hyperref[MR]{BA}               & Esterna       & Affidabilità            \\
+			\hyperref[OCDSDF]{Correzione delle situazioni di fallimento}                           & \hyperref[MCDSDF]{FA}               & Esterna       & Affidabilità            \\
+			\hyperref[OCDS]{Copertura degli statement}                           & \hyperref[MCDSDF]{SC}               & Esterna       & Affidabilità            \\
+			\hyperref[OCDS]{Copertura dei branch}                           & \hyperref[MCDSDF]{BC}               & Esterna       & Affidabilità            \\
+			 \hline
+			%						\midrule                                                  &
+		\end{tabular}
+		\caption{Mappa Metriche-Caratteristiche}
+		\label{tab:mappa_metriche_caratteristiche}
+	\end{table}
+
+
+
+
+
+
+
+

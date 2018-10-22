@@ -1,0 +1,71 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplate}
+
+
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+%\setcounter{tocdepth}{2}
+\includeGlossario
+%\externaldocument{../Glossario/Glossario}
+
+\docTitle{Piano di Qualifica}
+\docVersion{4.0.0}
+\docCreationDate{\frmdata{04}{12}{2016}}
+\docLastUpdateDate{\frmdata{21}{08}{2017}}
+\docStatus{Approvato}
+\docEditors{Jordan Gottardo}
+\docVerificators{Giulia Petenazzi}
+\docApprovers{Marco Pasqualini}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{	
+	4.0.0 & \frmdata{21}{08}{2017} & Marco Pasqualini & \responsabile & Approvazione documento \\
+	3.1.0 & \frmdata{20}{08}{2017} & Giulia Petenazzi & \verificatore & Verifica documento \\
+	3.0.1 & \frmdata{18}{08}{2017} & Jordan Gottardo & \programmatore & Inserimento resoconto periodo Va appendice D \\
+	3.0.0 & \frmdata{09}{04}{2017} & Daniel De Gaspari & \responsabile & Approvazione documento \\
+	2.1.0 & \frmdata{06}{04}{2017} & Giulia Petenazzi & \verificatore & Verifica documento\\
+	2.0.3 & \frmdata{05}{04}{2017} & Marco Pasqualini & \amministratore & Aggiunta sezione 3.4 "Test di unità"\\
+	2.0.2 & \frmdata{05}{04}{2017} & Marco Pasqualini & \amministratore & Aggiunta sezione D.2.2 "Verifica del software"\\
+	2.0.2 & \frmdata{22}{03}{2017} & Marco Pasqualini & \amministratore & Correzione post RP: eliminata sezione E; riorganizzata sezione D per obiettivo invece che per periodo\\
+	2.0.1 & \frmdata{22}{03}{2017} & Jordan Gottardo & \amministratore & Correzione post RP: Spostata sezione Test da appendice a corpo del documento (sezione 3)\\
+	2.0.1 & \frmdata{22}{03}{2017} & Jordan Gottardo & \amministratore & Correzione post RP: Eliminata sezione 3\\
+	2.0.0 & \frmdata{30}{02}{2017} & Leonardo Brutesco & \responsabile & Approvazione documento \\
+	1.2.0 & \frmdata{26}{02}{2017} & Jordan Gottardo & \verificatore & Verifica documento \\
+	1.1.1 & \frmdata{27}{02}{2017} & Giulia Petenazzi & \analista & Corretta descrizione "Superamento dei test pianificati". Aggiunti test di validazione, sistema, integrazione \\
+	1.1.0 & \frmdata{26}{02}{2017} & Jordan Gottardo & \verificatore & Verifica documento \\
+	1.0.8 & \frmdata{22}{02}{2017} & Giulia Petenazzi & \analista & Eliminazione obiettivo "Validazione Web"; cambiati valore accettabile da 100\% a 80\% per obiettivo "Implementazione funzionalità desiderabili" in §2.2.2.2; Rinominato "Superamento dei test richiesti" in "Superamento dei test pianificati" in §2.2.2.9;  \\
+	1.0.7 & \frmdata{22}{02}{2017} & Marco Pasqualini & \analista & Stesura § 2.2.1 \\
+	1.0.6 & \frmdata{06}{02}{2017} & Marco Pasqualini & \analista & Stesura § 3.3 \\
+	1.0.5 & \frmdata{05}{02}{2017} & Giulia Petenazzi & \analista & Sostituita nome section "Copertura dei test" con "Superamento dei test" \\
+	1.0.4 & \frmdata{04}{02}{2017} & Giulia Petenazzi & \analista & Section documentazione del codice: sostituito "Avere" con "Scrivere", "anche essere soggetti esterni" con "essere soggetti esterni" \\
+	1.0.3 & \frmdata{04}{02}{2017} & Giulia Petenazzi & \analista & Estesa descrizione delle section "Rispetto del budget", "Leggibilità e comprensibilità", "Adesione alle norme interne", "Correttezza ortografica", "Correttezza concettuale", "Implementazione delle funzionalità obbligatorie", "Implementazione delle funzionalità desiderabili", "Basso numero di statement per metodo", "Basso numero di parametri per metodo", "Basso numero di campi dati per classe", "Basso grado di accoppiamento", "Bassa complessità ciclomatica", "Basso numero di variabili dichiarate e non utilizzate", "Correzione delle situazioni di fallimento" \\
+	1.0.2 & \frmdata{03}{02}{2017} & Giulia Petenazzi & \analista & Cambiato nomi delle section "Visione generale della strategia di gestione della qualità" in "Obiettivi di qualità" e di "La strategia di gestione della qualità nel dettaglio" in "Organizzazione della gestione della qualità". Ristrutturato il contenuto di tali section \\
+	1.0.1 & \frmdata{29}{01}{2017} & Giulia Petenazzi & \analista & Messi a glossario i termini solo la prima volta che compaiono in ogni section del documento \\
+	1.0.0 & \frmdata{07}{01}{2017} & Giulia Petenazzi & \responsabile & Approvazione  	\\
+	0.2.0 & \frmdata{06}{01}{2017} & Leonardo Brutesco & \verificatore & Verifica documento  	\\
+	0.1.1 & \frmdata{06}{01}{2017} & Jordan Gottardo & \analista & Correzione errori  	\\
+	0.1.0 & \frmdata{06}{01}{2017} & Leonardo Brutesco & \verificatore & Verifica documento  	\\
+	0.0.7 & \frmdata{04}{01}{2017} & Marco Pasqualini & \verificatore & Aggiunta sezione resoconto delle attività di verifica - fase analisi	\\
+	0.0.6 & \frmdata{13}{12}{2016} & Marco Pasqualini & \analista & Aggiunte sezioni CMM, ISO/IEC-9126, Test, PDCA 	\\
+	0.0.5 & \frmdata{12}{12}{2016} & Jordan Gottardo & \analista & Aggiunta sezione la strategia di gestione della qualità nel dettaglio	\\
+	0.0.3 & \frmdata{05}{12}{2016} & Jordan Gottardo & \analista & Aggiunta sezione visione generale della strategia di gestione \\
+	0.0.2 & \frmdata{04}{12}{2016} & Jordan Gottardo & \analista & Aggiunta introduzione\\
+	0.0.1 & \frmdata{04}{12}{2016} & Jordan Gottardo & \analista & Creazione template e indice\\
+}
+\newcommand\VRule[1][\arrayrulewidth]{\color{white} \vrule width 1pt}
+\catcode`\_=12
+
+\begin{document}
+%\setcounter{secnumdepth}{2} % to block out subsubparagraph from showing out with its numbering (index etc.)
+
+\input{sections/PdqIntroduzione.tex}
+\input{sections/ObiettiviDiQualita.tex}
+%\input{sections/OrganizzazioneDellaGestioneDellaQualita.tex}
+\input{sections/Test.tex}
+\appendix
+\input{sections/CMM.tex}
+\input{sections/ISOIEC-9126.tex}
+\input{sections/PDCA.tex}
+\input{sections/ResocontoDelleAttivitaDiVerifica.tex}
+\end{document}

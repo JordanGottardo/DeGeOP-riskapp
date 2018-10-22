@@ -1,0 +1,431 @@
+\newpage
+
+\section{Tecnologie utilizzate}
+\label{tecnologie}
+\subsection{Introduzione}
+In questa sezione vengono descritte le tecnologie su cui si basa lo sviluppo del progetto. Per ognuna di esse verrà indicato l'ambito di utilizzo della tecnologia, i vantaggi e eventuali svantaggi che ne derivano. La scelta delle tecnologie non è stata vincolata in alcun modo dal proponente, anche se alcune decisioni a riguardo sono state prese tenendo conto delle tecnologie da loro già utilizzate.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cl}
+		\toprule
+		Tecnologia & Utilizzo \\
+		\midrule
+		\nameref{CSS3} & Linguaggio per la formattazione delle pagine web \\
+		\nameref{HTML5} & Linguaggio per la costruzione di pagine web \\
+		\nameref{JavaScript ES6}  & Linguaggio principale in cui è sviluppata l'applicazione \\
+		\nameref{JSON} & Formato dati utilizzato per lo scambio di informazioni \\
+		\nameref{JSX} & Estensione \glo{JavaScript}{JavaScript} per l'integrazione del codice \glo{HTML}{HTML} \\
+		\nameref{Node.js} & Ambiente operativo per utilizzare \js{} lato server \\
+		\nameref{OpenLayers} & Libreria per la gestione della mappa e del grafo \\
+		\nameref{Open Street Map} & Libreria per la fornitura di mappe in formato vettoriale \\
+		\nameref{React} & Costruzione dell'interfaccia grafica \\
+		\nameref{ReactColor} & Libreria per gestire la palette di colori \\
+		\nameref{React-Redux} & libreria per interfacciare \glo{React}{React} con Redux \\ 
+		\nameref{React Toolbox} & Libreria che implementa la specifica di Material Design \\
+		\nameref{Redux}  & Libreria per l'implementazione dell'architettura \\
+		\nameref{SVG} & Scalable Vector Graphics \\
+		
+		\bottomrule
+	\end{tabular}
+	\caption{Panoramica generale delle tecnologie usate nel progetto}
+\end{table}
+
+\newpage
+\vspace{40px}
+\subsection{CSS3}
+\label{CSS3}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		È un linguaggio utilizzato per la presentazione di documenti HTML. Lo standard viene definito dal \glo{W3C}{W3C}.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }assicura maggiore manutenibilità e riutilizzo grazie alla separazione tra presentazione e struttura;
+		\newline
+		\textbf{- }raccomandato dal W3C.
+		\\ \midrule
+		\textbf{Svantaggi} & &
+		\textbf{- }specifica ufficiale non completata;
+		\newline
+		\textbf{- }non supportato pienamente da tutti i browser.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per definire il layout dell'applicazione.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+\vspace{40px}
+\subsection{HTML5}
+\label{HTML5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		È un \glo{Linguaggio di markup}{linguaggio di markup} utilizzato per definire la struttura delle pagine web. Lo standard viene definito dal W3C.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }fornisce un set di \glo{Tag}{tag} più vasto rispetto alle vecchie versioni, con nuovi tag semantici;
+		\newline
+		\textbf{- }raccomandato dal W3C.
+		\\ \midrule
+		\textbf{Svantaggi} & &
+		\textbf{- }non supportato pienamente da tutti i browser.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per definire il layout dell'applicazione.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+\newpage
+\vspace{40px}
+\subsection{JavaScript ES6}
+\label{JavaScript ES6}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+\js{} è un linguaggio di scripting orientato agli oggetti e agli eventi, utilizzato principalmente nella programmazione Web lato client.
+Le caratteristiche più importanti di questo linguaggio sono:
+\begin{itemize}
+	\item \textbf{eventi:} quando l'utente interagisce con la pagina Web in vari modi, come ad esempio mouse e tastiera, viene generato un evento; \js{} gestisce  tali eventi, i quali possono avviare un'azione registrata in un gestore di eventi;
+	\item \textbf{tipizzazione dinamica:} il programmatore non è tenuto a specificare il tipo degli oggetto che utilizza;
+	\item \textbf{paradigma a protipi:} stile di programmazione orientato ad oggetti in cui l'ereditarietà è implementata tramite il riuso di oggetti esistenti, basandosi sul loro prototipo.
+\end{itemize}
+In particolare, il \glo{Gruppo}{gruppo} si baserà sull'utilizzo della specifica \jsv{}, che definisce significativi cambiamenti sintattici per la scrittura di applicazioni complesse in modo più semplice.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+\textbf{- }facilità di utilizzo;\newline
+\textbf{- }larga disponibilità di documentazione;\newline
+\textbf{- }conoscenza pregressa del linguaggio;\newline
+\textbf{- } maggior supporto da parte dei browser rispetto alle alternative, come ad esempio ActionScript.
+		\\ \midrule
+		\textbf{Svantaggi} & &
+\textbf{- } variazione di interpretazione a seconda del browser;\newline
+\textbf{- } la tipizzazione dinamica è frequentemente fonte di errori.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		\js{} è il linguaggio base con cui si svilupperà l'applicazione \progetto{}. Di conseguenza è ance il linguaggio utilizzato maggiormente dalle librerie esterne da noi sfruttate.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+\vspace{40px}
+\subsection{JSON}
+\label{JSON}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Formato dati utilizzato per lo scambio di informazioni tra il client (ovvero il nostro prodotto) e il server (ovvero il prodotto di \riskapp).
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- } standard per lo scambio di dati;
+		\newline
+		\textbf{- } meno verboso di alternative come XML.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per lo scambio di dati tra l'applicazione \progetto e il server di \riskapp.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+\newpage
+\subsection{JSX}
+\label{JSX}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		JSX è un linguaggio orientato agli oggetti staticamente tipizzato. È un'estensione di \js.
+		I file in linguaggio JSX vengono poi tradotti in \js.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }permette di utilizzare tag in stile HTML all'interno delle componenti React;
+		\newline
+		\textbf{- }facilità di utilizzo;
+		\newline
+		\textbf{- }viene compilato, quindi permette di scoprire gli errori a tempo di compilazione;
+		\newline
+		\textbf{- }il suo utilizzo in combinazione con React è altamente consigliato;
+		\newline
+		\textbf{- } maggiore leggibilità.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato come sintassi all'interno di React.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+\vspace{40px}
+\subsection{Node.js}
+\label{Node.js}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Ambiente operativo per utilizzare \js{} in ambito server.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }combinato con npm permette di creare un ambiente di sviluppo molto facilitato.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per far avviare la nostra applicazione.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\newpage
+\vspace{40px}
+\subsection{OpenLayers}
+\label{OpenLayers}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per visualizzare mappe interattive nei browser web.
+		OpenLayers offre \glo{API}{API} ai programmatori per poter accedere a diverse fonti d'informazioni cartografiche in Internet: mappe del progetto OpenStreetMap, mappe sotto licenze non-libere (Google Maps, Bing, Yahoo), Web Feature Service, ecc. E' coperto da licenza BSD.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }buona documentazione;
+		\newline
+		\textbf{- }maggiori funzionalità e flessibilità rispetto ai concorrenti, come ad esempio Leaflet.
+		\\ \midrule
+		\textbf{Svantaggi} & &
+		\textbf{- }più pesante di alcuni concorrenti, come Leaflet.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per gestire la mappa.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{Open Street Map}
+\label{Open Street Map}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per fornire informazioni geografiche in formato vettoriale.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }utile alla nostra applicazione in quanto mostra il perimetro di molti edifici.
+		\\ \midrule
+		\textbf{Svantaggi} & &
+		\textbf{- }mancanza della vista satellitare.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		OpenStreetMap viene utilizzato in modo indiretto dalla libreria OpenLayers per fornire una vista
+		vettoriale nella mappa dell'applicazione.
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+
+
+\vspace{40px}
+\subsection{React}
+\label{React}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} \glo{Open source}{open source} mantenuta da Facebook e Instagram utile alla costruzione di interfacce grafiche. Per fare ciò, React utilizza componenti indipendenti e riusabili che ereditano dalla classe base astratta React.Component. Le componenti devono implementare il metodo \glo{Render}{render}() che si occupa di rappresentare la \glo{Componente}{componente} sul browser.
+		Le caratteristiche più importanti di questa libreria sono:
+		\begin{itemize}
+			\item {\textbf{One-way-data-flow:}} meccanismo tramite il quale le proprietà (un insieme di valori immutabili passato al render di un componente) non possono essere direttamente modificate. Queste proprietà possono però essere modificate da una \glo{Callback}{callback};
+			\item {\textbf{Virtual DOM:}} virtualizzazione operata da React per effettuare un re-rendering efficiente dei componenti. 
+			Consiste in:
+			\begin{itemize}
+				\item replicare il DOM in memoria;
+				\item individuare le differenze tra il DOM reale e il DOM virtuale;
+				\item aggiornare le informazioni del DOM reale sulla base delle differenze precedentemente individuate.
+			\end{itemize}
+			\item utilizzo di JSX.
+		\end{itemize}
+		\\ \midrule \textbf{Vantaggi} & &
+		\textbf{- }facile da testare in quanto il DOM virtuale è implementato interamente in \js;
+		\newline
+		\textbf{- }agevola il riuso del codice grazie all'uso delle componenti, le quali possono essere combinate e collegate tra loro;
+		\newline
+		\textbf{- } gestione automatica degli aggiornamenti dell'interfaccia grafica.
+		\\ \midrule \textbf{Svantaggi} & &
+		\textbf{- } per far dialogare le componenti, React suggerisce di portare lo stato nelle componenti di più alto livello possibile. In questo modo le componenti di più basso livello sono prevalente presentazionali, mentre le componenti di più alto livello risultano essere cariche di informazioni;\\ &&
+		\textbf{- } manca di librerie per la gestione del model perché si occupa solamente della costruzione dell'interfaccia grafica.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		React viene utilizzata per la costruzione dell'interfaccia grafica dell'applicazione.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\newpage
+\vspace{40px}
+\subsection{ReactColor}
+\label{ReactColor}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per creare una palette di colori RGB.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }buona documentazione.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene  utilizzata per la creazione di un color picker.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\vspace{40px}
+\subsection{React-Redux}
+\label{React-Redux}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Libreria che facilita l'integrazione tra Redux e React.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- }facilita l'integrazione tra Redux e React.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Le classi \js{} vengono passate ad una funzione della libreria per ottenere una nuova classe che sfrutti React-Redux.
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\vspace{40px}
+\subsection{React Toolbox}
+\label{React Toolbox}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} composta da un insieme di componenti React che implementano la specifica del Material Design di Google.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- } vasta varietà di elementi grafici; \newline
+		\textbf{- } elementi grafici e temi facilmente personalizzabili; \newline
+		\textbf{- } ben documentata; \newline
+		\textbf{- } aiuta la separazione tra presentazione e contenuto grazie all'utilizzo usa i moduli \glo{CSS}{CSS} al posto dello stile inline, a differenza ad esempio di Material-UI.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		React Toolbox viene utilizzata per implementare alcune le componenti grafiche secondo la specifica del Material Design.
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\newpage
+\subsection{Redux}
+\label{Redux}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Libreria per l’implementazione dell’architettura che si occupa di gestire le interazioni tra la business logic e la presentazione.
+		Per fare ciò:
+		\begin{itemize}
+			\item implementa un \glo{Design pattern}{design pattern} architetturale da usare il sostituzione a MVC, come descritto in
+			\nameref{dp_redux};
+			\item offre delle API apposite per la gestione degli elementi del design pattern descritto al punto precedente.
+		\end{itemize}
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- } integrabile facilmente con React; \newline
+		\textbf{- } largamente utilizzato; \newline
+		\textbf{- } ben documentata.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Redux viene utilizzato per implentare l'archiettura di \progetto.
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\vspace{40px}
+\subsection{SVG}
+\label{SVG}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Standard per la scrittura di immagini in formato vettoriale.
+		\\ \midrule
+		\textbf{Vantaggi} & &
+		\textbf{- } standard aperto.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		SVG viene utilizzato per aggiungere oggetti personalizzati alla mappa.
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+
+
+
+%\subsection{VisJS}
+%	\subsubsection{Descrizione}
+%	E' una libreria JavaScript per costruire grafi.
+%	\subsubsection{Vantaggi}
+%	\begin{itemize}
+%		\item facilità di manipolazione dei dati relativi al grafo;
+%		\item possibilità di scelta di forme per i \glo{Nodo}{nodi};
+%		\item facilità di integrazione con il sistema \riskapp in quanto riceve i dati in input riguardanti il grafo in formato JSON.
+%	\end{itemize}
+%	\subsubsection{Svantaggi}
+%	\begin{itemize}
+%		\item perdita di efficienza in caso di grafi contenenti molti elementi.
+%	\end{itemize}

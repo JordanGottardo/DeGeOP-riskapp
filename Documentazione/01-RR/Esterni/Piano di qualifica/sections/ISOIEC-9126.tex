@@ -1,0 +1,91 @@
+
+{
+\newcommand{\qmodel}{modello della qualità del software}
+\newcommand{\qeimodel}{modello della qualità esterna e interna}
+\newcommand{\qumodel}{modello della qualità in uso}
+\newcommand{\Qmodel}{Modello della qualità del software}
+\newcommand{\Qeimodel}{Modello della qualità esterna e interna}
+\newcommand{\Qumodel}{Modello della qualità in uso}
+\newcommand{\rappr}{rappresenta la capacità del prodotto software}
+
+\section{ISO/IEC 9126}
+
+Lo standard \glo{ISO}{ISO}/\glo{IEC}{IEC} 9126 prevede una serie di normative e linee guida nate dalla collaborazione tra \glo{ISO}{ISO} e \glo{IEC}{IEC} per descrivere un modello della qualità del software. \\
+Esso si suddivide in quattro parti:
+	\begin{itemize}	
+		\item modello della qualità del software (9126-1);
+		\item metriche per la qualità esterna (9126-2);
+		\item metriche per la qualità interna (9126-3);
+		\item metriche per la qualità in uso (9126-4).
+	\end{itemize}
+
+\subsection{\Qmodel}
+	Il {\qmodel} viene definito nella prima parte dello standard e viene suddiviso in:
+	\begin{itemize}
+		\item \qeimodel;
+		\item \qumodel.
+	\end{itemize}
+	Le caratteristiche contenute in tali modelli sono misurabili attraverso l'utilizzo di metriche. \\
+	
+\subsubsection{\Qeimodel}
+	Il {\qeimodel} classifica la qualità del software con sei caratteristiche generali:
+	\begin{itemize}
+		\item \textbf{funzionalità}: {\rappr} di fornire le funzioni necessarie per operare in determinate condizioni, cioè in un determinato contesto;
+		
+		\item \textbf{affidabilità}: {\rappr} di mantenere un certo livello di prestazioni quando viene usato in condizioni specifiche e per un intervallo di tempo fissato;
+		
+		\item \textbf{usabilità}: {\rappr} di essere comprensibile. Un software è considerato usabile in proporzione alla facilità con cui gli utenti operano per sfruttare a pieno le funzionalità che il software realizza;
+		
+		\item \textbf{efficienza}: {\rappr} di realizzare le funzioni richieste nel minor tempo possibile, utilizzando le risorse a disposizione nel miglior modo possibile;
+		
+		\item \textbf{manutenibilità}: {\rappr} di essere modificato (a costi accessibili e in tempi rapidi). Le modifiche possono includere correzioni, adattamenti o migliorie del software; Le ultime possono essere richieste in seguito a cambiamenti nell'ambiente, nei requisiti o nelle specifiche funzionali;
+		
+		\item \textbf{portabilità}: {\rappr} di poter essere trasportato da un ambiente all'altro (in modo sufficientemente veloce). L'ambiente include aspetti hardware e software.
+	\end{itemize}
+
+	\subsubsection{\Qumodel}
+	Gli attributi del {\qumodel} vengono suddivisi nelle seguenti quattro categorie:
+		\begin{itemize}
+			\item \textbf{efficacia}: {\rappr} di permettere all'utente di raggiungere obiettivi specifici con accuratezza e completezza in uno specifico contesto d'utilizzo;
+			\item \textbf{produttività}: {\rappr} di permettere all'utente di impiegare un numero definito di risorse, in relazione all'efficienza raggiunta in uno specifico contesto di utilizzo;
+			\item \textbf{sicurezza fisica}: {\rappr} di raggiungere un livello accettabile di rischio per i dati, le persone, il business, la proprietà o gli ambienti in uno specifico contesto di utilizzo;
+			\item \textbf{soddisfazione}: {\rappr} di soddisfare gli utenti in uno specifico contesto di utilizzo.
+		\end{itemize}
+	
+	\subsection{Qualità esterna e relative metriche}
+	È la qualità del prodotto software vista dall'esterno nel momento in cui esso viene eseguito e testato in un ambiente di prova.
+	Le metriche associate ne misurano i comportamenti rilevabili:
+	\begin{itemize}
+		\item dai test;
+		\item dall'operabilità;
+		\item dall'osservazione in un contesto specifico.
+	\end{itemize}	
+	Tali metriche vengono selezionate sulla base delle caratteristiche che il prodotto finale dovrà dimostrare durante la sua esecuzione.
+	
+	\subsection{Qualità interna e relative metriche}
+	È la qualità del prodotto software vista dall'interno e fa riferimento alle caratteristiche implementative quali la sua architettura e il codice che ne deriva.\\
+	Le metriche associate si applicano al software non eseguibile (es: il codice sorgente) e alla documentazione. Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale poiché gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
+	
+	\subsection{Qualità in uso e relative metriche}
+	È la qualità del prodotto software dal punto di vista dell'utilizzatore che ne fa uso all'interno di uno specifico sistema e contesto.
+	Le metriche associate misurano il grado con cui il prodotto software permette agli utenti di svolgere,in un contesto operativo specifico, le proprie attività in modo:
+	\begin{itemize}
+		\item efficace;
+		\item produttivo;
+		\item sicuro;
+		\item soddisfacente.
+	\end{itemize}
+	 %Sono perciò rilevabili solo allo stato di prodotto stabile in condizioni reali. %ovvero non in condizione di test
+	
+}
+				
+
+
+
+
+
+%test d'errore???? stress test, resilience test
+
+
+
+

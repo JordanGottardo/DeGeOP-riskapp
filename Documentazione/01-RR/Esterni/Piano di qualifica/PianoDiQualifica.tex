@@ -1,0 +1,43 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplate}
+
+
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\externaldocument{../Glossario/Glossario}
+
+\docTitle{Piano di Qualifica}
+\docVersion{1.0.0}
+\docCreationDate{\frmdata{04}{12}{2016}}
+\docLastUpdateDate{\frmdata{07}{01}{2017}}
+\docStatus{Approvato}
+\docEditors{Jordan Gottardo \\ & Marco Pasqualini}
+\docVerificators{Leonardo Brutesco}
+\docApprovers{Giulia Petenazzi}
+\docUse{Esterno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus \\ & \riskapp}
+\docJournal{	
+	1.0.0 & \frmdata{07}{01}{2017} & Giulia Petenazzi & \responsabile & Approvazione  	\\
+	0.2.0 & \frmdata{06}{01}{2017} & Leonardo Brutesco & \verificatore & Verifica documento  	\\
+	0.1.1 & \frmdata{06}{01}{2017} & Jordan Gottardo & \analista & Correzione errori  	\\
+	0.1.0 & \frmdata{06}{01}{2017} & Leonardo Brutesco & \verificatore & Verifica documento  	\\
+	0.0.7 & \frmdata{04}{01}{2017} & Marco Pasqualini & \verificatore & Aggiunta sezione resoconto delle attività di verifica - fase analisi	\\
+	0.0.6 & \frmdata{13}{12}{2016} & Marco Pasqualini & \analista & Aggiunte sezioni CMM, ISO/IEC-9126, Test, PDCA 	\\
+	0.0.5 & \frmdata{12}{12}{2016} & Jordan Gottardo & \analista & Aggiunta sezione la strategia di gestione della qualità nel dettaglio	\\
+	0.0.3 & \frmdata{05}{12}{2016} & Jordan Gottardo & \analista & Aggiunta sezione visione generale della strategia di gestione \\
+	0.0.2 & \frmdata{04}{12}{2016} & Jordan Gottardo & \analista & Aggiunta introduzione\\
+	0.0.1 & \frmdata{04}{12}{2016} & Jordan Gottardo & \analista & Creazione template e indice\\
+}
+\begin{document}
+\input{sections/PdqIntroduzione.tex}
+\input{sections/VisioneGeneraleDellaStrategiaDiGestioneDellaQualita.tex}
+\input{sections/LaStrategiaDiGestioneDellaQualitaNelDettaglio.tex}
+\appendix
+\input{sections/CMM.tex}
+\input{sections/ISOIEC-9126.tex}
+\input{sections/PDCA.tex}
+\input{sections/Test.tex}
+\input{sections/ResocontoDelleAttivitaDiVerifica-FaseAnalisi.tex}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{../../../Template/zemplate}
+\usepackage{float}
+
+\externaldocument{../../Esterni/Glossario/Glossario}
+
+\docTitle{Norme di Progetto}
+\docVersion{v1.0.0}
+\docCreationDate{\frmdata{03}{12}{2016}}
+\docLastUpdateDate{\frmdata{23}{12}{2016}}
+\docStatus{Approvato}
+\docEditors{Giovanni Damo \\ & Giovanni Prete }
+\docVerificators{Leonardo Brutesco}
+\docApprovers{Giulia Petenazzi}
+\docUse{Interno}
+\docDestination{\Tullio \\ & \Cardin \\ & \zephyrus}
+\docJournal{
+1.0.0 & \frmdata{23}{12}{2016} & Giulia Petenazzi & \responsabile & Approvazione \\
+0.2.0 & \frmdata{20}{12}{2016} & Leonardo Brutesco & \verificatore & Verifica documento \\
+0.1.1 & \frmdata{20}{12}{2016} & Giovanni Prete & \analista & Correzione errori \\
+0.1.0 & \frmdata{17}{12}{2016} & Leonardo Brutesco & \verificatore & Verifica documento \\
+0.0.10 & \frmdata{17}{12}{2016} & Giovanni Prete & \analista & Correzioni e aggiornamento diagrammi \\
+0.0.9 & \frmdata{16}{12}{2016} & Giovanni Damo & \analista & Correzioni sezione processi primari \\
+0.0.8 & \frmdata{13}{12}{2016} & Giovanni Prete & \analista & Correzioni sezione processi di organizzativi \\
+0.0.7 & \frmdata{09}{12}{2016} & Giovanni Damo & \analista & Correzioni sezione processi  di supporto\\
+0.0.6 & \frmdata{07}{12}{2016} & Giovanni Prete & \analista & Aggiunte descrizioni attività e processi \\
+0.0.5 & \frmdata{07}{12}{2016} & Giovanni Damo & \analista & Terminata sezione processi di supporto \\
+0.0.4 & \frmdata{05}{12}{2016} & Giovanni Damo & \analista & Terminata sezione processi organizzativi \\
+0.0.3 & \frmdata{05}{12}{2016} & Giovanni Prete & \analista & Terminata sezione processi primari \\
+0.0.2 & \frmdata{04}{12}{2016} & Giovanni Prete & \analista & Terminata introduzione \\
+0.0.1 & \frmdata{03}{12}{2016} & Giovanni Prete & \analista & Creazione template e indice \\
+}
+
+\begin{document}
+\input{sections/introduzione}
+\input{sections/processi_primari}
+\input{sections/processi_di_supporto}
+\input{sections/processi_organizzativi}
+\appendix
+\input{sections/ListaDiControllo}
+\end{document}

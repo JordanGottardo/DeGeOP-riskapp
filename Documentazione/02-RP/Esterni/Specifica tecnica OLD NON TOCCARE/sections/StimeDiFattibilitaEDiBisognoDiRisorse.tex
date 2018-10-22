@@ -1,0 +1,26 @@
+\newpage
+
+\section{Stime di fattibilità e bisogno di risorse}
+\label{sec:sdf}
+
+L'architettura definita precedentemente ha raggiunto un livello di dettaglio sufficiente a fornire una stima sulla fattibilità e di bisogno di risorse.
+Durante la progettazione iniziale del prodotto e la scelta delle tecnologie da utilizzare, si sono riscontrati diversi potenziali limiti legati agli stessi.
+Il gruppo si è impegnato a coprire le parti carenti come descritto nei paragrafi sottostanti, al fine di rendere le tecnologie completamente adeguate per la realizzazione del prodotto.
+
+\subsection{JavaScript}
+
+L'utilizzo ottimale di librerie come React e Redux prevedono l'uso di costrutti e sintassi presenti solo dalla versione ES6 di JavaScript in poi. Tale versione non è ancora totalmente definita e quindi molti browser odierni non supportano nativamente alcune feature. Specificatamente ES6 ha inserito la sintassi relativa al costrutto delle classi (class, construct, ecc.) e alcuni operatori utili all'implementazione dei reducer in Redux (per esempio lo spread operator). Questa situazione ha portato ad una serie di conseguenze, fra le quali:
+\begin{itemize}
+	\item utilizzo di Babel, una componente JavaScript che agisce come compilatore (o meglio, come un refactor di codice) trasformando codice, che utilizza le feature definite in ES6 o superiore, in codice completamente compatibile alla versione ES5, che quindi è supportato nativamente dai browser moderni;
+	\item bassa presenza di codice e librerie scritte in ES6. Per esempio la libreria OpenLayer e la sua documentazione sono scritte in codice ES5. Ciò si ripercuote sul prodotto da definire in due modi:
+	\begin{itemize}
+		\item necessità di convertire il codice ES5 in codice ES6 per mantenere uniforme il codice prodotto;
+		\item necessità di importare librerie secondarie che operano tale conversione liberando il team dalla scrittura di ulteriore codice.
+	\end{itemize}
+\end{itemize}
+Il package Babel è una componente popolare e molto usata quindi il rischio che  non funzioni correttamente è molto basso, ma comunque da non trascurare.
+
+\subsection{React}
+
+La libreria React è relativamente giovane, ma risulta molto usata. Risulta essere soprattutto una libreria stabile, anche a causa del numero basso di issue correttamente aperti sulla relativa pagina \glo{Github}{GitHub}.
+\\Il requisito di funzionamento del prodotto su dispositivi mobile, nello specifico su tablet, implica che il prodotto stesso dovrebbe risultare di piccole dimensioni e computazionalmente leggero, per favorire un uso veloce e fluido anche su questa famiglia di dispositivi. React risulta una libreria adatta allo scopo in quanto leggera e pienamente supportata su dispositivi mobili. 

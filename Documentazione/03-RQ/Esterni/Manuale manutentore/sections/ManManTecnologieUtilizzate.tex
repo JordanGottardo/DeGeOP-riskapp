@@ -1,0 +1,361 @@
+\newpage
+
+\section{Tecnologie utilizzate}
+In questa sezione vengono elencate le tecnologie su cui si basa lo sviluppo del progetto. Per ognuna di esse verrà indicato l'ambito di utilizzo e una descrizione.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cl}
+		\toprule
+		Tecnologia & Utilizzo \\
+		\midrule
+		\nameref{CSS3} & Linguaggio per la formattazione delle pagine web \\
+		\nameref{HTML5} & Linguaggio per la costruzione di pagine web \\
+		\nameref{JavaScript ES6}  & Linguaggio principale in cui è sviluppata l'applicazione \\
+		\nameref{JSON} & Formato dati utilizzato per lo scambio di informazioni \\
+		\nameref{JSX} & Estensione \glo{JavaScript}{JavaScript} per l'integrazione del codice \glo{HTML}{HTML} \\
+		\nameref{Node.js} & Ambiente operativo per utilizzare \js{} lato server \\
+		\nameref{OpenLayers} & Libreria per la gestione della mappa e del grafo \\
+		\nameref{Open Street Map} & Libreria per la fornitura di mappe in formato vettoriale \\
+		\nameref{React} & Costruzione dell'interfaccia grafica \\
+		\nameref{ReactColor} & Libreria per gestire la palette di colori \\
+		\nameref{React-Redux} & libreria per interfacciare \glo{React}{React} con Redux \\ 
+		\nameref{React Toolbox} & Libreria che implementa la specifica di Material Design \\
+		\nameref{Redux}  & Libreria per l'implementazione dell'architettura \\
+		\nameref{SVG} & Scalable Vector Graphics \\
+		
+		\bottomrule
+	\end{tabular}
+	\caption{Tabella riassuntiva tecnologie utilizzate nel progetto}
+\end{table}
+
+\subsection{CSS3}
+\label{CSS3}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		È un linguaggio utilizzato per la presentazione di documenti HTML. Lo standard viene definito dal \glo{W3C}{W3C}.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per definire il layout dell'applicazione.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://www.w3schools.com/css/css3_intro.asp}
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{HTML5}
+\label{HTML5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		È un \glo{Linguaggio di markup}{linguaggio di markup} utilizzato per definire la struttura delle pagine web. Lo standard viene definito dal W3C.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per definire il layout dell'applicazione.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://www.w3.org/TR/html5/}
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{JavaScript ES6}
+\label{JavaScript ES6}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		\js{} è un linguaggio di scripting orientato agli oggetti e agli eventi, utilizzato principalmente nella programmazione Web lato client.
+		Le caratteristiche più importanti di questo linguaggio sono:
+		\begin{itemize}
+			\item \textbf{eventi:} quando l'utente interagisce con la pagina Web in vari modi, come ad esempio mouse e tastiera, viene generato un evento; \js{} gestisce  tali eventi, i quali possono avviare un'azione registrata in un gestore di eventi;
+			\item \textbf{tipizzazione dinamica:} il programmatore non è tenuto a specificare il tipo degli oggetto che utilizza;
+			\item \textbf{paradigma a protipi:} stile di programmazione orientato ad oggetti in cui l'ereditarietà è implementata tramite il riuso di oggetti esistenti, basandosi sul loro prototipo.
+		\end{itemize}
+		In particolare, il \glo{Gruppo}{gruppo} si baserà sull'utilizzo della specifica \jsv{}, che definisce significativi cambiamenti sintattici per la scrittura di applicazioni complesse in modo più semplice.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		\js{} è il linguaggio base con cui si svilupperà l'applicazione \progetto{}. Di conseguenza è ance il linguaggio utilizzato maggiormente dalle librerie esterne da noi sfruttate.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://www.ecma-international.org/ecma-262/6.0/}
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{JSON}
+\label{JSON}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Formato dati utilizzato per lo scambio di informazioni tra il client (ovvero il nostro prodotto) e il server (ovvero il prodotto di \riskapp).
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per lo scambio di dati tra l'applicazione \progetto e il server di \riskapp.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://www.json.org}
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{JSX}
+\label{JSX}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		JSX è un linguaggio orientato agli oggetti staticamente tipizzato. È un'estensione di \js.
+		I file in linguaggio JSX vengono poi tradotti in \js.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato come sintassi all'interno di React.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://facebook.github.io/react/docs/introducing-jsx.html}
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{Node.js}
+\label{Node.js}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Ambiente operativo per utilizzare \js{} in ambito server.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per far avviare la nostra applicazione.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://nodejs.org/it/docs/}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		6.9.1
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{OpenLayers}
+\label{OpenLayers}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per visualizzare mappe interattive nei browser web.
+		OpenLayers offre \glo{API}{API} ai programmatori per poter accedere a diverse fonti d'informazioni cartografiche in Internet: mappe del progetto OpenStreetMap, mappe sotto licenze non-libere (Google Maps, Bing, Yahoo), Web Feature Service, ecc. E' coperto da licenza BSD.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene utilizzato per gestire la mappa.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://openlayers.org/en/latest/doc/}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		4.0.1
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{Open Street Map}
+\label{Open Street Map}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per fornire informazioni geografiche in formato vettoriale.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		OpenStreetMap viene utilizzato in modo indiretto dalla libreria OpenLayers per fornire una vista
+		vettoriale nella mappa dell'applicazione.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://www.openstreetmap.org/help}
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{React}
+\label{React}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} \glo{Open source}{open source} mantenuta da Facebook e Instagram utile alla costruzione di interfacce grafiche. Per fare ciò, React utilizza componenti indipendenti e riusabili che ereditano dalla classe base astratta React.Component. Le componenti devono implementare il metodo \glo{Render}{render}() che si occupa di rappresentare la \glo{Componente}{componente} sul browser.
+		Le caratteristiche più importanti di questa libreria sono:
+		\begin{itemize}
+			\item {\textbf{One-way-data-flow:}} meccanismo tramite il quale le proprietà (un insieme di valori immutabili passato al render di un componente) non possono essere direttamente modificate. Queste proprietà possono però essere modificate da una \glo{Callback}{callback};
+			\item {\textbf{Virtual DOM:}} virtualizzazione operata da React per effettuare un re-rendering efficiente dei componenti. 
+			Consiste in:
+			\begin{itemize}
+				\item replicare il DOM in memoria;
+				\item individuare le differenze tra il DOM reale e il DOM virtuale;
+				\item aggiornare le informazioni del DOM reale sulla base delle differenze precedentemente individuate.
+			\end{itemize}
+			\item utilizzo di JSX.
+		\end{itemize}
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		React viene utilizzata per la costruzione dell'interfaccia grafica dell'applicazione.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://facebook.github.io/react/docs/hello-world.html}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		15.4.2
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{ReactColor}
+\label{ReactColor}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} per creare una palette di colori RGB.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Viene  utilizzata per la creazione di un color picker.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://casesandberg.github.io/react-color/}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		2.11.3
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{React-Redux}
+\label{React-Redux}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Libreria che facilita l'integrazione tra Redux e React.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Le classi \js{} vengono passate ad una funzione della libreria per ottenere una nuova classe che sfrutti React-Redux.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://redux.js.org/docs/basics/UsageWithReact.html}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		5.0.3
+		\\ \bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{React Toolbox}
+\label{React Toolbox}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		E' una libreria \js{} composta da un insieme di componenti React che implementano la specifica del Material Design di Google.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		React Toolbox viene utilizzata per implementare alcune le componenti grafiche secondo la specifica del Material Design.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://react-toolbox.com/#/components}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		2.0.0-beta.7
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{Redux}
+\label{Redux}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Libreria per l’implementazione dell’architettura che si occupa di gestire le interazioni tra la business logic e la presentazione.
+		Per fare ciò:
+		\begin{itemize}
+			\item implementa un \glo{Design pattern}{design pattern} architetturale da usare il sostituzione a MVC, come descritto in
+			\nameref{dp_redux};
+			\item offre delle API apposite per la gestione degli elementi del design pattern descritto al punto precedente.
+		\end{itemize}
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		Redux viene utilizzato per implentare l'archiettura di \progetto.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{http://redux.js.org}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		3.6.0
+		\\\bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{40px}
+\subsection{SVG}
+\label{SVG}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{p{2cm}p{0.5cm}p{11.5cm}}
+		\arrayrulecolor{lightgray}
+		\toprule
+		\textbf{Descrizione} & &
+		Standard per la scrittura di immagini in formato vettoriale.
+		\\ \midrule
+		\textbf{Utilizzo} & &
+		SVG viene utilizzato per aggiungere oggetti personalizzati alla mappa.
+		\\ \midrule
+		\textbf{Documentazione ufficiale} & &
+		\url{https://www.w3.org/Graphics/SVG/}
+		\\ \midrule
+		\textbf{Versione installata} & &
+		0.1.0
+		\\\bottomrule
+	\end{tabular}
+\end{table}

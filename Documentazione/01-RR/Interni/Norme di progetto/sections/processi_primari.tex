@@ -1,0 +1,233 @@
+\section{Processi primari}
+    \subsection{Fornitura}
+        \subsubsection{Scopo}
+        Lo scopo del processo di fornitura è di determinare le procedure e le risorse necessarie allo svolgimento del progetto. Le attività di cui si compone sono:
+        \begin{itemize}
+            \item studio di fattibilità;
+            \item contrattazione.
+        \end{itemize}
+        La corretta implementazione del processo deve:
+        \begin{itemize}
+            \item decidere il progetto da svolgere;
+            \item fissare gli obiettivi per la contrattazione.
+        \end{itemize}
+
+        \subsubsection{Studio di fattibilità}
+            \paragraph{Scopo}
+            Individuare gli aspetti fondamentali dei progetti proposti, tramite lo studio dei capitolati ed il confronto tra i membri del \glo{Gruppo}{gruppo}.
+            \paragraph{Discussione e scelta del capitolato}
+            Il \responsabilediprogetto{} ha il compito di organizzare gli incontri del \glo{Gruppo}{gruppo} necessari ad analizzare i capitolati proposti.
+            \paragraph{Struttura studio di fattibilità}
+            Il documento creato dagli \analisti{} per ogni \glo{Capitolato}{capitolato} deve rispettare i seguenti punti:
+            \begin{itemize}
+                \item \textbf{descrizione:} descrizione del prodotto richiesto dal \glo{Capitolato}{capitolato};
+                \item \textbf{dominio applicativo:} ambito di utilizzo del prodotto;
+                \item \textbf{dominio tecnologico:} tecnologie richieste per lo sviluppo del progetto;
+                \item \textbf{criticità:} individuazione di punti critici e possibili problematiche che potrebbero sorgere durante lo svolgimento del progetto;
+                \item \textbf{valutazione finale:} considerazioni finali sulla scelta di accettare o meno il \glo{Capitolato}{capitolato} preso in esame.
+            \end{itemize}
+        \subsubsection{Contrattazione}
+            \paragraph{Scopo}
+            Presentare una proposta in risposta al \glo{Capitolato}{capitolato} del proponente.
+            \paragraph{Preparazione della proposta}
+            Il \glo{Gruppo}{gruppo} deve redigere e consegnare i seguenti documenti:
+            \begin{itemize}
+                \item \ndp;
+                \item \sdf;
+                \item \adr;
+                \item \pdp;
+                \item \pdq.
+            \end{itemize}
+            Verrà inoltre fornita in allegato la \ldp{} del \glo{Gruppo}{gruppo}. Si veda la sezione \ref{sec:classificazionedocumenti} per maggiori informazioni sulla gestione dei documenti.
+
+    \subsection{Sviluppo}
+        \subsubsection{Scopo}
+	        Il processo di sviluppo contiene le attività necessarie a produrre il prodtto software richiesto. In accordo con lo standard \glo{ISO}{ISO}/\glo{IEC}{IEC} (\ref{sec:isoiec}) preso come riferimento le attività che lo compongono sono:
+        \begin{itemize}
+            \item analisi dei requisiti;
+            \item progettazione;
+            \item codifica.
+        \end{itemize}
+        La corretta implementazione del processo deve:
+        \begin{itemize}
+            \item fissare gli obiettivi di sviluppo;
+            \item fissare i vincoli tecnologici;
+            \item realizzare un prodotto finale che soddisfi i test di accettazione e che sia conforme alle richieste del proponente.
+        \end{itemize}
+        \subsubsection{Analisi dei requisiti}
+            \paragraph{Scopo}
+            Individuare i requisiti del progetto tramite lo studio del \glo{Capitolato}{capitolato} ed incontri con il proponente. Individuare i test di sistema. Il risultato deve essere presentato nel documento formale \adr{} che deve contenere la lista dei casi d'uso e dei requisti.
+            \paragraph{Classificazione dei casi d'uso}
+            I casi d'uso individuati devono essere classificati secondo la seguente notazione:
+            \begin{center}
+            UC[Codice padre].[Codice identificativo]
+            \end{center}
+            dove:
+            \begin{itemize}
+                \item \textbf{codice padre:} indica il codice numerico in forma gerarchica del caso d'uso da cui deriva, viene omesso se non identificabile;
+                \item \textbf{codice identificativo:} indica il codice numerico del caso d'uso.
+            \end{itemize}
+            Per ogni caso d'uso bisogna indicare:
+            \begin{itemize}
+                \item \textbf{titolo:} titolo riassuntivo dell'operazione che il caso d'uso modella;
+                \item \textbf{attori:} elenco attori coinvolti;
+                \item \textbf{descrizione:} concisa e meno ambigua possibile;
+                \item \textbf{pre-condizione:} condizioni sempre vere riferite allo stato del sistema che abilitano lo svolgimento del caso d'uso;
+                \item \textbf{post-condizione:} condizioni sempre vere riferite allo stato del sistema dopo lo svolgimento del caso d'uso;
+                \item \textbf{scenario principali:} ordine con cui vengono eseguiti i casi d'uso figli;
+                \item \textbf{scenari alternativi:} possibili scenari alternativi del caso d'uso;
+                \item \textbf{estensioni:} spiegazione di tutte le estensioni se presenti;
+                \item \textbf{inclusioni:} spiegazione di tutte le inclusioni se presenti;
+                \item \textbf{generalizzazioni:} spiegazione di tutte le generalizzazioni se presenti.
+            \end{itemize}
+
+            \paragraph{Classificazione dei requisiti}
+            I requisiti individuati devono essere classificati secondo la seguente notazione:
+            \begin{center}
+            R[Importanza][Tipologia][Codice]
+            \end{center}
+            dove:
+            \begin{itemize}
+                \item \textbf{importanza:} può assumere questi valori:
+                \begin{itemize}
+                    \item \textbf{O:} indica un requisito obbligatorio;
+                    \item \textbf{D:} indica un requisito desiderabile;
+                    \item \textbf{F:} indica un requisito opzionale (facoltativo).
+                \end{itemize}
+                \item \textbf{tipologia:} può assumere questi valori:
+                \begin{itemize}
+                    \item \textbf{F:} indica un requisito funzionale;
+                    \item \textbf{Q:} indica un requisito di qualità;
+                    \item \textbf{P:} indica un requisito prestazionale;
+                    \item \textbf{V:} indica un requisito di vincolo.
+                \end{itemize}
+                \item \textbf{codice:} codice numerico che identifica il requisito, deve essere univoco ed indicato in forma gerarchica, da sinistra a destra, nella notazione X.Y.Z.
+            \end{itemize}
+            Per ogni requisito bisogna inoltre indicare:
+            \begin{itemize}
+                \item \textbf{descrizione:} concisa e meno ambigua possibile;
+                \item \textbf{fonte:} l'origine dei requisiti deve essere una delle seguenti:
+                \begin{itemize}
+                    \item \textbf{\glo{Capitolato}{capitolato}:} derivato direttamente dal testo del \glo{Capitolato}{capitolato};
+                    \item \textbf{interno:} deriva da discussioni interne al \glo{Gruppo}{gruppo};
+                    \item \textbf{verbale:} deriva da un verbale steso in seguito ad un incontro con il proponente. Deve essere indicato il nome del verbale a cui si riferisce;
+                    \item \textbf{casi d'uso:} deriva da uno o più casi d'uso. Deve essere indicato il codice identificativo dei casi d'uso a cui si riferisce.
+                \end{itemize}
+            \end{itemize}
+            \paragraph{Diagrammi UML}
+                I diagrammi \glo{UML}{UML} devono essere realizzati seguendo lo standard \glo{UML}{UML} versione 2. \\
+                Per facilitare la lettura dei diagrammi si devono seguire le seguenti convenzioni generali:
+                \begin{itemize}
+                % considerare di separare per tipo di diagramma es: casi d'uso e diagrammi delle classi
+                    \item gli elementi devono essere il più possibile omogenei tra loro per dimensione;
+                    \item gli elementi devono essere allineati tra loro, sia orizzontalmente che verticalmente, quando possibile;
+                    \item i margini di spazio tra gli elementi di un \glo{Gruppo}{gruppo} devono rimanere invariati in gruppi analoghi se si hanno le stesse tipologie di elementi;
+                    \item i collegamenti in uscita da un singolo elemento devono essere ad angolo retto invece che diretti.
+                \end{itemize}
+            \subsubsection{Progettazione ad alto livello}
+                \paragraph{Scopo}
+                Definire la struttura di alto livello del software e identificare le sue componenti. Definire le interfacce esterne ed interne. Individuare i test di integrazione. Il risultato deve essere presentato nel documento formale \st.
+                \paragraph{Specifica tecnica}
+                \subparagraph{Diagrami UML}
+                Devono essere forniti i seguenti diagrammi:
+                \begin{itemize}
+                    \item diagrammi di classe;
+                    \item diagrammi dei \glo{Package}{package};
+                    \item diagrammi di attività;
+                    \item diagrammi di sequenza.
+                \end{itemize}
+                \subparagraph{Design pattern}
+                Devono essere fornita una descrizione dei \glo{Design pattern}{design pattern} utilizzati per la realizzazione dell'architettura. Ogni \glo{Design pattern}{design pattern} deve avere una descrizione ed un diagramma che ne esponga la struttura.
+                \subparagraph{Tracciamento delle componenti}
+                Tutti i requisiti devono essere riferiti al componente che li soddisfa per poter verificare che ogni requisito sia soddisfatto. Si veda le sezione \ref{par:trender} in cui viene descritto lo strumento utilizzato per il tracciamento.
+                \subparagraph{Test di integrazione}
+                Devono essere definite le classi di verifica necessarie a garantire che tutte le componenti del sistema funzionino correttamente.
+            \subsubsection{Progettazione a basso livello}
+                \paragraph{Scopo}
+                Definire la struttura di tutte le componenti e suddivederle in unità che possanno essere realizzate, compilate e testate singolarmente. Individuare i test delle unità. Il risultato deve essere presentato nel documento formale \ddp.
+                \paragraph{Definizione di prodotto}
+                \subparagraph{Diagrammi UML}
+                Devono essere forniti i seguenti diagrammi:
+                \begin{itemize}
+                    \item diagrammi di classe;
+                    \item diagrammi di attività;
+                    \item diagrammi di sequenza.
+                \end{itemize}
+                \subparagraph{Definizione delle classi}
+                Deve essere fornita una descrizione per ogni classe progettata che ne spieghi lo scopo e che definisca le funzionalità.
+                \subparagraph{Tracciamento delle classi}
+                Tutti i requisiti devono essere tracciati alle classi associate per poter verificare che ogni classe soddisfi almeno un requisito. Si veda le sezione \ref{par:trender} in cui viene descritto lo strumento utilizzato per il tracciamento.
+                \subparagraph{Test di unità}
+                Devono essere definiti dei testi di unità necessari a garantire che tutte le componenti del sistema funzionino correttamente.
+            \subsubsection{Codifica e test}
+                \paragraph{Scopo}
+                Sviluppare le unità ed i test individuati durante la progettazione. Il risultato finale deve essere il codice sorgente del prodotto da realizzare e dei test necessari.
+                \paragraph{Stile di codifica}
+                Al fine di produrre codice uniforme, leggibile e manutenibile è richiesto che vengano rispettate le seguenti convenzioni:
+                \begin{itemize}
+                    \item i nomi utilizzati devono essere chiari, descrittivi rispetto alla loro funzione e in inglese;
+                    \item evitare nomi troppo simili tra loro che possano creare difficoltà nella comprensione del codice;
+                    \item deve essere presente almeno un breve commento descrittivo per ogni classe e metodo;
+                    \item i commenti devono essere scritti in lingua italiana senza utilizzare abbreviazioni o altre ambiguità;
+                    \item le modifiche al codice devono sempre riflettersi sui relativi commenti;
+                    \item evitare commenti superflui, inappropriati o scurrili;
+                    \item ogni file deve presentare un'intestazione con le seguenti informazioni:
+                        \begin{itemize}
+                            \item percorso e nome del file;
+                            \item nome e cognome dell'autore;
+                            \item data di creazione;
+                            \item breve descrizione del contenuto del file.
+                        \end{itemize}
+                \end{itemize}
+                \paragraph{Ricorsione}
+                La ricorsione va sempre evitata se possibile. Per ogni funzione ricorsiva è necessario fornire una prova di terminazione nei commenti.
+                \paragraph{Variabili globali}
+                L'uso di variabili globali va sempre evitato se possibile.
+
+        %\subsubsection{Procedure}
+
+        \subsubsection{Strumenti}
+            \paragraph{Trender}\label{par:trender}
+            Il \glo{Gruppo}{gruppo} utilizza l'applicazione \glo{Trender}{Trender} per gestire i dati ricavati dall'analisi dei requisiti. \glo{Trender}{Trender} è stato sviluppato dal \glo{Gruppo}{gruppo} InfiniTech per il progetto dell'anno 2014/15, utilizza un \glo{Database}{database} \glo{MySQL}{MySQL} per la persistenza dei dati ed è disponibile al seguente indirizzo:
+            \begin{center}
+	            \url{https://github.com/campagna91/Trender}.
+            \end{center}
+            Le funzionalità offerte da \glo{Trender}{Trender} sono:
+            \begin{itemize}
+                \item tracciamento dei requisiti;
+                \item tracciamento dei casi d’uso;
+                \item tracciamento dei verbali;
+                \item tracciamento degli attori presenti nel sistema;
+                \item tracciamento dei packages;
+                \item tracciamento delle classi;
+                \item tracciamento dei test;
+                \item tracciamento delle voci del glossario;
+                \item possibilità di creare il codice \LaTeX{} di quanto archiviato nei punti precedenti.
+            \end{itemize}
+	        Lo spazio di lavoro dedicato al \glo{Gruppo}{gruppo} si trova al seguente indirizzo:
+			\begin{center}
+				\url{http://zephyrusar.altervista.org/trender/}
+			\end{center}
+            \paragraph{Astah}
+            % 1)descrizione veloce dell'app
+            % 2)cosa ci permette di fare
+	        \glo{Astah}{Astah} è un'applicazione per la creazione di diagrammi \glo{UML}{UML} ed è utilizzata nel corso delle attività di analisi e progettazione. I diagrammi che verranno realizzati sono:
+	        \begin{itemize}
+	        	\item diagrammi di sequenza;
+	        	\item di attività;
+	        	\item dei casi d'uso;
+	        	\item delle classi.
+	        \end{itemize}
+            % 3) perche l'abbiamo scelta
+            Le principali motivazioni che hanno portato il \glo{Gruppo}{gruppo} alla scelta di questo strumento sono:
+            \begin{itemize}
+            	\item già utilizzato da parte del docente;
+            	\item versione professional gratuita con la licenza studente;
+            	\item \glo{Cross-platform}{cross-platform}.
+            \end{itemize}
+            % 4) indirizzo dove collegarsi
+            Indirizzi per il download del programma e della licenza studente:
+            \begin{center}
+            	\url{http://astah.net/download} \\
+            	\url{http://astah.net/student-license-request}
+            \end{center}

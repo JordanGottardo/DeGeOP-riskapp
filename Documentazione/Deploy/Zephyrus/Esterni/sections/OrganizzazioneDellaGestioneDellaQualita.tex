@@ -1,0 +1,67 @@
+\newpage
+
+
+
+\section{Organizzazione della gestione della qualità}
+		In questa sezione sono presenti le necessità e le risorse necessarie per la gestione della qualità.
+		
+		\subsection{Risorse}
+			Il processo di verifica necessita di risorse per poter ottenere gli obiettivi prefissati. Il \glo{Gruppo}{team} ha identificato i seguenti tipi di risorse:
+			\begin{itemize}
+				\item risorse umane;
+				\item risorse hardware;
+				\item risorse software.
+			\end{itemize}
+			\subsubsection{Risorse necessarie}
+				\paragraph{Risorse umane}
+					Le risorse umane comprendono il \responsabilediprogetto{} e i \verificatori.
+				\paragraph{Risorse hardware}
+					Le risorse hardware comprendono i computer con una potenza di calcolo sufficiente a sopportare il carico di lavoro.
+				\paragraph{Risorse software}
+					Le risorse software comprendono gli strumenti software, sia installabili localmente che disponibili online, che permettano di eseguire controlli su documenti e codice.
+					Inoltre è necessario anche un tool per il tracciamento dei requisiti e il controllo dei test.
+			\subsubsection{Risorse disponibili}
+				\paragraph{Risorse umane}
+					Le risorse umane disponibili sono tutti i membri del team, che ricopriranno a turno i ruoli di \responsabilediprogetto{} e di \verificatore{} come previsto dal \pdpv.
+				\paragraph{Risorse hardware}
+					Le risorse hardware disponibili sono i personal computer dei membri del team. In caso tali risorse non fossero disponibili, si potranno sfruttare i computer del Servizio Calcolo dell'Università di Padova.
+				\paragraph{Risorse software}
+					Le risorse software disponibili sono:
+					\begin{itemize}
+						\item editor \glo{Latex}{\LaTeX{}} con pacchetto lingua italiana installato e correzioni ortografiche abilitate;
+						\item script per calcolare l'\glo{Indice Gulpease}{indice Gulpease};
+						\item \glo{Issue}{issue} offerte da \glo{GitHub}{GitHub}.
+					\end{itemize}
+		\subsection{Scadenze temporali}
+			Le scadenze che il team ha deciso di rispettare sono riportate nel \pdpv.
+		\subsection{Forme di verifica}
+			
+			In questa sezione sono presentate le forme di verifica che il team deciso di applicare durante lo svolgimento del progetto.
+			
+			\subsubsection{Analisi statica}
+				L'analisi statica è una forma di verifica che non richiede l'esecuzione del prodotto software. Essa verrà attuata sia per i documenti che per il software. In entrambi i casi, i \verificatori{} dovranno assicurarsi che:
+				\begin{itemize}
+					\item siano state rispettate le regole stabilite dalle \ndp{} per quanto riguarda lo stile tipografico e l'utilizzo dei linguaggi \LaTeX{} e di programmazione;
+					\item non siano presenti errori all'interno del documento o del codice preso in esame.
+				\end{itemize}
+				L'analisi statica può essere eseguita in due modi diversi: walkthrough e inspection.
+				
+				\paragraph{Walkthrough}
+					Il \glo{Walkthrough}{walkthrough} è una forma di analisi statica che si basa su una lettura ad ampio spettro della documentazione del prodotto. È molto costosa in termini di tempo e richiede maggiore attenzione, ma è l'unico metodo che \verificatori{} non esperti possano eseguire.
+				
+					
+					 Il team prevede di utilizzare principalmente questo metodo nei periodi iniziali del progetto. 
+					
+					
+					L'analisi tramite walkthrough provvederà a generare una lista di controllo da utilizzare nell'analisi tramite \glo{Inspection}{inspection}. La lista di controllo aggiornata è presente come appendice alle \ndpv.
+					
+				\paragraph{Inspection}
+					L'inspection è una forma di analisi statica più mirata del walkthrough. Essa si basa su una lista di controllo, contenente gli errori più ricorrenti. I \verificatori{} si dovranno concentrare sulla ricerca degli errori elencati nella lista, risparmiando tempo rispetto ad una lettura complessiva del documento. 
+					
+					
+					Il team desidera utilizzare l'inspection nei periodi più avanzati del progetto per ottenere una verifica più efficiente in termini di tempo. 
+					
+			\subsubsection{Analisi dinamica}
+					L'analisi dinamica è una forma di analisi che richiede l'esecuzione del programma. Essa viene effettuata tramite test sulle varie componenti del sistema, prima singolarmente e successivamente unendole fino a creare il sistema completo. Per prendere visione delle varie tipologie di test che il team eseguirà ed avere un elenco degli stessi, consultare l'\hyperref[Test]{appendice D}.
+					
+					Nonostante la pianificazione e l'esecuzione dei test sia molto dispendiosa in termini di risorse, il team ritiene importante eseguirli per garantire la qualità del prodotto. Particolare attenzione verrà posta ai test di unità, dato che statisticamente sono quelli che rilevano il maggior numero di errori.
