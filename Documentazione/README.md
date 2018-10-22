@@ -42,21 +42,3 @@ Per le operazioni sui file è consigliato utilizzare i seguenti comandi in modo 
 * `git stash` per accantonare in un'area temporanea le modifiche fatte alla staging area quando il pull non va a buon fine
 * `git stash clear` per pulire del tutto l'area temporanea (perdendo le modifiche)
 
-- - -
-
-GIT 101 FOR BEGINNERS (con repository già clonata)
-
-Mi sveglio al mattino. Accendo il pc. 
-* Scarico le modifiche che potrebbero aver fatto gli altri con `git pull`.
-* SE ho problemi con pull vuol dire che ho modifiche in locale che vanno in conflitto con quelle in remoto (probabilmente non avevo fatto un push precedentemente). Per risolvere, vedere la sezione 4, comando `git stash`.
-* Lavoro sul mio documento fino a quando decido che sono arrivato ad un punto che merita di essere caricato.
-* Aggiungo il mio lavoro alla staging area con `git add . `. Il punto aggiunge tutta la cartella in cui mi trovo ed eventuali sottocartelle in modo ricorsivo.
- Se voglio aggiungere alla staging area TUTTA la repo locale (quindi sia cartella attuale, le sue sottocartelle e i suoi genitori) uso `git add *`. Molto rischioso, rischio di sovrascrivere il lavoro di altri. Metodo più sicuro di tutti: aggiungo file per file con `git add nomefile.ext`
-* Finalizzo il lavoro aggiunto alla staging area con `git commit -m "messaggio di commit"`. 
-* Pusho il lavoro sulla repository remota con `git push`.
-
-
-RESET
-
-'git reset --soft HEAD^' dopo un commit sbagliato (solo locale, senza aver fatto 'git push') questo comando ritorna a subito prima del commit, lasciando inariata il working tree
-
